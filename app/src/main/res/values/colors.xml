@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CC3333</color>
+    <color name="colorPrimaryDark">#9b0b11</color>
+    <color name="colorPrimaryLight">#c25f5f</color>
+    <color name="colorSecondary">#20ff7777</color>
+    <color name="colorSecondaryDark">#6a0b0e</color>
+    <color name="colorSecondaryLight">#109b0b11</color>
+    <color name="colorbackground">#c1cdd3</color>
+
+    <!--  <color name="colorPrimary">#00b8d4</color>
+    <color name="colorPrimaryDark">#0088a3</color>
+    <color name="colorPrimaryLight">#4962ebff</color>
+    <color name="colorSecondary">#4bc2d2</color>-->
+    <!--    <color name="colorPrimary">#b90003</color>
+    <color name="colorPrimaryDark">#8D0000</color>-->
+    <color name="colorAmericanBlueDark">#800000</color>
+    <color name="colorAccent">@color/colorPrimaryDark</color>
+    <color name="colorOrange">#ff6633</color>
+    <color name="black_overlay">#99000000</color>
+    <color name="colorGreen">#0daa5a</color>
+    <color name="colorGreenSemi">#298A08</color>
+    <color name="colorGreenemi">#4B8A08</color>
+    <color name="colorGreenDark">#00695C</color>
+    <color name="colorGreenFaint">#4DB6AC</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorText">#282828</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#FF0101</color>
+    <color name="colorWhitegrey">#e3e2e2</color>
+    <!--<color name="colorWhitegrey">#50A4A4A4</color>-->
+    <color name="colorgrey">#464646</color>
+    <color name="colorfaintGrey">#c9c9c9</color>
+    <color name="colorSemiGrey">#696969</color>
+    <color name="colorWhitegreySemi">#20A4A4A4</color>
+    <color name="colorWhiteSemi">#70FFFFFF</color>
+    <color name="colorBrownSec">#887B94</color>
+    <color name="colorBrownPri">#5B5265</color>
+    <color name="colorBrownTrans">#877A92</color>
+    <color name="colorBlue">#2b84c9</color>
+    <color name="colorBlueDark">#018f89</color>
+    <color name="colorBrown">#a52a2a</color>
+    <color name="colorBrownDark">#872e07</color>
+    <color name="colorAmericanBlueDarkFaint">#60004d6d</color>
+    <color name="colorYellow">#F9B233</color>
+    <color name="colorYellowDark">#FFD700</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+</resources>

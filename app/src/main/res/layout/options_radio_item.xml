@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image2x"
+        android:text="Question :"
+        android:textColor="@color/colorPrimary"
+        android:alpha="0.9"
+        android:background="@color/colorWhitegreySemi"
+        android:paddingLeft="@dimen/image4x"
+        android:paddingRight="@dimen/image4x"
+        android:textSize="@dimen/font3x" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image4x"
+        android:text="Question"
+        android:background="@color/colorWhitegreySemi"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font5x" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- - - - - - - options - - - - - - -"
+        android:textSize="@dimen/font4x"
+        android:textColor="@color/colorText"
+        android:padding="@dimen/image4x"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/image4x"
+        android:layout_marginRight="@dimen/image4x"
+        android:layout_marginTop="@dimen/imagex"/>
+
+    <RadioGroup
+        android:id="@+id/radioGrpOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/image4x"
+        android:layout_marginLeft="@dimen/image4x"
+        android:layout_marginRight="@dimen/image4x"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioOptionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/radioOptionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/radioOptionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/radioOptionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/radioOptionFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/radioOptionSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+        <RadioButton
+            android:id="@+id/radioOptionSeven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+        <RadioButton
+            android:id="@+id/radioOptionEight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+        <RadioButton
+            android:id="@+id/radioOptionNine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+        <RadioButton
+            android:id="@+id/radioOptionTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option 1"
+            android:textColor="@color/colorgrey"
+            android:visibility="visible" />
+    </RadioGroup>
+
+</LinearLayout>

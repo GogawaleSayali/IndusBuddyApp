@@ -1,0 +1,372 @@
+<resources>
+    <string name="app_name">"Indus Health Plus"</string>
+    <string name="app_name_app">"Indus Buddy"</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_login_screen">Login</string>
+    <string name="title_activity_verifyOtp_screen">Verify OTP</string>
+    <string name="title_activity_register_screen">Verify Details</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="login_enterhint">User Id</string>
+    <string name="login_sendotp">Send OTP</string>
+    <string name="login_or">Or</string>
+    <string name="login_registeration">Verify yourself with \"Indus Buddy\"</string>
+    <string name="otp_getOTP">Sit back &amp; Relax! while we verify you</string>
+    <string name="otp_suggestion">(Enter the OTP below in case if we fail to detect SMS automatically)</string>
+    <string name="otp_guest_dontReceivedOTp">Didn\'t receive OTP ?</string>
+    <string name="otp_submit">\t\t\tSubmit\t\t\t</string>
+    <string name="otp_resend">\t\t\tResend OTP\t\t\t</string>
+    <string name="register_or">--- OR ---</string>
+    <string name="register_user">\t\tVerify\t\t</string>
+    <string name="register_fname">First Name</string>
+    <string name="register_lname">Last Name</string>
+    <string name="register_dob">DOB</string>
+    <string name="register_mobile">Mobile</string>
+    <string name="register_emailid">Email Id</string>
+    <string name="login_empty_field">User id can not be empty !</string>
+    <string name="netConnection">Please check  your internet connection !</string>
+    <string name="register_name_empty">Please enter valid name !</string>
+    <string name="register_empty_date">Date of birth can not be empty !</string>
+    <string name="register_empty_mobile">Mobile number can not be empty !</string>
+    <string name="register_invalid_mobile">Please enter valid mobile number with country code !</string>
+    <string name="register_empty_email">Email Id can not be empty !</string>
+    <string name="register_invalid_email">Please enter valid Email Id !</string>
+    <string name="statuse_code_0">0</string>
+    <string name="shars_userid">shars_userid</string>
+    <string name="shars_user_otp">shars_user_otp</string>
+    <string name="copyRight">copyright@2018 | privacy | all rights reserved</string>
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="title_activity_centre_locator">CentreLocatorActivity</string>
+    <string name="title_activity_my_un_availed_package">MyUnAvailedPackageActivity</string>
+    <string name="acitity_my_centre_locator">Centre Locator</string>
+    <string name="acitity_my_availed_packages">Unavailed Packages</string>
+    <string name="acitity_my_availed_package">My Unavailed Package</string>
+    <string name="title_activity_my_availed_package">MyAvailedPackageActivity</string>
+    <string name="package_name">Package Name</string>
+    <string name="package_addontest">Add on Test :</string>
+    <string name="package_totalamount">Total Amount</string>
+    <string name="package_paymode">Pay Status</string>
+    <string name="btn_testdetails">Test Details</string>
+    <string name="powered_by">Powered by,\nDogra Technologies Pvt. Ltd.</string>
+    <string name="rate_our_app">Rate Our App</string>
+    <string name="help_centre">Help Centre</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_my_health_chek_up">MyHealthChekUpActivity</string>
+    <string name="title_activity_test_details">Test Details</string>
+
+    <string name="myAppo_appno">Appt Number</string>
+    <string name="myAppo_benifitest">Beneficiary</string>
+    <string name="myAppo_benifirelation">Relation</string>
+    <string name="myAppo_checkupcentre">Checkup Centre</string>
+    <string name="myAppo_appsstatus">Appt Status</string>
+    <string name="myAppo_rescheduleapp">Reschedule Appointment</string>
+    <string name="title_activity_centre_details">Centre Details</string>
+    <string name="centre_name">Centre Name</string>
+    <string name="centre_address">Address :</string>
+    <string name="centre_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</string>
+    <string name="dummytext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, </string>
+    <string name="centre_valueadd">Value Add</string>
+    <string name="centre_packingAvail">Parking Available :</string>
+    <string name="centre_parkingStatus">Coming soon</string>
+    <string name="centre_foodProvider">Food Providers Service Available :</string>
+    <string name="centre_Logistic">Logistics Available :</string>
+    <string name="centre_uber">Uber</string>
+    <string name="centre_ola">Ola</string>
+    <string name="title_activity_show_on_maps">Centre on Map</string>
+    <string name="feedback">Feedback</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="title_activity_get_appointment">GetAppointmentActivity</string>
+    <string name="title_activity_my_health_guide">MyHealthGuideActivity</string>
+    <string name="title_activity_test_av">TestAVActivity</string>
+    <string name="my_appointment">My Appointment</string>
+    <string name="hra">HRA</string>
+
+    <!--Font awesome icons-->
+    <string name="fa_user_icon">&#xf007;</string>
+    <string name="fa_package_icon">&#xf466;</string>
+    <string name="fa_calendar_icon">&#xf073;</string>
+    <string name="fa_location_icon">&#xf3c5;</string>
+    <string name="fa_gender_icon">&#xf225;</string>
+    <string name="fa_mobile_icon">&#xf10b;</string>
+    <string name="fa_file_icon">&#xf0f6;</string>
+    <string name="fa_file_share_icon">&#xf1e0;</string>
+    <string name="fa_plus_icon">&#xf067;</string>
+    <string name="marker">&#xf041;</string>
+    <string name="fa_heartrate">&#xf21e;</string>
+    <string name="fa_bed">&#xf236;</string>
+    <string name="fa_weight">&#xf496;</string>
+
+    <string name="visitWise">By Visit</string>
+    <string name="paramWise">By Parameter</string>
+    <string name="title_activity_graph_by_visit">GraphByVisitActivity</string>
+
+    <string name="file_name">Report</string>
+
+    <!--Select Image from gallery and camera-->
+    <string name="Camera_Add_Photo">Add Photo!</string>
+    <string name="Camera_Take_Photo">Take Photo</string>
+    <string name="Choose_from_Gallery">Choose from Gallery</string>
+    <string name="Camera_Cancel">Cancel</string>
+
+    <!--Shared Prefs-->
+    <string name="IndusBuddySharedPrefs">IndusBUddySHaredPrefs</string>
+    <string name="isLoggedin">isLoggedIn</string>
+
+    <string name="heath_checkup">Health Checkup</string>
+    <string name="health_guide">Health Guide</string>
+    <string name="my_welness">My Wellness</string>
+    <string name="fitness_tracker">Fitness Tracker</string>
+    <string name="welcome_note">Welcome</string>
+    <string name="your_ivps">Redeem Points :</string>
+    <string name="articles">Health Articles</string>
+    <string name="mini_checkup">Checkup</string>
+    <string name="mini_guide">Guide</string>
+    <string name="mini_wellness">Wellness</string>
+    <string name="mini_fitness">Fitness</string>
+    <string name="tips">Tip</string>
+    <string name="title_activity_tip">Tip</string>
+    <string name="dashboard_Status">Status :</string>
+    <string name="dashboard_date">Date :</string>
+    <string name="dashboard_name">Name :</string>
+    <string name="dashboard_expirydate">Expiry Date :</string>
+    <string name="dashboard_joining">JOINING</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="myAppo_apps_centre">Centre Name</string>
+    <string name="file_uploadedby">Name</string>
+    <string name="file_upladedDate">02-Mar-2018</string>
+    <string name="title_activity_reminder">ReminderActivity</string>
+    <string name="reminder">Reminder</string>
+    <string name="remind_title">Reminder Title</string>
+    <string name="remind_time">Time</string>
+    <string name="remind_submit">Submit</string>
+    <string name="username">userName</string>
+    <string name="userLName">userLastName</string>
+    <string name="userMobile">userMobileNumber</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="about_us_text"> \t\t\t Indus Health Plus (P) Ltd. was incorporated in the year 2000 as a first-of-its-kind in the preventive healthcare sector.\n\t\t\t An ISO 9001:2015 certified company; Indus Health Plus is determined to live up to its motto of making quality healthcare Available, Accessible and Affordable, each and every day.
+Headquartered in Pune,twe are present in major metros, tier I, II and III cities in India and UAE and GCC countries.Indirect alliance partners have helped us reach to pan India, especially rural parts to cater to the needs and convenience of our clientele.  \n\t\t\tIndus is consistent in spreading the word of timely checkup which not only saves an individual from premature death or disability but effectively saves their families from mental and physical trauma and financial distress.
+ \n\t\t\tIndus aims to handhold its clients with care for all their preventive healthcare needs.\n
+\t\t\tIndus drives the cause of prevention and is creating a successful framework for the government to effectively tackle the burden of non-communicable diseases, and in turn help in reducing the future burden on India’s already weak health infrastructure.</string>
+    <string name="about_us_quotes">Let prevention reach you before cure\nLet disease get caught early and for sure!</string>
+    <string name="title_activity_help_centre">HelpCentreActivity</string>
+    <string name="getintouch">Get in touch with us</string>
+    <string name="indus_address">\'INDUS HOUSE\', Pride Port, Model Colony, Pune-411  016 Maharashtra, India</string>
+    <string name="indus_phone">0-90490-33333</string>
+    <string name="indus_phone1">020 6647 2500</string>
+    <string name="indus_fax">020-66493499</string>
+    <string name="indus_email">info@indushealthplus.com</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="articlePreferences">Article Preferences</string>
+    <string name="save">Save</string>
+    <string name="visit_date">vDate</string>
+    <string name="visit_value">vValue</string>
+    <string name="visit_p_name">vName</string>
+    <string name="title_activity_wellness">WellnessActivity</string>
+    <string name="title_activity_fitnsee_tracker">FitnseeTrackerActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_main_feed_back">MainFeedBackActivity</string>
+    <string name="general_info">General\nInformation</string>
+    <string name="service_rel">Service\nRelated</string>
+    <string name="additional_info">Additional\nInformation</string>
+    <string name="questionGeneralOne">Do you know that the price of checkup package offered bu indus is offered is substantially lesser than the market price?</string>
+    <string name="questionGeneralTwo">Do you know that the highest number of CT scan in the world are done for Indus Health Plus Client?</string>
+    <string name="questionServiceOne">Service by Indus Customer Care Executive :</string>
+    <string name="questionServiceTwo">Did the executive greet you?</string>
+    <string name="questionServiceThree">Did the executive introduce himself/herself?</string>
+    <string name="questionServiceFour">Check Up Process:</string>
+    <string name="questionServiceFive">Breakfast:</string>
+    <string name="questionServiceSix">Counselling by Doctor:</string>
+    <string name="questionServiceSeven">Facilities Provided:</string>
+    <string name="questionServiceEight">Overall service provided:</string>
+    <string name="questionServiceNine">Received Silver Card:</string>
+    <string name="indus_ltd">Indus Health Plus (P) Ltd.</string>
+
+    <string name="login_dismissed">Login dismissed or no scopes selected</string>
+    <string name="missing_scopes_error">Error logging in. Missing the following required scopes: </string>
+    <string name="login_title">Login</string>
+    <string name="login_with_fitbit">Login with Fitbit</string>
+    <string name="fitbit_logo_description">Fitbit Logo</string>
+    <string name="title_activity_fitbit_login">FitbitLoginActivity</string>
+    <string name="logging_you_into_fitbit">Logging you into Fitbit&#8230;</string>
+    <string name="title_activity_my_fitness_home">MyFitnessHomeActivity</string>
+    <string name="hraTypes">HRA TYPE</string>
+    <string name="title_activity_hra">HRAActivity</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="userType">userType</string>
+    <string name="something_went_wrong">Something went Wrong !</string>
+    <string name="error_loading_data">ErrorData</string>
+    <string name="activity_info">Activity</string>
+    <string name="timeLine">Timeline</string>
+    <string name="setGoal">Set your goal!</string>
+    <string name="title_activity_set_goal">SetGoalActivity</string>
+    <string name="noPkg">You don\'t have any Package,\nPlease buy the Package</string>
+    <string name="getPkg">Get Package >> </string>
+    <string name="title_activity_indus_sites_url">IndusSitesURLActivity</string>
+    <string name="title_activity_center_locator">CenterLocatorActivity</string>
+    <string name="youMayAvail">Addon DC</string>
+    <string name="title_activity_event_details">EventDetailsActivity</string>
+    <string name="ev_corporate">Corporate </string>
+    <string name="ev_type">Event Type</string>
+    <string name="ev_service">Service</string>
+    <string name="ev_centre">Centre</string>
+    <string name="ev_validity">Validity</string>
+    <string name="ev_price">Total Price</string>
+    <string name="ev_payment">Payment</string>
+    <string name="ev_pay">Pay</string>
+    <string name="ev_feedback">Feedback</string>
+    <string name="ev_confirm">Confirm</string>
+    <string name="title_activity_event_feedback">EventFeedbackActivity</string>
+    <string name="redeemPoint">Wellness Redeem Point</string>
+    <string name="title_activity_fitness_time_line">FitnessTimeLineActivity</string>
+    <string name="no_internet">OOPs no internet</string>
+    <string name="Remdate">Remider Date</string>
+    <string name="status">Status</string>
+    <string name="discount">Discount</string>
+    <string name="slots">Slots</string>
+    <string name="slot_select_error">Please select the slot!!</string>
+    <string name="event_confirm_success">Your Event Confirmed Successfully, Thank you!!</string>
+    <string name="something_wrong_error">Something went Wrong.. Please try again!!</string>
+    <string name="days">Days</string>
+    <string name="title_activity_willness_history">WillnessHistoryActivity</string>
+    <string name="title_activity_image_preview">ImagePreviewActivity</string>
+    <string name="errorNoDesc">No description available!!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_appt_details">ApptDetailsActivity</string>
+    <string name="profile">Profile</string>
+    <string name="userGender">userGender</string>
+    <string name="userDOB">userDOB</string>
+    <string name="userEmail">userEmailId</string>
+    <string name="title_activity_reminder_details">ReminderDetailsActivity</string>
+    <string name="title_activity_store_records">StoreRecordsActivity</string>
+    <string name="title_activity_upload_menu">UploadMenuActivity</string>
+    <string name="title_activity_doc_type">DocTypeActivity</string>
+    <string name="title_activity_naming_report">NamingReportActivity</string>
+    <string name="title_activity_view_records">ViewRecordsActivity</string>
+    <string name="title_activity_view_and_share">ViewAndShareActivity</string>
+    <string name="Remfor">Reminder For</string>
+    <string name="remMobile">Mobile</string>
+    <string name="remEmail">Email</string>
+
+    <string name="material_calendar_today_button">Today</string>
+    <string name="material_calendar_positive_button">Ok</string>
+    <string name="material_calendar_negative_button">Cancel</string>
+    <string name="userProfile">userProfilePic</string>
+    <string name="title_activity_instruction_call">InstructionCallActivity</string>
+    <string name="indus_update">Indus Updates</string>
+    <string name="title_activity_indus_update">IndusUpdateActivity</string>
+    <string name="readMore">Read more</string>
+    <string name="download">download</string>
+    <string name="archives">Archive</string>
+    <string name="title_activity_news_archives">NewsArchivesActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="sources">Sources</string>
+    <string name="title_activity_home_page_news">HomePageNewsActivity</string>
+    <string name="drName">Doctor Name</string>
+    <string name="drDateTime">Doctor Date and Time</string>
+    <string name="excerType">Type of Exercise</string>
+    <string name="excerinMinut">Duration in Minutes</string>
+    <string name="testName">Test Name</string>
+    <string name="centerName">Centre Name</string>
+    <string name="medicineName">Medicine Name</string>
+    <string name="medicineDose">Medicine Dose</string>
+    <string name="MediDateTime">Medicine Date and Time</string>
+    <string name="remmefor">Reminder me for</string>
+    <string name="otherLocation">Location</string>
+    <string name="othersDuration">Duration</string>
+    <string name="title_activity_fitness_menu">FitnessMenuActivity</string>
+</resources>

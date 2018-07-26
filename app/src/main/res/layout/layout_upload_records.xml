@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llOptions"
+        android:layout_margin="@dimen/image3x"
+        android:background="@drawable/dashed_square">
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llButtons"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/image3x"
+        android:padding="@dimen/image3x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_camera"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/image2x"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="Photo"
+                android:textStyle="bold"
+                android:textColor="@color/colorText" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_file"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/image2x"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="File"
+                android:textStyle="bold"
+                android:textColor="@color/colorText" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_gallery"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/image2x"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="Gallery"
+                android:textStyle="bold"
+                android:textColor="@color/colorText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/image3x">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/image2x"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_green"
+            android:gravity="center"
+            android:padding="@dimen/image5x"
+            android:text="BACK"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image2x"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_button_green"
+            android:gravity="center"
+            android:padding="@dimen/image5x"
+            android:text="NEXT"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>

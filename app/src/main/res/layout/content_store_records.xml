@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".main.activities.storerecord.StoreRecordsActivity"
+    tools:showIn="@layout/activity_store_records">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_square_green">
+
+                <ImageView
+                    android:id="@+id/ivcloudOne"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/image15x"
+                    android:layout_marginTop="@dimen/image3x"
+                    android:alpha="0.4"
+                    android:src="@drawable/cloud" />
+
+                <ImageView
+                    android:id="@+id/ivMainCloud"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/image15x"
+                    android:layout_marginTop="@dimen/image3x"
+                    android:alpha="0.6"
+                    android:src="@drawable/cloud" />
+
+                <ImageView
+                    android:id="@+id/ivThree"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_above="@+id/ivTwo"
+                    android:layout_marginBottom="@dimen/image4x"
+                    android:layout_marginLeft="@dimen/image15x"
+                    android:layout_toRightOf="@+id/ivTwo"
+                    android:alpha="0.3"
+                    android:rotation="30"
+                    android:src="@drawable/ic_action_file_flying" />
+
+                <ImageView
+                    android:id="@+id/ivTwo"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/ivOne"
+                    android:layout_marginBottom="@dimen/image3x"
+                    android:layout_marginLeft="@dimen/image10x"
+                    android:layout_toRightOf="@+id/ivOne"
+                    android:alpha="0.4"
+                    android:rotation="30"
+                    android:src="@drawable/ic_action_file_flying" />
+
+                <ImageView
+                    android:id="@+id/ivOne"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/ivMobile"
+                    android:layout_marginLeft="@dimen/image8x"
+                    android:layout_toRightOf="@+id/ivMobile"
+                    android:alpha="0.5"
+                    android:rotation="30"
+                    android:src="@drawable/ic_action_file_flying" />
+
+                <ImageView
+                    android:id="@+id/ivMobile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/mobilehand" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlUploadRecords"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivUploadIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/image4x"
+                        android:src="@drawable/cloud_upload" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivUploadIcon"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/image3x"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Records"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:text="Capture photo/Select Image and upload documents"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:alpha="0.5"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:id="@+id/rlViewRecords"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivViewIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/image4x"
+                        android:src="@drawable/view" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivViewIcon"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/image3x"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View Records"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:text="View your all documents"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:alpha="0.5"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:id="@+id/rlDocumentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivShareIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/image4x"
+                        android:src="@drawable/ic_menu_share" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/ivShareIcon"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/image3x"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Share Records"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:text="Share your documents"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

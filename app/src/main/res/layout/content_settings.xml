@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.navmenuactivities.SettingsActivity"
+    tools:showIn="@layout/activity_settings">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlArticlePrefs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image4x">
+
+                <ImageView
+                    android:id="@+id/ivArticleSetting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.5"
+                    android:src="@drawable/article_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivArticleSetting"
+                    android:padding="@dimen/image4x"
+                    android:text="@string/articlePreferences"
+                    android:textColor="@color/textbox_pinview"
+                    android:textSize="@dimen/font4x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:alpha="0.7"
+                android:background="@color/colorgrey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="@dimen/image4x">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/image4x"
+                    android:paddingTop="@dimen/image4x"
+                    android:text="@string/articlePreferences"
+                    android:textColor="@color/textbox_pinview"
+                    android:textSize="@dimen/font4x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:alpha="0.7"
+                android:background="@color/colorgrey" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/frameArticlePrefs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <!--<android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:layout_gravity="center"
+            android:elevation="@dimen/image5x"
+            android:layout_margin="@dimen/image2x"
+            app:cardCornerRadius="@dimen/image3x">-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/image3x">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_above="@+id/tvSave"
+                android:background="@drawable/square_round_tab">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvArticleSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvSave"
+                    android:background="@drawable/square_round_tab"
+                    android:padding="@dimen/image2x" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/image3x"
+                android:background="@drawable/ripple_button_orange"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:layout_marginBottom="@dimen/image4x"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font5x" />
+        </RelativeLayout>
+        <!--</android.support.v7.widget.CardView>-->
+    </FrameLayout>
+</RelativeLayout>

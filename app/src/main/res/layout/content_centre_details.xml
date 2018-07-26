@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.CentreDetailsActivity"
+    tools:showIn="@layout/activity_centre_details">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/RltCentre"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true">
+                <ProgressBar
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"/>
+                <ImageView
+                    android:id="@+id/package_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="@dimen/image2x"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/package_three" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black_overlay"
+                    android:gravity="bottom"
+                    android:padding="@dimen/image4x"
+                    android:shadowColor="@color/colorBlack"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="@string/centre_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font6x"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvAddresslbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="@dimen/image5x"
+                    android:gravity="top"
+                    android:text="@string/centre_address"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/font4x" />
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/image5x"
+                    android:paddingTop="@dimen/image5x"
+                    android:paddingBottom="@dimen/image5x"
+                    android:gravity="top"
+                    android:text="@string/centre_address"
+                    android:layout_toLeftOf="@+id/fltShowMap"
+                    android:layout_toRightOf="@+id/tvAddresslbl"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+                <FrameLayout
+                    android:id="@+id/fltShowMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/image3x"
+                    android:background="@drawable/circle_american">
+
+                    <ImageView
+                        android:layout_width="@dimen/image20x"
+                        android:layout_height="@dimen/image20x"
+                        android:src="@mipmap/marker" />
+                </FrameLayout>
+                </RelativeLayout>
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image5x"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:background="@color/colorWhitegrey"
+                android:text="@string/centre_description"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+            <TextView
+                android:id="@+id/tvAvailableTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available Packages"
+                android:background="@drawable/ripple_button_maroon"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font5x"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:layout_marginTop="@dimen/image3x"
+                android:padding="@dimen/image5x"/>
+
+            <TextView
+                android:id="@+id/tvValueAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image3x"
+                android:background="@color/colorOrange"
+                android:padding="@dimen/image5x"
+                android:text="@string/centre_valueadd"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:textSize="@dimen/font4x"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhitegrey"
+                android:layout_marginRight="@dimen/image3x"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginBottom="@dimen/image3x"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/loutPacking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_packingAvail"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:id="@+id/tvParkAvailable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_parkingStatus"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loutFoodProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loutPacking"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_foodProvider"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:id="@+id/tvFoodAvailable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_parkingStatus"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loutLogistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loutFoodProvider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_Logistic"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:id="@+id/LogisticsAvailable"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_parkingStatus"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/loutLogistics"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvUber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/image5x"
+                        android:gravity="center"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_uber"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font9x"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvOla"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/image5x"
+                        android:gravity="center"
+                        android:padding="@dimen/image5x"
+                        android:text="@string/centre_ola"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font9x"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

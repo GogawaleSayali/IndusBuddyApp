@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image2x"
+        android:text="Question :"
+        android:textColor="@color/colorPrimary"
+        android:alpha="0.9"
+        android:background="@color/colorWhitegreySemi"
+        android:paddingLeft="@dimen/image4x"
+        android:paddingRight="@dimen/image4x"
+        android:textSize="@dimen/font3x" />
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image4x"
+        android:text="Question"
+        android:textColor="@color/colorText"
+        android:background="@color/colorWhitegreySemi"
+        android:textSize="@dimen/font5x" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:paddingLeft="@dimen/image4x"
+        android:paddingRight="@dimen/image4x"
+        android:alpha="0.7"
+        android:background="@color/colorOrange"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- - - - - - - options - - - - - - -"
+        android:textSize="@dimen/font4x"
+        android:textColor="@color/colorText"
+        android:padding="@dimen/image4x"
+        android:gravity="center"
+        android:singleLine="true"
+        android:paddingLeft="@dimen/image4x"
+        android:paddingRight="@dimen/image4x"
+        android:layout_marginTop="@dimen/imagex"/>
+
+    <LinearLayout
+       android:id="@+id/llCheckboxOption"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/image4x"
+        android:paddingRight="@dimen/image4x"
+       android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <CheckBox
+               android:id="@+id/checkboxOptionOne"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+           <CheckBox
+               android:id="@+id/checkboxOptionTwo"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <CheckBox
+               android:id="@+id/checkboxOptionThree"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+           <CheckBox
+               android:id="@+id/checkboxOptionFour"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <CheckBox
+               android:id="@+id/checkboxOptionFive"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+           <CheckBox
+               android:id="@+id/checkboxOptionSix"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <CheckBox
+               android:id="@+id/checkboxOptionSeven"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+           <CheckBox
+               android:id="@+id/checkboxOptionEight"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:padding="@dimen/image2x"
+               android:textColor="@color/colorgrey"
+               android:text="Option 1"/>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <CheckBox
+               android:id="@+id/checkboxOptionNine"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+           <CheckBox
+               android:id="@+id/checkboxOptionTen"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:visibility="visible"
+               android:textColor="@color/colorgrey"
+               android:padding="@dimen/image2x"
+               android:text="Option 1"/>
+       </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

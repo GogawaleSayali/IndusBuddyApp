@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/image3x"
+        android:layout_margin="@dimen/image2x"
+        app:cardCornerRadius="@dimen/image3x">
+
+        <RelativeLayout
+            android:id="@+id/rltView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:padding="@dimen/image3x">
+
+                <TextView
+                    android:id="@+id/tvEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/image3x"
+                    android:alpha="0.8"
+                    android:text="Event Name"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:id="@+id/tv_evcorporate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/image2x"
+                    android:alpha="0.6"
+                    android:visibility="gone"
+                    android:text="Corporate Name"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:id="@+id/tv_evservice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/image2x"
+                    android:layout_marginTop="@dimen/image2x"
+                    android:alpha="0.7"
+                    android:text="Service"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:alpha="0.7"
+                        android:text="Status : "
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:alpha="0.7"
+                        android:text="Status "
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/font4x" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="@dimen/image3x"
+                            android:alpha="0.7"
+                            android:text="Discount : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font4x" />
+
+                        <TextView
+                            android:id="@+id/tvPayPercentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:alpha="0.7"
+                            android:text="Pay type "
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/font4x"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image2x"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:alpha="0.7"
+                        android:text="Validity : "
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:alpha="0.6"
+                        android:text=" From : "
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                    <TextView
+                        android:id="@+id/tvValidity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" date "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:alpha="0.6"
+                        android:text=" To : "
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                    <TextView
+                        android:id="@+id/tvValidityTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" date "
+                        android:textStyle="bold"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image2x"
+                    android:background="@drawable/square_round"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        android:gravity="center"
+                        android:padding="@dimen/image3x"
+                        android:text="Type"
+                        android:textColor="@color/colorBlueDark"
+                        android:textSize="@dimen/font4x" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/tvViewDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:alpha="0.6"
+                        android:gravity="center"
+                        android:padding="@dimen/image3x"
+                        android:text="View Details(i)"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

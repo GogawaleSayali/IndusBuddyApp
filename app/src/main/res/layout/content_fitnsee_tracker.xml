@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.componentclasses.FitnessTrackerComponents"
+    tools:showIn="@layout/activity_fitnsee_tracker">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/welcome_note"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/super_title_text_size"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/login_button"
+                    style="@style/Fitbit.Translucent.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="64dp"
+                    android:paddingLeft="64dp"
+                    android:paddingRight="64dp"
+                    android:paddingStart="64dp"
+                    android:paddingTop="16dp"
+                    android:text="@string/login_with_fitbit"
+                    android:textSize="16sp">
+                </Button>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/fitbit_logo_description"
+                    android:src="@drawable/fitbit_logo"
+                    />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple_button_maroon"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

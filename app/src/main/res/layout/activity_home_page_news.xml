@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main.activities.navmenuactivities.HomePageNewsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/gradient_square"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@drawable/gradient_square"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/ivNewsOne"
+                    android:layout_width="@dimen/image50x"
+                    android:layout_height="@dimen/image50x"
+                    android:src="@drawable/newsone"
+                    android:layout_marginTop="@dimen/image25x"
+                    android:rotation="45"
+                    android:alpha="0.5"
+                    android:layout_alignParentRight="true"/>
+                <ImageView
+                    android:id="@+id/ivNewsTwo"
+                    android:layout_width="@dimen/image40x"
+                    android:layout_height="@dimen/image40x"
+                    android:src="@drawable/newstwo"
+                    android:layout_margin="@dimen/image3x"
+                    android:rotation="-45"
+                    android:alpha="0.2"
+                    android:layout_centerHorizontal="true"/>
+                <ImageView
+                    android:id="@+id/ivNewsThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/newsthree"
+                    android:scaleType="fitStart"
+                    android:alpha="0.3"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="#00000000"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home_page_news" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_action_date" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/image4x"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:text="Your Goal "
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font5x"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image3x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Active Minutes "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvActiveMinGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Distance "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvDistanceGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Steps "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvStepsGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Calories Out "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvCaloriesOutGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Floors "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvFloorsGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

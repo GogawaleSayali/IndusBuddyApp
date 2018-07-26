@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/image3x"
+        android:background="@drawable/square_white">
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="2014"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/font3x"
+            android:padding="@dimen/image3x"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

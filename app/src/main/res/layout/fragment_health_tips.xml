@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.fragments.HealthTips">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_healthTips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_margin="@dimen/image4x"
+        android:scrollbars="vertical" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/image10x"
+        android:layout_marginBottom="@dimen/image10x"
+        android:tint="@color/colorWhite"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="auto"
+        android:visibility="visible"
+        app:srcCompat="@drawable/funnel" />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_square_faint_maroon"
+    android:layout_margin="@dimen/image2x">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/imagex">
+        <TextView
+            android:id="@+id/tv_selecttype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Type *"
+            android:textSize="@dimen/font5x"
+            android:padding="@dimen/image5x"
+            android:textColor="@color/colorBlack"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_selecttype"
+            android:id="@+id/radioGroup">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image5x">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male"
+                android:id="@+id/radioButton"
+                android:checked="false"
+                android:textSize="@dimen/font5x" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/radioButton2"
+                android:checked="false"
+                android:textSize="@dimen/font5x"
+                android:layout_weight="1" />
+            </LinearLayout>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:gravity="center"
+            android:layout_below="@+id/radioGroup"
+            android:textColor="@color/colorWhite"
+            android:padding="@dimen/image5x"
+            android:layout_margin="@dimen/imagex"
+            android:background="@drawable/ripple_button_maroon"
+            android:textSize="@dimen/font4x"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/image4x"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:text="Your Goal :"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font5x"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image3x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fairly Active Minutes "
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvFairlyActiveMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:text="Marginal calories "
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvMarginalCal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:text="-"
+                android:gravity="end"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sedentary Minutes "
+                android:alpha="0.8"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvSedentaryMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Light Active Minutes"
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvLightActiveMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activity Calories"
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvActivityCal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Very Active Minutes"
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvVeryActivMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:text="Calories Out"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvCalOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Active Score"
+                android:alpha="0.8"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvActiveScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calories BMR"
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvCaloriesBMR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Floor"
+                android:textColor="@color/colorText"
+                android:alpha="0.8"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvFloors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distance"
+                android:alpha="0.8"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.7"
+        android:background="@color/colorfaintGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/image4x">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elevation"
+                android:alpha="0.8"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:text=" - "
+            android:textColor="@color/colorText" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvElevation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:text=" -"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

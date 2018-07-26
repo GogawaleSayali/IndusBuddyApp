@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".main.activities.storerecord.DocTypeActivity"
+    tools:showIn="@layout/activity_doc_type">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorYellow">
+                <ImageView
+                    android:id="@+id/ivTestOne"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:alpha="0.2"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/testtube"/>
+                <ImageView
+                    android:id="@+id/ivTestTwo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:alpha="0.2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/test"/>
+                <ImageView
+                    android:id="@+id/ivSuitcase"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:alpha="0.2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/suitcase"/>
+                <ImageView
+                    android:id="@+id/ivPrescription"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:alpha="0.1"
+                    android:src="@drawable/prescription"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/man"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/image30x"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What type of document is that?"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font6x"
+                    android:textColor="@color/colorText"
+                    android:gravity="center"
+                    android:padding="@dimen/image3x"/>
+                <RadioGroup
+                    android:id="@+id/rgDocType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/radioPrescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prescription"/>
+                    <RadioButton
+                        android:id="@+id/radioPathology"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pathology Lab Report"/>
+                    <RadioButton
+                        android:id="@+id/radioDiagnosis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Discharge Summary"/>
+                    <RadioButton
+                        android:id="@+id/radioDoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Doctor Report"/>
+                    <RadioButton
+                        android:id="@+id/radioOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Other Documents"/>
+                    <RadioButton
+                        android:id="@+id/radioHospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hospital Report"/>
+                    <RadioButton
+                        android:id="@+id/radioUltrasound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ultrasound Report"/>
+                    <RadioButton
+                        android:id="@+id/radioDiagnostic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnostic Report"/>
+                    <RadioButton
+                        android:id="@+id/radioHRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HRA Report"/>
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/llButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/image3x"
+                    android:padding="@dimen/image3x">
+
+                    <TextView
+                        android:id="@+id/tvBackBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/image2x"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_button_blue"
+                        android:gravity="center"
+                        android:padding="@dimen/image5x"
+                        android:text="BACK"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/tvNextBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/image2x"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_button_blue"
+                        android:gravity="center"
+                        android:padding="@dimen/image5x"
+                        android:text="FINISH"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

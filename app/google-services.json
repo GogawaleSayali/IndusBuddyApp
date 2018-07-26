@@ -1,0 +1,137 @@
+{
+  "project_info": {
+    "project_number": "224931356937",
+    "firebase_url": "https://tetris-effect-177806.firebaseio.com",
+    "project_id": "tetris-effect-177806",
+    "storage_bucket": "tetris-effect-177806.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224931356937:android:7b8dba2fd5bbfc3b",
+        "android_client_info": {
+          "package_name": "com.dogratech.in.google_services"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224931356937-qqdkcdmt1k7hv8c5fpduhtml9quoi5ec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dogratech.in.google_services",
+            "certificate_hash": "e9df0adefc7c090c46a647d4e936100f0458d73e"
+          }
+        },
+        {
+          "client_id": "224931356937-b3qag93sjoluoh0ebha24gk8ikau1vn4.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "224931356937-gvopmnslb7h0k3cottsirc7dmqv6j8gl.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "224931356937-3moaq1c7nnudb9e4q35tbhgev8bgfvli.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dogratech.in.google_services",
+            "certificate_hash": "5ba1771a985e290eb7d9ca5e1751c306a89c382c"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFtIeVFvMlPnpteqoTYmHqgwD5fJI73A4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224931356937-b3qag93sjoluoh0ebha24gk8ikau1vn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224931356937:android:1498edf382212d20",
+        "android_client_info": {
+          "package_name": "com.dogratech.googlemap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224931356937-b3qag93sjoluoh0ebha24gk8ikau1vn4.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "224931356937-gvopmnslb7h0k3cottsirc7dmqv6j8gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFtIeVFvMlPnpteqoTYmHqgwD5fJI73A4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224931356937:android:668a300410e53f83",
+        "android_client_info": {
+          "package_name": "com.dogratech.indusbuddyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224931356937-b3qag93sjoluoh0ebha24gk8ikau1vn4.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "224931356937-gvopmnslb7h0k3cottsirc7dmqv6j8gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFtIeVFvMlPnpteqoTYmHqgwD5fJI73A4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

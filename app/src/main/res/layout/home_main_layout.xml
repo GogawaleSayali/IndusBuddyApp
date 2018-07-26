@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlUser1"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/rlUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient_square"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvWelcomeNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/image3x"
+                        android:text="@string/welcome_note"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font6x"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivEditProfile"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/viewLineWelcom"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/image2x"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/logo_indus"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/IvEdit"
+                        android:layout_marginLeft="@dimen/image4x"
+                        android:layout_marginRight="60dp"
+                        android:gravity="center"
+                        android:padding="@dimen/image4x"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font6x"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/image2x"
+                    android:padding="@dimen/image6x"
+                    android:src="@drawable/menu_white" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlIVPS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlUser1"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="@dimen/image4x"
+            android:paddingRight="@dimen/image4x">
+
+            <View
+                android:id="@+id/viewLineWelcom"
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/image6x"
+                android:layout_marginRight="@dimen/image6x"
+                android:alpha="0.3"
+                android:background="@color/colorWhite"
+                android:visibility="gone" />
+
+            <!--
+                        <ImageView
+                            android:id="@+id/ivEditProfile"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/viewLineWelcom"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/image2x"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/logo_indus"
+                            android:textColor="@color/colorWhite" />
+            -->
+
+            <LinearLayout
+                android:id="@+id/llRedeem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rlNotifications"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvIvpLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/image4x"
+                    android:gravity="left"
+                    android:text="@string/your_ivps"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+
+                <TextView
+                    android:id="@+id/tvIVPs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/image4x"
+                    android:layout_toRightOf="@+id/tvIvpLable"
+                    android:singleLine="true"
+                    android:text="00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNotifications"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/image4x"
+                android:background="@drawable/circle"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivNotifications"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/image4x"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bell"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font6x" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle_trans"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font3x" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llStoreRecords"
+            android:layout_below="@+id/rlIVPS"
+            android:layout_marginTop="@dimen/image2x"
+            android:alpha="0.9"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/rlHealthCheckUp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/image2x"
+                        android:layout_marginLeft="@dimen/image4x"
+                        android:layout_marginRight="@dimen/image2x"
+                        android:layout_marginTop="@dimen/image2x"
+                        android:layout_weight="1"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite">
+
+                            <ImageView
+                                android:id="@+id/ivHealthCheckup"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="@dimen/image10x"
+                                android:background="@drawable/circle_maroon"
+                                android:padding="@dimen/image12x"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/health_checkup_new" />
+
+                            <TextView
+                                android:id="@+id/tvHealthCheckup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:padding="@dimen/image2x"
+                                android:text="@string/heath_checkup"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/font3x"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/rlHealthGuide"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/image2x"
+                        android:layout_marginLeft="@dimen/image2x"
+                        android:layout_marginRight="@dimen/image4x"
+                        android:layout_marginTop="@dimen/image2x"
+                        android:layout_weight="1"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite">
+
+                            <ImageView
+                                android:id="@+id/ivHealthGuide"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="@dimen/image10x"
+                                android:background="@drawable/circle_maroon"
+                                android:padding="@dimen/image12x"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/health_guide" />
+
+                            <TextView
+                                android:id="@+id/tvHealthGuide"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:padding="@dimen/image2x"
+                                android:text="@string/health_guide"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/font3x"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/rlWellness"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/image4x"
+                        android:layout_marginLeft="@dimen/image4x"
+                        android:layout_marginRight="@dimen/image2x"
+                        android:layout_marginTop="@dimen/image2x"
+                        android:layout_weight="1"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite">
+
+                            <ImageView
+                                android:id="@+id/ivWelness"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="@dimen/image10x"
+                                android:background="@drawable/circle_maroon"
+                                android:padding="@dimen/image12x"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/welness" />
+
+                            <TextView
+                                android:id="@+id/tvWellness"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:padding="@dimen/image2x"
+                                android:text="@string/my_welness"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/font3x"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/rlFitness"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/image4x"
+                        android:layout_marginLeft="@dimen/image2x"
+                        android:layout_marginRight="@dimen/image4x"
+                        android:layout_marginTop="@dimen/image2x"
+                        android:layout_weight="1"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite">
+
+                            <ImageView
+                                android:id="@+id/ivFitness"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="@dimen/image10x"
+                                android:background="@drawable/circle_maroon"
+                                android:padding="@dimen/image12x"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/fitness" />
+
+                            <TextView
+                                android:id="@+id/tvFitness"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:padding="@dimen/image2x"
+                                android:text="@string/fitness_tracker"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/font3x"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--       android:elevation="5dp"
+                    app:cardCornerRadius="7dp"-->
+        <LinearLayout
+            android:id="@+id/llStoreRecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/image4x"
+            android:background="@color/colorWhiteSemi"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/image3x">
+
+            <RelativeLayout
+                android:id="@+id/rlStoreRecords"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_above="@+id/ivStore"
+                    android:background="@drawable/circle_white_border">
+                    <ImageView
+                        android:id="@+id/ivRecords"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/image5x"
+                        android:scaleType="centerInside"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_action_record"
+                        android:textColor="@color/colorPrimaryDark" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/ivStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Store Health Record"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/imagex"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlReminders"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_above="@+id/ivReminder"
+                    android:background="@drawable/circle_white_border">
+                    <ImageView
+                        android:id="@+id/ivRemiders"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:padding="@dimen/image5x"
+                        android:scaleType="centerInside"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_action_reminders"
+                        android:textColor="@color/colorPrimaryDark" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/ivReminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Health Reminders"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/imagex"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCopyRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/image2x"
+            android:text="@string/copyRight"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/something_went_wrong"
+        android:visibility="gone" />
+</RelativeLayout>

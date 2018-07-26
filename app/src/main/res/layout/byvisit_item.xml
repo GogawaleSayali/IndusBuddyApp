@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/image4x">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_parametername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/image4x"
+            android:text="Parameter Name"
+            android:textColor="@color/colorgrey"
+            android:textSize="@dimen/font4x" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/image4x"
+        android:layout_marginTop="@dimen/image4x"
+        android:alpha="0.5"
+        android:text=":"
+        android:textSize="@dimen/font6x" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35">
+
+        <ImageView
+            android:id="@+id/ivEmoji"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/emoji_happy" />
+        <TextView
+            android:id="@+id/tvNA"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/font4x"
+            android:visibility="gone"
+            android:textColor="@color/colorgrey"
+            android:text="NA" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/arrow_top"
+            android:rotation="90"
+            android:alpha="0.2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+</LinearLayout>

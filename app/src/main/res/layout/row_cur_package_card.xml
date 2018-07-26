@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhitegrey"
+    android:paddingRight="@dimen/image2x"
+    android:paddingLeft="@dimen/image2x"
+    android:paddingTop="@dimen/image2x"
+    android:orientation="vertical"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        card_view:cardCornerRadius="@dimen/image3x"
+        android:layout_marginBottom="@dimen/image2x">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/image4x">
+
+            <RelativeLayout
+                android:id="@+id/rlImag"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_backdrop_height">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_backdrop_height"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="@dimen/image2x"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/package_five" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#50000000"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/loutdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlImag"
+                android:background="@drawable/square_semi_brown"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/image4x"
+                    android:text="@string/dummytext"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x"
+                    android:layout_margin="@dimen/imagex"
+                    android:textStyle="normal" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:alpha="0.5"
+                    android:layout_marginLeft="@dimen/image10x"
+                    android:layout_marginRight="@dimen/image10x"
+                    android:background="@color/colorOrange"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.7"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/package_totalamount"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_totalamount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="@dimen/image3x"
+                        android:text=": ₹ 00.00 "
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.7"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/package_paymode"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_paymode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="@dimen/image3x"
+                        android:text=": Status of the payment"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/image4x"
+                android:layout_below="@+id/loutdetails">
+
+                <TextView
+                    android:id="@+id/tvYouMay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple_button_orange"
+                    android:gravity="center"
+                    android:padding="@dimen/image5x"
+                    android:text="@string/youMayAvail"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="@dimen/image3x"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+
+                <TextView
+                    android:id="@+id/tvTestDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/image3x"
+                    android:background="@drawable/ripple_button_maroon"
+                    android:gravity="center"
+                    android:padding="@dimen/image5x"
+                    android:text="@string/btn_testdetails"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

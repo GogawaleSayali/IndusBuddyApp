@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.UnavailedPackageDetailsActivity"
+    tools:showIn="@layout/activity_my_availed_package">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlImag"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/package_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/package_five" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#15000000" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#40000000"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/black_overlay"
+                android:gravity="start|center"
+                android:padding="@dimen/image4x"
+                android:text="@string/package_name"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font5x"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/black_overlay"
+                android:gravity="start|center"
+                android:paddingBottom="@dimen/image4x"
+                android:paddingLeft="@dimen/image4x"
+                android:text="Other info"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font3x"
+                android:textStyle="normal" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/rlImag"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/loutdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlImag"
+            android:layout_marginTop="@dimen/image4x"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/image2x"
+                android:paddingBottom="@dimen/image2x"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.7"
+                    android:gravity="start"
+                    android:padding="@dimen/image4x"
+                    android:alpha="0.6"
+                    android:text="@string/package_totalamount"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/image3x"
+                    android:text=" ₹ 00.00 "
+                    android:alpha="0.5"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:alpha="0.3"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:background="@color/colorgrey" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/image2x"
+                android:paddingBottom="@dimen/image2x"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.7"
+                    android:gravity="start"
+                    android:padding="@dimen/image4x"
+                    android:alpha="0.6"
+                    android:text="@string/package_paymode"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/image3x"
+                    android:alpha="0.5"
+                    android:text=" Mode of the payment"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:alpha="0.3"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:background="@color/colorgrey" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_testdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/image3x"
+                android:background="@drawable/ripple_button_orange"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="@string/btn_testdetails"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font5x"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_getAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_button_maroon"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="@string/my_appointment"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font5x"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

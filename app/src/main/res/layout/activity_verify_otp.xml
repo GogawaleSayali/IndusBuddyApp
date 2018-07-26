@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    tools:context=".main.activities.signinsignup.VerifyOtpActivity">
+
+    <LinearLayout
+        android:id="@+id/Lout_Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/logo_indus"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/image10x"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_above="@+id/lout_otpbox"
+            android:padding="@dimen/image4x">
+
+            <TextView
+                android:id="@+id/txt_OTPMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/otp_getOTP"
+                android:textSize="@dimen/font6x"
+                android:textStyle="normal"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/image5x"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/txt_OTPSuggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/otp_suggestion"
+                android:textSize="@dimen/font4x"
+                android:textStyle="italic"
+                android:textColor="@color/colorgrey"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lout_otpbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image6x"
+                android:background="#00000000"
+                android:hint="O T P"
+                android:textSize="@dimen/font11x"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:maxLength="6"
+                android:textColor="@color/textbox_pinview"
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@color/colorPrimaryDark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom|center"
+            android:layout_marginTop="@dimen/image20x"
+            android:layout_below="@+id/lout_otpbox"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/image10x"
+                android:paddingRight="@dimen/image10x"
+                android:layout_margin="@dimen/image3x">
+
+                <Button
+                    android:id="@+id/btn_SubmitOTP"
+                    style="@style/ButtonStyle"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ripple_button_maroon"
+                    android:gravity="center"
+                    android:text="@string/otp_submit"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/image20x"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitmerOtpNotReceive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:padding="@dimen/image3x"
+                    android:text="@string/otp_guest_dontReceivedOTp"
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="@dimen/image10x"
+                android:paddingRight="@dimen/image10x"
+                android:layout_margin="@dimen/image3x">
+
+                <Button
+                    android:id="@+id/btn_ResendOtp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_button_orange"
+                    android:text="@string/otp_resend"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    android:padding="@dimen/image4x"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.navmenuactivities.AboutUsActivity"
+    tools:showIn="@layout/activity_about_us">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/image2x">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/indus_logo"
+            android:alpha="0.15"
+            android:scaleType="centerCrop"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/tvBottomText">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us_text"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+        </ScrollView>
+        <TextView
+            android:id="@+id/tvBottomText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/about_us_quotes"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/font4x"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

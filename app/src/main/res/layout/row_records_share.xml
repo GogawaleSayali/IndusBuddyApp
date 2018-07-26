@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhitegrey">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/imagex"
+        android:elevation="@dimen/image4x"
+        android:padding="@dimen/image4x"
+        card_view:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image6x">
+
+                <ImageView
+                    android:id="@+id/ivFileIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_action_file_icon" />
+                <TextView
+                    android:id="@+id/tvFileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ivFileIcon"
+                    android:layout_toLeftOf="@+id/tvRecordDate"
+                    android:layout_marginRight="@dimen/image2x"
+                    android:text="document name"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font3x"
+                    android:padding="@dimen/image3x"/>
+                <TextView
+                    android:id="@+id/tvRecordDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="date"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font3x"
+                    android:alpha="0.7"
+                    android:paddingTop="@dimen/image3x"
+                    android:paddingBottom="@dimen/image3x"
+                    android:paddingLeft="@dimen/image6x"
+                    android:paddingRight="@dimen/image6x" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/image3x"
+                    android:layout_below="@+id/ivFileIcon">
+                    <ImageView
+                        android:id="@+id/ivViewIcon"
+                        android:layout_width="55dp"
+                        android:layout_height="40dp"
+                        android:padding="@dimen/image2x"
+                        android:layout_toLeftOf="@+id/ivShareIcon"
+                        android:alpha="0.8"
+                        android:background="@drawable/ripple_button_blue"
+                        android:layout_marginRight="@dimen/image4x"
+                        android:src="@drawable/view" />
+                    <ImageView
+                        android:id="@+id/ivShareIcon"
+                        android:layout_width="55dp"
+                        android:layout_height="40dp"
+                        android:alpha="0.8"
+                        android:padding="@dimen/image2x"
+                        android:background="@drawable/ripple_button_green"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/image4x"
+                        android:src="@drawable/ic_menu_share" />
+                </RelativeLayout>
+            </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

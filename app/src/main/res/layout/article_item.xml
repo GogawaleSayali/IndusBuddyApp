@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhitegrey"
+    android:padding="@dimen/imagex">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:layout_margin="@dimen/image2x"
+        android:orientation="horizontal"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/image2x">
+
+            <TextView
+                android:id="@+id/tvArticleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_round_tab"
+                android:gravity="center"
+                android:padding="@dimen/image4x"
+                android:text="Here is the name of the Article, It may be multiline"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x"
+                android:alpha="0.8"
+                android:textStyle="bold" />
+            <View
+                android:id="@+id/viewline"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/image2x"
+                android:layout_marginBottom="@dimen/image2x"
+                android:layout_below="@+id/tvArticleTitle"
+                android:background="@color/colorWhitegrey"/>
+            <ImageView
+                android:id="@+id/ivArticleImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewline"
+                android:scaleType="fitCenter"
+                android:background="@color/colorWhitegrey"
+                android:src="@drawable/package_five" />
+
+            <TextView
+                android:id="@+id/tvPublishDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivArticleImage"
+                android:paddingBottom="@dimen/image2x"
+                android:paddingTop="@dimen/image2x"
+                android:layout_marginLeft="@dimen/image2x"
+                android:layout_marginRight="@dimen/image2x"
+                android:visibility="gone"
+                android:text="Published on: 24 January 2018"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font3x"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPublishDate"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font3x"
+                android:padding="@dimen/image2x"
+                android:alpha="0.7"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/tvAddedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDescription"
+                android:paddingBottom="@dimen/image2x"
+                android:paddingTop="@dimen/image2x"
+                android:text="Added By - "
+                android:visibility="gone"
+                android:gravity="end"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font3x"
+                android:textStyle="italic" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.fitness.SetGoalActivity"
+    tools:showIn="@layout/activity_set_goal">
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvIcan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I will take"
+            android:paddingLeft="@dimen/image10x"
+            android:layout_marginTop="@dimen/image5x"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/font8x"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/tvIcan"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvEight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="8,000"
+                    android:layout_marginRight="@dimen/image3x"
+                    android:layout_marginTop="@dimen/image6x"
+                    android:layout_marginBottom="@dimen/image3x"
+                    android:layout_marginLeft="@dimen/image6x"
+                    android:textSize="@dimen/font11x"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/ripple_button_maroon"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tvTen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="10,000"
+                    android:layout_marginRight="@dimen/image6x"
+                    android:layout_marginTop="@dimen/image6x"
+                    android:layout_marginBottom="@dimen/image3x"
+                    android:layout_marginLeft="@dimen/image3x"
+                    android:textSize="@dimen/font11x"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/ripple_button_orange"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvTwelve"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="12,000"
+                        android:layout_marginRight="@dimen/image3x"
+                        android:layout_marginTop="@dimen/image3x"
+                        android:layout_marginBottom="@dimen/image6x"
+                        android:layout_marginLeft="@dimen/image6x"
+                        android:textSize="@dimen/font11x"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/ripple_button_green"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/tvMore"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="···"
+                        android:layout_marginRight="@dimen/image6x"
+                        android:layout_marginTop="@dimen/image3x"
+                        android:layout_marginBottom="@dimen/image6x"
+                        android:layout_marginLeft="@dimen/image3x"
+                        android:textSize="@dimen/font11x"
+                        android:background="@drawable/square_white"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvEachDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="steps each day"
+                    android:paddingLeft="@dimen/image10x"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font8x"/>
+                <ImageView
+                    android:id="@+id/ivSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/image3x"
+                    android:alpha="0.5"
+                    android:src="@drawable/steps_icon" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlDialodSetGoal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/image20x"
+                android:background="@drawable/black_dialog_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image5x"
+                    android:text="I will take"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+
+                <EditText
+                    android:id="@+id/etSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image5x"
+                    android:background="@drawable/black_text_bg"
+                    android:padding="@dimen/image5x"
+                    android:hint="Enter steps goal"
+                    android:textColorHint="@color/colorgrey"
+                    android:inputType="number"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/image20x"
+                    android:padding="@dimen/image5x"
+                    android:text="Steps each day"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font5x" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/image5x"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/image7x"
+                        android:text="CANCEL"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font5x" />
+
+                    <TextView
+                        android:id="@+id/tvSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/image7x"
+                        android:text="SAVE"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font5x" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlProgressView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

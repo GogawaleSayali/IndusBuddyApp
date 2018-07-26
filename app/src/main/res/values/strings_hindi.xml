@@ -1,0 +1,177 @@
+<resources>
+
+    <string name="action_settings_h">Settings</string>
+
+    <string name="title_activity_login_screen_h">Login</string>
+    <string name="title_activity_verifyOtp_screen_h">Verify OTP</string>
+    <string name="title_activity_register_screen_h">Verify Details</string>
+    <string name="title_activity_home_h">Home</string>
+
+    <string name="login_enterhint_h">User Id</string>
+    <string name="login_sendotp_h">Send OTP</string>
+    <string name="login_or_h">Or</string>
+    <string name="login_registeration_h">Verify yourself with \"Indus Buddy\"</string>
+    <string name="otp_getOTP_h">Sit back &amp; Relax! while we verify you</string>
+    <string name="otp_suggestion_h">(Enter the OTP below in case if we fail to detect SMS automatically)</string>
+    <string name="otp_guest_error_otp_h">Invalid OTP *</string>
+    <string name="otp_guest_otpMobileno_h">Please check the Mobile Number</string>
+    <string name="otp_gest_otp_timer_h">00:00</string>
+    <string name="otp_guest_dontReceivedOTp_h">Didn\'t receive OTP ?</string>
+    <string name="otp_submit_h">\t\t\tSubmit\t\t\t</string>
+    <string name="otp_resend_h">\t\t\tResend OTP\t\t\t</string>
+    <string name="register_or_h">--- OR ---</string>
+    <string name="register_user_h">\t\tVerify\t\t</string>
+    <string name="register_fname_h">First Name</string>
+    <string name="register_lname_h">Last Name</string>
+    <string name="register_dob_h">DOB</string>
+    <string name="register_mobile_h">Mobile</string>
+    <string name="register_emailid_h">Email Id</string>
+    <string name="Guest_Otp_Timer_h">00:00</string>
+    <string name="Guest_Error_OtP_h">Invalid OTP *</string>
+    <string name="login_empty_field_h">User id can not be empty !</string>
+    <string name="login_invalid_username_h">Please enter valid email or mobile number !</string>
+    <string name="login_invalid_email_h">Please enter valid email Id !</string>
+    <string name="login_invalid_mobile_h">Please enter valid mobile number !</string>
+    <string name="netConnection_h">Please check  your internet connection !</string>
+    <string name="register_name_empty_h">Please enter valid name !</string>
+    <string name="register_empty_date_h">Date of birth can not be empty !</string>
+    <string name="register_invalid_date_h">Please enter valid date of birth !</string>
+    <string name="register_empty_mobile_h">Mobile number can not be empty !</string>
+    <string name="register_invalid_mobile_h">Please enter valid mobile number with country code !</string>
+    <string name="register_empty_email_h">Email Id can not be empty !</string>
+    <string name="register_invalid_email_h">Please enter valid Email Id !</string>
+    <string name="Userid_h">&#xf007;</string>
+    <string name="statuse_code_0_h">0</string>
+    <string name="shars_userid_h">shars_userid</string>
+    <string name="shars_user_otp_h">shars_user_otp</string>
+    <string name="copyRight_h">copyright@2018 | privacy | all rights reserved</string>
+    <!-- <string name="_h"></string>-->
+
+    <string name="action_add_favourite_h">Add to Favourites</string>
+    <string name="action_play_next_h">Play Next</string>
+    <string name="backdrop_title_h">Health Care</string>
+    <string name="backdrop_subtitle_h">This re top 20 packages that we offering</string>
+    <string-array name="gender_h">
+        <item>Select Gender</item>
+        <item>Female</item>
+        <item>Male</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="beneficiary_name_h">
+        <item>Select Beneficiary</item>
+        <item>Beneficiary 1</item>
+        <item>Beneficiary 2</item>
+        <item>Beneficiary 3</item>
+    </string-array>
+    <string-array name="beneficiary_relation_h">
+        <item>Select Beneficiary Relation</item>
+        <item>Beneficiary Relation 1</item>
+        <item>Beneficiary Relation 2</item>
+        <item>Beneficiary Relation 3</item>
+    </string-array>
+    <string-array name="visits_h">
+        <item>Select Visit</item>
+        <item>Visit 1 - 12 July 2015</item>
+        <item>Visit 2 - 24 August 2016</item>
+        <item>Visit 3 - 05 March 2018</item>
+    </string-array>
+    <string name="title_activity_centre_locator_h">CentreLocatorActivity</string>
+    <string name="title_activity_my_un_availed_package_h">MyUnAvailedPackageActivity</string>
+    <string name="acitity_my_centre_locator_h">Centre Locator</string>
+    <string name="acitity_my_availed_packages_h">Unavailed Packages</string>
+    <string name="acitity_my_availed_package_h">My Unavailed Package</string>
+    <string name="title_activity_my_availed_package_h">MyAvailedPackageActivity</string>
+    <string name="package_name_h">Package Name</string>
+    <string name="package_addontest_h">Add on Test :</string>
+    <string name="package_totalamount_h">Total Amount :</string>
+    <string name="package_paymode_h">Pay Mode :</string>
+    <string name="btn_testdetails_h">Test Details</string>
+    <string name="btn_appointment_h">Get Appointment</string>
+    <string name="powered_by_h">Powered by,\nDogra Technologies Pvt. Ltd.</string>
+    <string name="rate_our_app_h">Rate Our App</string>
+    <string name="help_centre_h">Help Centre</string>
+    <string name="about_us_h">About Us</string>
+    <string name="logout_h">Logout</string>
+    <string name="title_activity_my_health_chek_up_h">MyHealthChekUpActivity</string>
+    <string name="title_activity_test_details_h">Test Details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment_h">Hello blank fragment</string>
+    <string name="title_activity_my_appointment_h">MyAppointmentActivity</string>
+    <string name="myAppo_appno_h">Appt Number</string>
+    <string name="myAppo_apptype_h">Appt Type</string>
+    <string name="myAppo_package_type_h">Package Type</string>
+    <string name="myAppo_addontest_h">Add on Test</string>
+    <string name="myAppo_benifitest_h">Beneficiary Name</string>
+    <string name="myAppo_benifirelation_h">Beneficiary Relation</string>
+    <string name="myAppo_appdatetime_h">App Date and Time</string>
+    <string name="myAppo_checkupcentre_h">Checkup Centre</string>
+    <string name="myAppo_appsstatus_h">Appt Status</string>
+    <string name="myAppo_rescheduleapp_h">Reschedule Appointment</string>
+    <string name="title_activity_schedule_appointment_h">ScheduleAppointmentActivity</string>
+    <string name="title_activity_centre_details_h">Centre Details</string>
+    <string name="centre_name_h">Centre Name</string>
+    <string name="centre_address_h">Address : 123 6th St.Melbourne, FL 32904</string>
+    <string name="centre_description_h">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</string>
+    <string name="dummytext_h">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, </string>
+    <string name="marker_h">&#xf3c5;</string>
+    <string name="centre_valueadd_h">Value Add</string>
+    <string name="centre_packingAvail_h">Parking Available :</string>
+    <string name="centre_parkingStatus_h">Coming soon</string>
+    <string name="centre_foodProvider_h">Food Providers Service Available :</string>
+    <string name="centre_Logistic_h">Logistics Available :</string>
+    <string name="centre_uber_h">Uber</string>
+    <string name="centre_ola_h">Ola</string>
+    <string name="title_activity_show_on_maps_h">Centre on Map</string>
+    <string name="title_activity_my_availed_packages_h">MyAvailedPackagesActivity</string>
+    <string name="feedback_h">Feedback</string>
+    <string name="title_activity_feedback_h">FeedbackActivity</string>
+    <string name="title_activity_get_appointment_h">GetAppointmentActivity</string>
+    <string name="title_activity_my_health_guide_h">MyHealthGuideActivity</string>
+    <string name="title_activity_test_av_h">TestAVActivity</string>
+    <string name="my_appointment_h">My Appointment</string>
+    <string name="track_para_h">Track\n Parameter</string>
+    <string name="hra_h">HRA</string>
+    <string name="health_report_h">Health\n Report</string>
+    <string name="store_records_h">Store\n Records</string>
+    <string name="doctor_comment_h">Doctor\n Comments</string>
+    <string name="health_tips_h">Health\n Tips</string>
+    <string name="test_bar_chart_h">Test Related Bar Diagram</string>
+
+    <!--Font awesome icons-->
+    <string name="fa_user_icon_h">&#xf007;</string>
+    <string name="fa_package_icon_h">&#xf466;</string>
+    <string name="fa_calendar_icon_h">&#xf073;</string>
+    <string name="fa_location_icon_h">&#xf3c5;</string>
+    <string name="visitWise_h">By Visit</string>
+    <string name="paramWise_h">By Parameter</string>
+    <string name="title_activity_graph_by_visit_h">GraphByVisitActivity</string>
+    <string name="file_unicode_h">&#xf15c;</string>
+    <string name="file_share_h">&#xf1e0;</string>
+    <string name="file_name_h">Report</string>
+    <string name="plusIcon_h">&#xf067;</string>
+
+    <!--Select Image from gallery and camera-->
+    <string name="Camera_Add_Photo_h">Add Photo!</string>
+    <string name="Camera_Take_Photo_h">Take Photo</string>
+    <string name="Choose_from_Gallery_h">Choose from Gallery</string>
+    <string name="Camera_Cancel_h">Cancel</string>
+    <string name="Camera_Select_File_h">Select File</string>
+    <string name="Camera_Remove_h">Remove</string>
+    <string name="dr_cooment_title_h">Doctor Comments</string>
+
+    <!--Shared Prefs-->
+    <string name="IndusBuddySharedPrefs_h">IndusBUddySHaredPrefs</string>
+    <string name="isLoggedin_h">H isLoggedIn</string>
+    <string name="heath_checkup_h">H Heath Checkup</string>
+    <string name="health_guide_h">H Health Guide</string>
+    <string name="my_welness_h">H My Wellness</string>
+    <string name="fitness_tracker_h">H Fitness Tracker</string>
+    <string name="welcome_note_h">H Welcome ,</string>
+    <string name="your_ivps_h">H Your IVP :</string>
+    <string name="articles_h">H Articles</string>
+    <string name="mini_checkup_h">H Checkup</string>
+    <string name="mini_guide_h">H Guide</string>
+    <string name="mini_wellness_h">H Wellness</string>
+    <string name="mini_fitness_h">H Fitness</string>
+</resources>

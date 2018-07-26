@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhitegrey">
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:padding="@dimen/image5x"
+        android:gravity="center"
+        android:textColor="@color/textbox_pinview"
+        android:textSize="@dimen/font5x"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorWhite"
+        android:alpha="0.3"
+        android:layout_below="@+id/tvGender"/>
+</RelativeLayout>

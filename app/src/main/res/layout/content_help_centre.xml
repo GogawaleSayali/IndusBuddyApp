@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.navmenuactivities.HelpCentreActivity"
+    tools:showIn="@layout/activity_help_centre">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorWhite">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhitegrey"></FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/image4x">
+
+        <ImageView
+            android:id="@+id/ivIndusLoso"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="@dimen/image4x"
+            android:src="@drawable/indus_logo_new" />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIndusLoso"
+            android:elevation="@dimen/image5x"
+            app:cardCornerRadius="@dimen/image3x">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/image3x">
+                <TextView
+                    android:id="@+id/tvGetInTouch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image2x"
+                    android:gravity="center"
+                    android:text="@string/getintouch"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="@dimen/font5x"
+                    android:textStyle="normal" />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.5"
+                    android:background="@color/colorPrimaryDark"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image2x"
+                    android:text="Address :"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font5x"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image2x"
+                    android:text="@string/indus_address"
+                    android:textColor="@color/colorSemiGrey"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image2x"
+                    android:text="Phone :"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font5x"
+                    android:textStyle="normal"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:padding="@dimen/image2x"
+                    android:text="@string/indus_phone"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:padding="@dimen/image2x"
+                    android:text=","
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+                <TextView
+                    android:id="@+id/tv_phone_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:padding="@dimen/image2x"
+                    android:text="@string/indus_phone1"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/image2x"
+                        android:text="Fax :"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font5x"
+                        android:textStyle="normal"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.7"
+                        android:padding="@dimen/image2x"
+                        android:text="@string/indus_fax"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image2x"
+                    android:text="Email :"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font5x" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:padding="@dimen/image2x"
+                    android:text="@string/indus_email"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/font4x" />
+            </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

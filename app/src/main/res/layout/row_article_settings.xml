@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvArticlePrefName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image5x"
+        android:text="@string/articlePreferences"
+        android:textColor="@color/colorText"
+        android:layout_toLeftOf="@+id/checkBoxArticlePrefs"
+        android:textSize="@dimen/font5x" />
+        <CheckBox
+            android:id="@+id/checkBoxArticlePrefs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/image2x"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorgrey"
+        android:alpha="0.7"/>
+</LinearLayout>

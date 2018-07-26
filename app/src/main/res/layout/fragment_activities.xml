@@ -1,0 +1,420 @@
+                                                                                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".main.activities.fitness.fitbitintegration.fragments.ActivitiesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:id="@+id/scrollFitness"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llFitnessGaolAndTimeLine">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <!--
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="@dimen/image5x">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/image2x"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivSteps"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/image3x"
+                                android:alpha="0.5"
+                                android:src="@drawable/steps_icon" />
+
+                            <TextView
+                                android:id="@+id/tvStepsCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom|center_horizontal"
+                                android:text="-"
+                                android:shadowColor="@color/black_overlay"
+                                android:shadowDx="5"
+                                android:shadowDy="5"
+                                android:shadowRadius="5"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font5x"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvStepsCountLbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:gravity="center_horizontal"
+                                android:padding="@dimen/imagex"
+                                android:text="Steps"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font5x"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/image2x"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivBurn"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/image3x"
+                                android:alpha="0.5"
+                                android:src="@drawable/calories_burn" />
+
+                            <TextView
+                                android:id="@+id/tvCaloriesBurn"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom|center_horizontal"
+                                android:text="-"
+                                android:shadowColor="@color/black_overlay"
+                                android:shadowDx="5"
+                                android:shadowDy="5"
+                                android:shadowRadius="5"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font5x"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvCaloriesBurnLbl"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.7"
+                                android:gravity="center_horizontal"
+                                android:padding="@dimen/imagex"
+                                android:text="Calories"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font5x"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--</android.support.v7.widget.CardView>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progressBarGoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_toLeftOf="@+id/tvTodaysGoal"
+                        app:rcBackgroundColor="#00000000"
+                        app:rcBackgroundPadding="5dp"
+                        app:rcMax="100.0"
+                        app:rcProgress="51.0"
+                        app:rcProgressColor="@color/colorGreen"
+                        app:rcRadius="15dp"
+                        app:rcReverse="false"
+                        android:layout_centerVertical="true"
+                        app:rcSecondaryProgress="100.0"
+                        app:rcSecondaryProgressColor="@color/colorfaintGrey" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginLeft="@dimen/image4x"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/image3x"
+                        android:text="Goal Completed"
+                        android:alpha="0.6"
+                        android:shadowColor="#000"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:visibility="gone"
+                        android:shadowRadius="10"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font4x"
+                        android:textStyle="normal" />
+                    <TextView
+                        android:id="@+id/tvTodaysGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginRight="@dimen/image2x"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/image2x"
+                        android:text="50%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font4x"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/colorBlue"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivHeart"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/image2x"
+                            android:alpha="0.5"
+                            android:padding="@dimen/imagex"
+                            android:src="@drawable/heartrate" />
+
+                        <TextView
+                            android:id="@+id/tvHeartRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="- bpm"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font4x"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivSleep"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/image2x"
+                            android:alpha="0.5"
+                            android:src="@drawable/sleep" />
+
+                        <TextView
+                            android:id="@+id/tvSleepHrs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="- hr"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font4x"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivWeight"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/image2x"
+                            android:alpha="0.5"
+                            android:padding="@dimen/imagex"
+                            android:src="@drawable/weight" />
+
+                        <TextView
+                            android:id="@+id/tvWeightKgs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:padding="@dimen/image2x"
+                            android:text="75 Kgs"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font4x"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/image2x">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvToday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/square_half_round_tab_left_colored"
+                                android:gravity="center"
+                                android:padding="@dimen/image4x"
+                                android:text="TODAY"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font4x" />
+
+                            <TextView
+                                android:id="@+id/tvGoal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/square_half_round_tab_right_white"
+                                android:gravity="center"
+                                android:padding="@dimen/image4x"
+                                android:text="GOAL"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/font4x" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llToday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/image2x">
+                            <include layout="@layout/fitness_today_layout" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llGoal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/image2x">
+
+                            <include layout="@layout/fitness_goal_layout" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llFitnessGaolAndTimeLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSetGoal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/image2x"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button_maroon"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="@string/setGoal"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font4x" />
+
+            <TextView
+                android:id="@+id/tvTimeLine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/image2x"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button_green"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="@string/timeLine"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlProgressView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#99000000"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

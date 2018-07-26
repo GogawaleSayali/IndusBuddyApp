@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.componentclasses.WellnessComponents"
+    tools:showIn="@layout/activity_wellness">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <goldzweigapps.tabs.View.EasyTabs
+        android:id="@+id/EasyTabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/something_went_wrong"
+        android:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/image20x"
+        android:layout_marginRight="@dimen/image20x"
+        android:padding="@dimen/image5x">
+
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            app:mk_color="@color/colorWhite"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:mk_type="FishSpinner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please wait..."
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/colorAmericanBlueDark"
+            android:textSize="@dimen/font7x" />
+    </LinearLayout>
+</RelativeLayout>

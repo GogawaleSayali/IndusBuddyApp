@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.activities.fitness.fitbitintegration.fragments.TimeLineinfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:alpha="0.5"
+                        android:background="@color/colorText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/image3x"
+                        android:layout_marginTop="@dimen/image3x"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/image4x"
+                        android:text="DATE"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font3x"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/image3x"
+                        android:layout_marginLeft="@dimen/image3x"
+                        android:layout_marginTop="@dimen/image3x"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/image4x"
+                        android:text="TIME LINE DATA"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font3x"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="01"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepesOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="02"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepesTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="03"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepesThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberFour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="04"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameFour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepesFour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesFour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="05"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepsFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesFive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberSix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="06"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameSix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepsSix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesSix"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDateNumberSeven"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/image4x"
+                            android:text="07"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font6x"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDayNameSeven"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:text="SUN"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="@dimen/image6x"
+                            android:background="@drawable/circle_american" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStepsSeven"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/image4x"
+                            android:text="Steps : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+
+                        <TextView
+                            android:id="@+id/tvCaloriesSeven"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/image4x"
+                            android:paddingLeft="@dimen/image4x"
+                            android:text="Calories : "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font3x" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:alpha="0.1"
+                    android:background="@color/colorText" />
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

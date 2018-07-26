@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.CentreLocatorFragment">
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        android:background="@drawable/square_round_tab"
+        app:defaultQueryHint="Search"
+        android:gravity="center"
+        android:layout_margin="@dimen/image4x"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/searchView"/>
+
+</RelativeLayout>

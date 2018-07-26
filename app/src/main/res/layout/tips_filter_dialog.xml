@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhitegrey">
+
+    <TextView
+        android:id="@+id/tv_titlefilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image5x"
+        android:gravity="center"
+        android:text="Choose Filter Criteria"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font5x"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="normal" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_titlefilter"
+        tools:listitem="@layout/row_tips_filter"
+        android:dividerHeight="1dp"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_button_orange"
+        android:text="Submit"
+        android:layout_below="@+id/lv"
+        android:layout_margin="@dimen/image4x"
+        android:textColor="@color/colorWhite"/>
+
+
+</RelativeLayout>

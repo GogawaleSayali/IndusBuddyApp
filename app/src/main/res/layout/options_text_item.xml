@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image2x"
+        android:text="Question :"
+        android:textColor="@color/colorPrimary"
+        android:alpha="0.9"
+        android:background="@color/colorWhitegreySemi"
+        android:paddingLeft="@dimen/image4x"
+        android:paddingRight="@dimen/image4x"
+        android:textSize="@dimen/font3x" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image4x"
+        android:text="Question"
+        android:background="@color/colorWhitegreySemi"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font5x" />
+
+    <EditText
+        android:id="@+id/etAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="130dp"
+        android:layout_marginTop="@dimen/image4x"
+        android:background="@drawable/square_round"
+        android:gravity="left"
+        android:textSize="@dimen/font4x"
+        android:hint="Type your answer here ..."
+        android:padding="@dimen/image4x"
+        android:imeOptions="actionDone"
+        android:layout_marginLeft="@dimen/image4x"
+        android:layout_marginRight="@dimen/image4x"
+        android:textColor="@color/textbox_pinview" />
+</LinearLayout>

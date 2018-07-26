@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".main.activities.healthcheckup.ApptDetailsActivity"
+    tools:showIn="@layout/activity_appt_details">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_testdetails"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/image2x">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:padding="@dimen/image5x"
+                    app:cardCornerRadius="@dimen/image5x">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:gravity="center"
+                            android:padding="@dimen/image2x"
+                            android:text="- Appointment Date -"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/font3x" />
+
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="0.3dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/image4x"
+                            android:alpha="0.5"
+                            android:background="@color/colorBlack" />
+
+                        <TextView
+                            android:id="@+id/tv_app_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/image4x"
+                            android:gravity="center"
+                            android:padding="@dimen/image3x"
+                            android:text="Appt. Date "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/font10x" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/square_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.75"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/myAppo_appno"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_app_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="-"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/square_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.75"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/package_name"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_app_package"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        android:gravity="start"
+                        android:padding="@dimen/image3x"
+                        android:text="-"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/square_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.75"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/myAppo_benifitest"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_app_beneficiaryName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        android:text="-"
+                        android:gravity="start"
+                        android:padding="@dimen/image3x"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/square_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.75"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/myAppo_benifirelation"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_app_beneficiaryRelation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        android:gravity="start"
+                        android:padding="@dimen/image3x"
+                        android:text="-"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/square_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0.75"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/myAppo_appsstatus"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_app_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="@dimen/image3x"
+                        android:text=" -"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/square_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="start"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/myAppo_apps_centre"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_app_centre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        android:padding="@dimen/image3x"
+                        android:text="-"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/font4x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loutCheckCentre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:background="@drawable/ripple_button_orange"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/myAppo_checkupcentre"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font4x" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_testdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/image3x"
+        android:background="@drawable/ripple_button_maroon"
+        android:gravity="center"
+        android:padding="@dimen/image5x"
+        android:text="@string/myAppo_rescheduleapp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font5x" />
+
+</RelativeLayout>

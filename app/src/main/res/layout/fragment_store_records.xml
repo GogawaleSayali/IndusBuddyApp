@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthguide.guidefragments.HealthReportsFragment">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ListView
+        android:id="@+id/lvReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/image3x"
+        android:divider="@color/colorWhitegrey"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/row_report_file" />
+
+    <TextView
+        android:id="@+id/tvNoReportsMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:gravity="center"
+        android:text="No reports available yet!!"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font3x"
+        android:visibility="gone" />
+
+</RelativeLayout>

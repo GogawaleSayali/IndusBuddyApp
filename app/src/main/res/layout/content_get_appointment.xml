@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.dogratech.indusbuddyapp.main.componentclasses.GetAppointmentComponents"
+    tools:showIn="@layout/activity_get_appointment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/image4x">
+
+            <LinearLayout
+                android:id="@+id/llChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCalendarIcon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/image2x"
+                        android:background="@drawable/circle_white"
+                        android:gravity="center"
+                        android:padding="@dimen/image2x"
+                        android:text="@string/fa_calendar_icon"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/font10x" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Change Date"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCentreIcon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/image2x"
+                        android:background="@drawable/circle_white"
+                        android:gravity="center"
+                        android:padding="@dimen/image2x"
+                        android:text="@string/marker"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/font10x" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Change Centre"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/loutCheckCentre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image4x"
+            android:layout_marginRight="@dimen/image4x"
+            android:layout_marginTop="@dimen/image4x"
+            android:background="@drawable/ripple_button_orange"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/image4x"
+                android:text="Select Checkup centre"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font4x" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image4x"
+            android:layout_marginRight="@dimen/image4x"
+            android:layout_marginTop="@dimen/image4x"
+            android:background="@drawable/square_white">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="0.5"
+                android:alpha="0.7"
+                android:gravity="center|right"
+                android:paddingBottom="@dimen/image4x"
+                android:paddingTop="@dimen/image4x"
+                android:text="Appt No : "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvAppointmentNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="0.5"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:paddingBottom="@dimen/image4x"
+                android:paddingTop="@dimen/image4x"
+                android:text="13546"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image4x"
+            android:layout_marginRight="@dimen/image4x"
+            android:layout_marginTop="@dimen/image4x"
+            android:background="@drawable/square_white"
+            android:orientation="vertical"
+            android:padding="@dimen/image2x">
+
+            <TextView
+                android:id="@+id/tvPackageName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:padding="@dimen/image3x"
+                android:text="Name of the package"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image4x"
+            android:layout_marginRight="@dimen/image4x"
+            android:layout_marginTop="@dimen/image4x"
+            android:background="@drawable/square_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/image2x"
+                android:padding="@dimen/image2x"
+                android:text="@string/marker"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font6x"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvCentreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/image4x"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:padding="@dimen/image3x"
+                android:text="Name of the centre "
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image4x"
+            android:layout_marginRight="@dimen/image4x"
+            android:layout_marginTop="@dimen/image4x"
+            android:background="@drawable/square_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/image2x"
+                android:padding="@dimen/image2x"
+                android:text="@string/marker"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font6x"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDateAndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="Set date of appointment"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image4x"
+            android:layout_marginRight="@dimen/image4x"
+            android:layout_marginTop="@dimen/image4x"
+            android:background="@drawable/square_white"
+            android:padding="@dimen/imagex">
+
+            <TextView
+                android:id="@+id/tvBeneficiaryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/image2x"
+                android:padding="@dimen/image2x"
+                android:text="@string/fa_user_icon"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font6x"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tvBenLable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvBeneficiaryIcon">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1.5"
+                    android:alpha="0.7"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/image3x"
+                    android:paddingTop="@dimen/image3x"
+                    android:text="@string/myAppo_benifitest"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="@color/colorgrey" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:alpha="0.7"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/image3x"
+                    android:paddingRight="@dimen/image3x"
+                    android:paddingTop="@dimen/image3x"
+                    android:text="@string/myAppo_benifirelation"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineBeneficiary"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/tvBenLable"
+                android:alpha="0.5"
+                android:background="@color/colorgrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineBeneficiary"
+                android:layout_toRightOf="@+id/tvBeneficiaryIcon">
+
+                <TextView
+                    android:id="@+id/tvBeneficiaryName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1.5"
+                    android:alpha="0.7"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/image3x"
+                    android:paddingTop="@dimen/image3x"
+                    android:text="@string/myAppo_benifitest"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font3x" />
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="@color/colorgrey" />
+
+                <TextView
+                    android:id="@+id/tvBeneficiaryRelation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:alpha="0.7"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/image3x"
+                    android:paddingRight="@dimen/image3x"
+                    android:paddingTop="@dimen/image3x"
+                    android:text="@string/myAppo_benifirelation"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/font3x" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/image2x"
+        android:background="@drawable/ripple_button_maroon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/image4x"
+            android:text="Submit"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font5x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlReasons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:padding="@dimen/image10x"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/image4x"
+            android:background="@drawable/square_round" >
+
+            <TextView
+                android:id="@+id/tvReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select reason"
+                android:gravity="center"
+                android:padding="@dimen/image3x"
+                android:textSize="@dimen/font4x"
+                android:layout_marginTop="@dimen/image2x"
+                android:textColor="@color/colorOrange" />
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorWhitegrey"
+                android:layout_marginTop="@dimen/image4x"
+                android:layout_below="@+id/tvReason"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvReasons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/viewLine"
+                android:layout_margin="@dimen/image3x"/>
+
+            <TextView
+                android:id="@+id/tvClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/image4x"
+                android:padding="@dimen/image3x"
+                android:text="X"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font4x"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

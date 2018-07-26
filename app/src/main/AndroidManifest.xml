@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dogratech.indusbuddyapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <permission
+        android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" />
+
+    <application
+        android:name=".main.application.IndusApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_indus"
+        android:label="@string/app_name"
+        android:logo="@mipmap/logo_indus"
+        android:roundIcon="@mipmap/logo_indus"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.indusbuddy.fitbit.CLIENT_ID"
+            android:value="22CW4B" />
+        <meta-data
+            android:name="com.indusbuddy.fitbit.REDIRECT_URL"
+            android:value="http://103.97.106.170:8008/Admin/Fitness1" />
+        <!--
+        <meta-data
+            android:name="com.indusbuddy.fitbit.REDIRECT_URL"
+            android:value="https://finished" />
+        -->
+
+        <activity
+            android:name=".main.SplashScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.activities.signinsignup.LoginActivity"
+            android:label="@string/title_activity_login_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".main.activities.signinsignup.RegisterActivity"
+            android:label="@string/title_activity_register_screen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".main.activities.signinsignup.VerifyOtpActivity"
+            android:label="@string/title_activity_verifyOtp_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activities.apphomeactivity.AppHomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.CentreSelectionActivity"
+            android:label="@string/title_activity_centre_locator"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".main.activities.healthcheckup.UnAvailedPackagesActivity"
+            android:label="@string/title_activity_my_un_availed_package"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.UnavailedPackageDetailsActivity"
+            android:label="@string/title_activity_my_availed_package"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.MyHealthChekUpActivity"
+            android:label="@string/title_activity_my_health_chek_up"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.TestDetailsActivity"
+            android:label="@string/title_activity_test_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+            <activity
+            android:name=".main.activity.MyAppointmentActivity"
+            android:label="@string/title_activity_my_appointment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        -->
+        <activity
+            android:name=".main.activities.healthcheckup.CentreDetailsActivity"
+            android:label="@string/title_activity_centre_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".main.activities.healthcheckup.ShowOnMapsActivity"
+            android:label="@string/title_activity_show_on_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".main.activities.healthcheckup.GetAppointmentActivity"
+            android:label="@string/title_activity_get_appointment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthguide.MyHealthGuideActivity"
+            android:label="@string/title_activity_my_health_guide"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.TestAVActivity"
+            android:label="@string/title_activity_test_av"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthguide.GraphByVisitActivity"
+            android:label="@string/title_activity_graph_by_visit"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.TipActivity"
+            android:label="@string/title_activity_tip"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.UserProfileActivity"
+            android:label="@string/title_activity_user_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.reminder.ReminderActivity"
+            android:label="@string/title_activity_reminder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.reminder.SetReminderActivity"
+            android:label="@string/title_activity_reminder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.AboutUsActivity"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.HelpCentreActivity"
+            android:label="@string/title_activity_help_centre"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.wellness.MyWellnessActivity"
+            android:label="@string/title_activity_wellness"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.fitness.MyFitnessActivity"
+            android:label="@string/title_activity_fitnsee_tracker"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.baseactivities.BaseActivity"
+            android:label="@string/title_activity_base"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".main.listeners.SmsReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".main.activities.healthcheckup.MainFeedBackActivity"
+            android:label="@string/title_activity_main_feed_back"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.fitness.fitbitintegration.FitbitLoginActivity"
+            android:label="@string/title_activity_fitbit_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.fitness.MyFitnessHomeActivity"
+            android:label="@string/title_activity_my_fitness_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthguide.HRAActivity"
+            android:label="@string/title_activity_hra"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.fitness.SetGoalActivity"
+            android:label="@string/title_activity_set_goal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.IndusSitesURLActivity"
+            android:label="@string/title_activity_indus_sites_url"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.CenterLocatorActivity"
+            android:label="@string/title_activity_center_locator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.wellness.EventDetailsActivity"
+            android:label="@string/title_activity_event_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.wellness.EventFeedbackActivity"
+            android:label="@string/title_activity_event_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.fitness.fitbitintegration.FitnessTimeLineActivity"
+            android:label="@string/title_activity_fitness_time_line"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.wellness.WellnessHistoryActivity"
+            android:label="@string/title_activity_willness_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthguide.ImagePreviewActivity"
+            android:label="@string/title_activity_image_preview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.ApptDetailsActivity"
+            android:label="@string/title_activity_appt_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.reminder.ReminderDetailsActivity"
+            android:label="@string/title_activity_reminder_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.storerecord.StoreRecordsActivity"
+            android:label="@string/title_activity_store_records"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.storerecord.UploadMenuActivity"
+            android:label="@string/title_activity_upload_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.storerecord.DocTypeActivity"
+            android:label="@string/title_activity_doc_type"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.storerecord.NamingReportActivity"
+            android:label="@string/title_activity_naming_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.storerecord.ViewRecordsActivity"
+            android:label="@string/title_activity_view_records"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.storerecord.ViewAndShareActivity"
+            android:label="@string/title_activity_view_and_share"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.healthcheckup.InstructionCallActivity"
+            android:label="@string/title_activity_instruction_call"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.ArchivesActivity"
+            android:label="@string/title_activity_indus_update"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.NewsArchivesActivity"
+            android:label="@string/title_activity_news_archives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.navmenuactivities.HomePageNewsActivity"
+            android:label="@string/title_activity_home_page_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.activities.fitness.FitnessMenuActivity"
+            android:label="@string/title_activity_fitness_menu"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

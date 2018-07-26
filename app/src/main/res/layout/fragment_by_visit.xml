@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthguide.guidefragments.ByVisitFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/image4x"
+        android:background="@drawable/square_round_tab">
+
+        <Spinner
+            android:id="@+id/spinnerVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#00000000"
+            android:layout_centerVertical="true"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/image5x"
+            android:alpha="0.2"
+            android:rotation="180"
+            android:src="@drawable/arrow_top" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/lvParameters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlSpinner"
+        android:divider="@color/colorWhitegrey"
+        android:dividerHeight="0.5dp"
+        tools:listitem="@layout/byvisit_item" />
+
+
+    <TextView
+        android:id="@+id/tvDataNotFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record not found!!"
+      android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font3x"
+        android:visibility="gone"
+        android:alpha="0.7"/>
+
+</RelativeLayout>

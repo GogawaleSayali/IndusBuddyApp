@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthguide.guidefragments.DoctorCommentFragment">
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_doctorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_margin="@dimen/image3x"
+        android:scrollbars="vertical" />
+    <TextView
+        android:id="@+id/tvNoCommentMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font3x"
+        android:alpha="0.5"
+        android:visibility="gone"
+        android:text="No comments available yet!!"/>
+</RelativeLayout>

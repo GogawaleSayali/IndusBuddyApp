@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.AvailedPackagesFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/tvDataNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:gravity="center"
+        android:text="You don't availed any packages yet!!"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font3x" />
+    <RelativeLayout
+        android:id="@+id/rlPrpgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50ffffff"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progressAvial"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

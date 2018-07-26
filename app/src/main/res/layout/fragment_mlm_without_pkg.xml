@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitegrey"
+    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.MlmWithoutPkgFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/image2x"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="@dimen/image2x"
+            android:padding="@dimen/image5x"
+            app:cardCornerRadius="@dimen/image2x">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvOnPkgMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/image2x"
+                    android:alpha="0.8"
+                    android:gravity="center"
+                    android:text="@string/noPkg"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:id="@+id/tvGetPkg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/image2x"
+                    android:alpha="0.8"
+                    android:background="@drawable/ripple_button_maroon"
+                    android:gravity="center"
+                    android:padding="@dimen/image3x"
+                    android:layout_marginTop="@dimen/image2x"
+                    android:layout_gravity="center"
+                    android:text="@string/getPkg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font4x" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvCenterLocator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOnPkgMsg"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/image2x"
+            android:alpha="0.8"
+            android:background="@drawable/ripple_button_green"
+            android:gravity="center"
+            android:padding="@dimen/image3x"
+            android:text="Centre Locator"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font4x" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/image2x"
+            android:background="@color/colorgrey"
+            android:gravity="center"
+            android:text="Test AV"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>
