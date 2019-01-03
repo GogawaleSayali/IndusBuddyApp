@@ -105,6 +105,7 @@ public class PackagesAvailableAdapter extends RecyclerView.Adapter<PackagesAvail
         public TextView tvTest;
         public ImageView ivTest;
 
+
         public MyViewHolder(View view) {
             super(view);
             tvTest       = view.findViewById(R.id.tvTest);
