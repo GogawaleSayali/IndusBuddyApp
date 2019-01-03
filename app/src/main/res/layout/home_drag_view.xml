@@ -3,9 +3,9 @@
     android:id="@+id/viewDragging"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@color/colorWhitegrey"
     android:clickable="true"
     android:focusable="false"
-    android:background="@color/colorWhitegrey"
     android:orientation="vertical">
 
 
@@ -14,29 +14,132 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+
         android:background="@color/colorWhite">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/llMainMenuStrip"
+
             android:orientation="vertical">
+
+
+
+      <!--      <RelativeLayout
+                android:id="@+id/rlUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient_square"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/image3x"
+                        android:text="@string/welcome_note"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font6x"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_settingactivity_arrow"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/image2x"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/settings"
+                        android:textColor="@color/colorWhite" />
+
+                    <TextView
+                        android:id="@+id/tvArticleTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="@dimen/image4x"
+                        android:layout_marginRight="60dp"
+                        android:gravity="center"
+                        android:padding="@dimen/image4x"
+                        android:singleLine="true"
+                        android:text="@string/articles"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font6x"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivViewArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/image2x"
+                    android:src="@drawable/ic_arrow_multiple" />
+
+                <ImageView
+                    android:id="@+id/ivViewArrowDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/image2x"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_arrow_multiple" />
+
+
+            </RelativeLayout>-->
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_square">
 
-                <TextView
-                    android:id="@+id/tvArticleTitle"
+                android:background="@drawable/gradient_square">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:gravity="center"
-                    android:padding="@dimen/image4x"
-                    android:text="@string/articles"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/font5x" />
+                    android:background="@drawable/gradient_square"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_settingactivity_arrow"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/settings" />
+
+                    <TextView
+                        android:id="@+id/tvArticleTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginLeft="@dimen/image4x"
+                        android:layout_marginRight="60dp"
+                        android:gravity="center"
+                        android:padding="@dimen/image4x"
+                        android:text="@string/articles"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font5x" />
+                </LinearLayout>
+
+
 
                 <ImageView
                     android:id="@+id/ivViewArrow"
@@ -46,57 +149,64 @@
                     android:padding="10dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_arrow_multiple" />
+
                 <ImageView
                     android:id="@+id/ivViewArrowDown"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:padding="10dp"
-                    android:visibility="gone"
                     android:rotation="180"
-                    android:src="@drawable/ic_arrow_multiple" />
+                    android:src="@drawable/ic_arrow_multiple"
+                    android:visibility="gone" />
+
             </RelativeLayout>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rvArticles"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:dividerHeight="@dimen/image2x"/>
+                android:dividerHeight="@dimen/image2x" />
+
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/llMainMenuStrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="@color/colorPrimaryDark"
             android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
-            android:visibility="visible">
+            android:visibility="gone">
 
 
             <RelativeLayout
                 android:id="@+id/rlCheckupSmall"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:visibility="gone"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:visibility="gone">
+
                 <ImageView
                     android:id="@+id/ivHealthCheckupSmall"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_above="@+id/tvCheckUpSmall"
                     android:layout_weight="1"
                     android:padding="@dimen/image2x"
-                    android:layout_above="@+id/tvCheckUpSmall"
                     android:src="@drawable/health_checkup_new" />
+
                 <TextView
                     android:id="@+id/tvCheckUpSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:gravity="center"
                     android:text="@string/mini_checkup"
-                    android:textSize="@dimen/font2x"
                     android:textColor="@color/colorWhite"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/font2x" />
             </RelativeLayout>
+
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="match_parent"
@@ -104,29 +214,33 @@
                 android:layout_marginTop="@dimen/image9x"
                 android:alpha="0.5"
                 android:background="@color/colorWhite" />
+
+
             <RelativeLayout
                 android:id="@+id/rlGuideSmall"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:visibility="gone"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:visibility="gone">
+
                 <ImageView
                     android:id="@+id/ivHealthGuideSmall"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_above="@+id/tvGuideSmall"
                     android:layout_weight="1"
                     android:padding="@dimen/image2x"
-                    android:layout_above="@+id/tvGuideSmall"
                     android:src="@drawable/health_guide" />
+
                 <TextView
                     android:id="@+id/tvGuideSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:gravity="center"
                     android:text="@string/mini_guide"
-                    android:textSize="@dimen/font2x"
                     android:textColor="@color/colorWhite"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/font2x" />
             </RelativeLayout>
 
 
@@ -137,31 +251,33 @@
                 android:layout_marginTop="@dimen/image9x"
                 android:alpha="0.5"
                 android:background="@color/colorWhite" />
+
             <RelativeLayout
                 android:id="@+id/rlWellnessSmall"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:visibility="gone"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:visibility="gone">
+
                 <ImageView
                     android:id="@+id/ivWelnessSmall"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_above="@+id/tvWellnessSmall"
                     android:layout_weight="1"
                     android:padding="@dimen/image2x"
-                    android:layout_above="@+id/tvWellnessSmall"
                     android:src="@drawable/welness" />
+
                 <TextView
                     android:id="@+id/tvWellnessSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:gravity="center"
                     android:text="@string/mini_wellness"
-                    android:textSize="@dimen/font2x"
                     android:textColor="@color/colorWhite"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/font2x" />
             </RelativeLayout>
-
 
 
             <View
@@ -171,19 +287,21 @@
                 android:layout_marginTop="@dimen/image9x"
                 android:alpha="0.5"
                 android:background="@color/colorWhite" />
+
             <RelativeLayout
                 android:id="@+id/rlFitnessSmall"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:visibility="gone"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:visibility="gone">
+
                 <ImageView
                     android:id="@+id/ivFitnessSamll"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_above="@+id/tvFitnessSmall"
                     android:layout_weight="1"
                     android:padding="@dimen/image2x"
-                    android:layout_above="@+id/tvFitnessSmall"
                     android:src="@drawable/fitness" />
 
                 <TextView
@@ -191,10 +309,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:gravity="center"
                     android:text="@string/mini_fitness"
-                    android:textSize="@dimen/font2x"
                     android:textColor="@color/colorWhite"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/font2x" />
             </RelativeLayout>
 
 

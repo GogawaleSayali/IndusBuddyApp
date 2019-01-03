@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,11 +47,12 @@ public class MyApptListFragment extends Fragment {
     private View rootView;
     private RecyclerView rvMyAppt;
     protected String userId ;
+    TextView tvDataNotFound1;
     protected SharedPrefsManager prefsManager ;
     protected ApiInterfaceGet interface_get ;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    private RelativeLayout rlPrpgress;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -123,14 +125,16 @@ public class MyApptListFragment extends Fragment {
                         if(response.isSuccessful()){
                             if(response.body()!=null){
                                 Model_Response_Appointment_Details details = response.body();
-                                if(details.getStatusCode().equalsIgnoreCase(getString(R.string.statuse_code_0))){
+                                if(details.getStatusCode().equalsIgnoreCase(getString(R.string.statuse_code_0)))
+                                {
                                     ArrayList<Model_Item_Appointment> appointment = details.getAppointment();
                                    // setAppointmentData(appointment);
                                 }else{
                                     String error_code = details.getErrorCode();
                                     ErrorCodesAndMessagesManager errCodeMsg = ErrorCodesAndMessagesManager.getInstance();
                                     showToast(errCodeMsg.getErrorMessage(Integer.parseInt(error_code)));
-                                }
+                                    }
+
                             }
                         }
                     }catch (Exception e){

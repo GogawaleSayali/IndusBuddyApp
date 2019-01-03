@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:alpha="0.7"
         android:gravity="center"
-        android:text="You don't availed any packages yet!!"
+        android:text="You have not yet availaed any package yet"
         android:textColor="@color/colorText"
         android:textSize="@dimen/font3x" />
     <RelativeLayout

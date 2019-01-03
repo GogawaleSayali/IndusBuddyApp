@@ -2,6 +2,7 @@ package com.dogratech.indusbuddyapp.main.activities.reminder;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dogratech.indusbuddyapp.R;
@@ -10,9 +11,10 @@ import com.dogratech.indusbuddyapp.main.models.ModelItemReminder;
 import com.google.gson.Gson;
 
 public class ReminderDetailsActivity extends BaseActivity {
-    private TextView tvEventTitle,tvRemindMeFor,tvReminderDateTime,tvEmail,tvLocation,tvMedicineName,
+    private TextView tvEventTitle,tvRemindertitle,tvReminderDateTime,tvEmail,tvMobile,tvLocation,tvMedicineName,
             tvMedicineDateTime,tvbMedicineDose,tvTestName,tvDoctorDateTime,tvDuration,tvDurationInMinutes,tvCentreName,
-            tvClientName,tvTypeExercise,tvDoctorName,tvStartEvent,tvEndEvent;
+            tvClientid,tvreminders,tvTypeExercise,tvDoctorName,tvStartEvent,tvEndEvent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +27,13 @@ public class ReminderDetailsActivity extends BaseActivity {
     /**
      * Initialize ui widgets.
      */
-    private void initialize() {
+    private void initialize()
+    {
         tvEventTitle        = findViewById(R.id.tvEventTitle);
-        tvRemindMeFor       = findViewById(R.id.tvRemindMeFor);
+       // tvRemindertitle     =findViewById(R.id.tvreminderTitle);
         tvReminderDateTime  = findViewById(R.id.tvReminderDateTime);
         tvEmail             = findViewById(R.id.tvEmail);
+        tvMobile            = findViewById(R.id.tvMobileNo);
         tvLocation          = findViewById(R.id.tvLocation);
         tvMedicineName      = findViewById(R.id.tvMedicineName);
         tvMedicineDateTime  = findViewById(R.id.tvMedicineDateTime);
@@ -39,11 +43,12 @@ public class ReminderDetailsActivity extends BaseActivity {
         tvDuration          = findViewById(R.id.tvDuration);
         tvDurationInMinutes = findViewById(R.id.tvDurationInMinutes);
         tvCentreName        = findViewById(R.id.tvCentreName);
-        tvClientName        = findViewById(R.id.tvClientName);
+        tvClientid          =findViewById(R.id.tvClientid);
         tvTypeExercise      = findViewById(R.id.tvTypeExercise);
         tvDoctorName        = findViewById(R.id.tvDoctorName);
         tvStartEvent        = findViewById(R.id.tvStartEvent);
         tvEndEvent          = findViewById(R.id.tvEndEvent);
+        //tvreminders         =findViewById(R.id.tvreminders);
         setReminderDetails();
     }
 
@@ -54,10 +59,12 @@ public class ReminderDetailsActivity extends BaseActivity {
         String data        = getIntent().getStringExtra("data");
         Gson gson          = new Gson();
         ModelItemReminder  itemReminder = gson.fromJson(data,ModelItemReminder.class);
-        tvEventTitle       .setText(itemReminder.getEventTitle());
-        tvRemindMeFor      .setText(itemReminder.getRemindMeFor());
+        tvEventTitle       .setText(itemReminder.getCategory());
+        //tvRemindertitle    .setText(itemReminder.getEventTitle());
         tvReminderDateTime .setText(itemReminder.getReminderDateTime());
         tvEmail            .setText(itemReminder.getEmailId());
+        //String mobile=itemReminder.getMobileNo();
+        tvMobile           .setText(itemReminder.getMobileNo());
         tvLocation         .setText(itemReminder.getLocation());
         tvMedicineName     .setText(itemReminder.getMedicineName());
         tvMedicineDateTime .setText(itemReminder.getMedicineDateTime());
@@ -67,7 +74,7 @@ public class ReminderDetailsActivity extends BaseActivity {
         tvDuration         .setText(itemReminder.getDuration());
         tvDurationInMinutes.setText(itemReminder.getDurationInMinutes());
         tvCentreName       .setText(itemReminder.getCentreName());
-        tvClientName       .setText(itemReminder.getClientName());
+        tvClientid         .setText(itemReminder.getClientId());
         tvTypeExercise     .setText(itemReminder.getTypeExercise());
         tvDoctorName       .setText(itemReminder.getDoctorName());
         tvStartEvent       .setText(itemReminder.getStartEvent());

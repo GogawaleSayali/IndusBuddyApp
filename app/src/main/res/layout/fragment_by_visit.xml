@@ -56,4 +56,18 @@
         android:visibility="gone"
         android:alpha="0.7"/>
 
+
+    <TextView
+        android:id="@+id/tvDataNotFound_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="No Visit History Found!!"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font3x"
+        android:alpha="0.7"/>
+
+
 </RelativeLayout>

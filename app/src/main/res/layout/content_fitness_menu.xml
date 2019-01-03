@@ -60,5 +60,83 @@
           android:layout_height="0.5dp"
           android:alpha="0.5"
           android:background="@color/colorgrey"/>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:alpha="0.5"
+          android:background="@color/colorgrey"
+          android:layout_marginTop="@dimen/image10x"/>
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/image3x">
+          <ImageView
+              android:id="@+id/ivGoogleLogo"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/colorPrimaryDark"
+              android:src="@drawable/googlefit"/>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Google Fit"
+              android:layout_centerVertical="true"
+              android:layout_toRightOf="@+id/ivGoogleLogo"
+              android:layout_toLeftOf="@+id/tvComingSoonGoogle"
+              android:padding="@dimen/image3x"/>
+          <TextView
+              android:id="@+id/tvComingSoonGoogle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="COMING SOON"
+              android:textColor="@color/colorPrimaryDark"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:padding="@dimen/image3x"/>
+      </RelativeLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:alpha="0.5"
+          android:background="@color/colorgrey"/>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:alpha="0.5"
+          android:background="@color/colorgrey"
+          android:layout_marginTop="@dimen/image10x"/>
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/image3x">
+          <ImageView
+              android:id="@+id/ivSamsungHelathLogo"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/colorPrimaryDark"
+              android:src="@drawable/samsunghealth_logo"/>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Samsung Health"
+              android:layout_centerVertical="true"
+              android:layout_toRightOf="@+id/ivSamsungHelathLogo"
+              android:layout_toLeftOf="@+id/tvComingSoonsamsunghealth"
+              android:padding="@dimen/image3x"/>
+          <TextView
+              android:id="@+id/tvComingSoonsamsunghealth"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="COMING SOON"
+              android:textColor="@color/colorPrimaryDark"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:padding="@dimen/image3x"/>
+      </RelativeLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:alpha="0.5"
+          android:background="@color/colorgrey"/>
   </LinearLayout>
 </android.support.constraint.ConstraintLayout>

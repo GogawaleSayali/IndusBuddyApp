@@ -22,7 +22,7 @@
         android:gravity="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/font3x"
+        android:visibility="visible"
         android:alpha="0.5"
-        android:visibility="gone"
-        android:text="No comments available yet!!"/>
+        android:text="Information Not Available!!"/>
 </RelativeLayout>

@@ -25,6 +25,7 @@ import com.dogratech.indusbuddyapp.main.activities.healthcheckup.CenterLocatorAc
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.InstructionCallActivity;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.TestAVActivity;
 import com.dogratech.indusbuddyapp.main.adapters.MyAvailedAdapter;
+import com.dogratech.indusbuddyapp.main.adapters.MyPackages_Adapter;
 import com.dogratech.indusbuddyapp.main.helper.Constatnts;
 import com.dogratech.indusbuddyapp.main.managers.SharedPrefsManager;
 import com.dogratech.indusbuddyapp.main.models.AvailedPackagesModel;
@@ -51,7 +52,7 @@ import retrofit2.Response;
 public class CurrentPackagesFragment extends Fragment implements View.OnClickListener{
     private View rootView;
     private RecyclerView recyclerView;
-    private MyAvailedAdapter adapter;
+    private MyPackages_Adapter adapter;
     private ArrayList<PackageDetailsModel> packages;
     private RecyclerView.LayoutManager mLayoutManager ;
     private TextView tvTestAV,tvDataNotFound;
@@ -162,7 +163,7 @@ public class CurrentPackagesFragment extends Fragment implements View.OnClickLis
                                     rlWithPkg.setVisibility(View.VISIBLE);
                                     rlWthoutPkg.setVisibility(View.GONE);
                                     tvDataNotFound.setVisibility(View.GONE);
-                                    adapter = new MyAvailedAdapter(getActivity(), packages);
+                                    adapter = new MyPackages_Adapter(getActivity(), packages);
                                     recyclerView . setAdapter(adapter);
                                 }else {
                                     if (AppHomeActivity.ROLE.equalsIgnoreCase("C")){

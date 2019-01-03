@@ -33,6 +33,41 @@ public class PackageDetailsModel {
     private String receiptDate;
     @SerializedName("Paymode")
     private String paymode;
+    @SerializedName("AvailableAddOnTest")
+    private String availableAddOnTest;
+
+    public String getAvailableDiscountCouponPackage() {
+        return availableDiscountCouponPackage;
+    }
+
+    public void setAvailableDiscountCouponPackage(String availableDiscountCouponPackage) {
+        this.availableDiscountCouponPackage = availableDiscountCouponPackage;
+    }
+
+    @SerializedName("AvailableDiscountCouponPackage")
+    private String availableDiscountCouponPackage;
+
+
+    public String getAvailableAddOnPackage() {
+        return availableAddOnPackage;
+    }
+
+    public void setAvailableAddOnPackage(String availableAddOnPackage) {
+        this.availableAddOnPackage = availableAddOnPackage;
+    }
+
+    @SerializedName("AvailableAddOnPackage")
+    private String availableAddOnPackage;
+
+    public String getAvailableAddOnTest() {
+        return availableAddOnTest;
+    }
+
+    public void setAvailableAddOnTest(String availableAddOnTest) {
+        this.availableAddOnTest = availableAddOnTest;
+    }
+
+
 
 
     public String getName() {

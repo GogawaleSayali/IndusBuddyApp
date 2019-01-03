@@ -9,11 +9,16 @@ import com.dogratech.indusbuddyapp.R;
 import com.dogratech.indusbuddyapp.main.activities.baseactivities.BaseActivity;
 import com.dogratech.indusbuddyapp.main.adapters.RecordViewShareAdapter;
 import com.dogratech.indusbuddyapp.main.models.ModelRedordDetails;
+import com.dogratech.indusbuddyapp.main.models.Model_Item_Report;
+import com.dogratech.indusbuddyapp.main.models.ViewRecordSupportModel;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
 public class ViewAndShareActivity extends BaseActivity {
     private RecyclerView rvViewRecords;
+    private ViewRecordSupportModel viewRecordSupportModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,17 +30,11 @@ public class ViewAndShareActivity extends BaseActivity {
     private void inititialize() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         rvViewRecords = findViewById(R.id.rvViewRecords);
-        Bundle bundle = getIntent().getExtras();
-        String type = bundle.getString("type");
-        String addedOn = bundle.getString("addedOn");
-        initializeToolBar(toolbar,type);
-        ArrayList<ModelRedordDetails> data = new ArrayList<>();
-        ModelRedordDetails redordDetails = new ModelRedordDetails();
-        redordDetails.setFileName(bundle.getString("data"));
-        redordDetails.setDate(bundle.getString("addedOn"));
-        redordDetails.setFilePath(bundle.getString("data"));
-        redordDetails.setFileType(type);
-        data.add(redordDetails);
+        Gson gson = new Gson();
+         viewRecordSupportModel = gson.fromJson(getIntent().getStringExtra("myjson"), ViewRecordSupportModel.class);
+        initializeToolBar(toolbar,viewRecordSupportModel.getName());
+        ArrayList<Model_Item_Report> data = viewRecordSupportModel.getRecordsList();
+
         RecordViewShareAdapter recordsAdapter = new RecordViewShareAdapter(ViewAndShareActivity.this,data);
         RecyclerView      . LayoutManager mLayoutManager = new LinearLayoutManager(ViewAndShareActivity.this);
         rvViewRecords.setLayoutManager(mLayoutManager);

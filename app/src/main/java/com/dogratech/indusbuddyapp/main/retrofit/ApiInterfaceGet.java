@@ -12,9 +12,10 @@ import com.dogratech.indusbuddyapp.main.models.ModelHomePageNews;
 import com.dogratech.indusbuddyapp.main.models.ModelIsWellnessEvent;
 import com.dogratech.indusbuddyapp.main.models.ModelPaymentStatusResponse;
 import com.dogratech.indusbuddyapp.main.models.ModelPostPoneReasonRes;
-import com.dogratech.indusbuddyapp.main.models.ModelReminderDetails;
+import com.dogratech.indusbuddyapp.main.models.Model_Categories;
+import com.dogratech.indusbuddyapp.main.models.Model_MainSubCategories;
+import com.dogratech.indusbuddyapp.main.models.Model_item_setReminderDetails;
 import com.dogratech.indusbuddyapp.main.models.Model_Response;
-import com.dogratech.indusbuddyapp.main.models.Model_Response_AppReschedule;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_Appointment_Details;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_DeliveryKit;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_DoctorComment;
@@ -23,15 +24,11 @@ import com.dogratech.indusbuddyapp.main.models.Model_Response_ReminderList;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_RenewalStatus;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_VisitList_Parameter;
 import com.dogratech.indusbuddyapp.main.models.ModelResGetAllReport;
-import com.google.android.gms.common.api.Api;
 
 import java.util.ArrayList;
 
 import retrofit2.Call;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
-import retrofit2.http.Multipart;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 import retrofit2.http.Url;
 
@@ -42,50 +39,56 @@ import retrofit2.http.Url;
 public interface ApiInterfaceGet {
 
     @GET
-    public Call<Model_Response> getClientByEHRId                            (@Url String url);
+    public Call<Model_Response> getClientByEHRId (@Url String url);
 
     @GET
-    public Call<Model_Response> resendOTP                                   (@Url String url);
+    public Call<Model_Response> resendOTP (@Url String url);
 
     @GET
-    public Call<Model_Response> verifyOTP                                   (@Url String url);
+    public Call<Model_Response> verifyOTP (@Url String url);
 
     @GET
-    public Call<Model_Response_DeliveryKit> deliveryKitStatus               (@Url String url);
+    public Call<Model_Response_DeliveryKit> deliveryKitStatus (@Url String url);
 
     @GET
-    public Call<Model_Response_RenewalStatus>  renewalStatus                (@Url String url);
+    public Call<Model_Response_RenewalStatus>  renewalStatus (@Url String url);
 
     @GET
-    public Call<ModelPaymentStatusResponse>  paymentStatus                (@Url String url);
+    public Call<ModelPaymentStatusResponse>  paymentStatus (@Url String url);
 
     @GET
-    public Call<Model_Response_Appointment_Details>  getAppointment         (@Url String url);
+    public Call<Model_Response_Appointment_Details>  getAppointment (@Url String url);
 
     @GET
-    public Call<Model_Response_VisitList_Parameter>  getVisitparamterList   (@Url String url);
+    public Call<Model_Response_VisitList_Parameter>  getVisitparamterList (@Url String url);
 
     @GET
-    public Call<ModelResGetAllReport>  getAllReport                  (@Url String url);
+    public Call<ModelResGetAllReport>  getAllReport (@Url String url);
 
     @GET
-    public Call<Model_Response_ReminderList>  getAllReminders               (@Url String url);
+    public Call<Model_Response_ReminderList>  getAllReminders (@Url String url);
 
     @GET
-    public Call<ModelResponseQuestionary>  getHRAByEHRId                   (@Url String url);
+    public Call<Model_Categories> getArticleCategories (@Url String url);
+
+   @GET
+    public Call<Model_MainSubCategories> getSubCategories (@Url String url);
 
     @GET
-    public Call<Model_Response_DoctorComment>  getDoctorComments               (@Url String url);
+    public Call<ModelResponseQuestionary>  getHRAByEHRId (@Url String url);
+
+    @GET
+    public Call<Model_Response_DoctorComment>  getDoctorComments (@Url String url);
 
     @GET()
-    public Call<MainMenuResponceModel>  getRoleMenus               (@Url String url);
+    public Call<MainMenuResponceModel>  getRoleMenus (@Url String url);
 
     @GET
-    public Call<AvailedPackagesModel>  getAvailedPackes               (@Url String url);
+    public Call<AvailedPackagesModel>  getAvailedPackes (@Url String url);
 
 
     @GET
-    public Call<MemberDetrailsModel>  getMemberDetails               (@Url String url);
+    public Call<MemberDetrailsModel>  getMemberDetails (@Url String url);
 
 
     @GET
@@ -112,6 +115,8 @@ public interface ApiInterfaceGet {
     @GET(ApiUrl.GET_POSTPONE_REASON)
     Call<ModelPostPoneReasonRes> getPostPoneReason ();
 
-    @GET
-    Call<ModelReminderDetails> getsaveReminder  (@Url String url);
+
+
+
+
 }

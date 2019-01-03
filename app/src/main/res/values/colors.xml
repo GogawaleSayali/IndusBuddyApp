@@ -46,4 +46,6 @@
     <color name="colorYellowDark">#FFD700</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
+    <color name="setting_expand_color">#787878</color>
+    <color name="setting_expand__child_color">#a0a0a0</color>
 </resources>

@@ -46,6 +46,7 @@
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -62,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="@dimen/image3x"
-                    android:text="For me"
+                    android:text="Reminder Title"
                     android:alpha="0.7"
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
@@ -76,7 +77,7 @@
                     android:textSize="@dimen/font4x" />
 
                 <TextView
-                    android:id="@+id/tvRemindMeFor"
+                    android:id="@+id/tvreminderTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -85,6 +86,7 @@
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -155,6 +157,46 @@
 
                 <TextView
                     android:id="@+id/tvEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/image3x"
+                    android:text=" - "
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:alpha="0.5"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:background="@color/black_overlay"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/image3x"
+                    android:text="Mobile No"
+                    android:alpha="0.7"
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image3x"
+                    android:text=":"
+                    android:alpha="0.7"
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x" />
+
+                <TextView
+                    android:id="@+id/tvMobileNo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -241,6 +283,8 @@
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
             </LinearLayout>
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -514,6 +558,8 @@
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
             </LinearLayout>
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -530,7 +576,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="@dimen/image3x"
-                    android:text="Client Name"
+                    android:text="Client Id"
                     android:alpha="0.7"
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
@@ -544,7 +590,7 @@
                     android:textSize="@dimen/font4x" />
 
                 <TextView
-                    android:id="@+id/tvClientName"
+                    android:id="@+id/tvClientid"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -553,6 +599,46 @@
                     android:textColor="@color/colorgrey"
                     android:textSize="@dimen/font4x" />
             </LinearLayout>
+<!--
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:alpha="0.5"
+                android:layout_marginLeft="@dimen/image3x"
+                android:layout_marginRight="@dimen/image3x"
+                android:background="@color/black_overlay"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/image3x"
+                    android:text="Reminders"
+                    android:alpha="0.7"
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/image3x"
+                    android:text=":"
+                    android:alpha="0.7"
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x" />
+&lt;!&ndash;
+                <TextView
+                    android:id="@+id/tvreminders"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/image3x"
+                    android:text=" - "
+                    android:textColor="@color/colorgrey"
+                    android:textSize="@dimen/font4x" />&ndash;&gt;
+            </LinearLayout>-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -717,5 +803,8 @@
                 android:layout_marginRight="@dimen/image3x"
                 android:background="@color/black_overlay"/>
         </LinearLayout>
+
+
+
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

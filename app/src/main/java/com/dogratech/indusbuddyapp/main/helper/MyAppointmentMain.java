@@ -27,7 +27,9 @@ import com.dogratech.indusbuddyapp.main.retrofit.ApiInterfaceGet;
  * Use the {@link MyAppointmentMain#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyAppointmentMain extends Fragment{
+public class MyAppointmentMain extends Fragment
+{
+    protected TextView tvDataNotFound;
     protected View rootView;
     protected RecyclerView rvMyAppt;
     private static final String ARG_PARAM1 = "param1";
@@ -66,7 +68,8 @@ public class MyAppointmentMain extends Fragment{
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -80,11 +83,13 @@ public class MyAppointmentMain extends Fragment{
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_my_appointment, container, false);
         return rootView;
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
 
     }
 
@@ -92,6 +97,7 @@ public class MyAppointmentMain extends Fragment{
         prefsManager         = SharedPrefsManager.getSharedInstance(getActivity());
         interface_get        = ApiClient.getClient(ApiClient.BASE_URL_TYEP_MOBILE).create(ApiInterfaceGet.class);
         userId               = prefsManager.getData(getString(R.string.shars_userid));
+        tvDataNotFound=rootView.findViewById(R.id.tvDataNotFound);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

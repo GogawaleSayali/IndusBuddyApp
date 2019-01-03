@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <permission
         android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE"
@@ -35,11 +35,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
-            android:name="com.indusbuddy.fitbit.CLIENT_ID"
-            android:value="22CW4B" />
+            android:name="com.indusbuddy.fitbit.CLIENT_ID" android:value="22CW4B" />
         <meta-data
-            android:name="com.indusbuddy.fitbit.REDIRECT_URL"
-            android:value="http://103.97.106.170:8008/Admin/Fitness1" />
+            android:name="com.indusbuddy.fitbit.REDIRECT_URL" android:value="http://103.97.106.170:8008/Admin/Fitness1" />
         <!--
         <meta-data
             android:name="com.indusbuddy.fitbit.REDIRECT_URL"
@@ -53,7 +51,6 @@
             android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -294,7 +291,8 @@
         <activity
             android:name=".main.activities.fitness.FitnessMenuActivity"
             android:label="@string/title_activity_fitness_menu"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".main.activities.healthcheckup.MyPackageActivity"></activity>
     </application>
 
 </manifest>

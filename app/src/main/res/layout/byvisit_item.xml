@@ -2,25 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:background="@color/colorWhite"
-    android:padding="@dimen/image4x">
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="@dimen/image2x">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/tv_parametername"
+        android:layout_weight="1.2"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/image4x"
+        android:text="Parameter Nameccccccv"
+        android:textColor="@color/colorgrey"
+        android:textSize="@dimen/font4x" />
 
-        <TextView
-            android:id="@+id/tv_parametername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/image4x"
-            android:text="Parameter Name"
-            android:textColor="@color/colorgrey"
-            android:textSize="@dimen/font4x" />
-    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,28 +37,32 @@
         <ImageView
             android:id="@+id/ivEmoji"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/emoji_happy" />
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/image5x"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/emoji_happy"
+            android:layout_alignParentLeft="true" />
+
         <TextView
             android:id="@+id/tvNA"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
+            android:layout_height="45dp"
             android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="@dimen/font4x"
-            android:visibility="gone"
+            android:text="NA"
             android:textColor="@color/colorgrey"
-            android:text="NA" />
+            android:textSize="@dimen/font4x"
+            android:visibility="gone" />
+
         <ImageView
             android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/arrow_top"
-            android:rotation="90"
-            android:alpha="0.2"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
+            android:alpha="0.2"
+            android:rotation="90"
+            android:src="@drawable/arrow_top" />
 
     </RelativeLayout>
 </LinearLayout>

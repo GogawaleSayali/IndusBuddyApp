@@ -31,16 +31,17 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout;
  * Created by amolr on 23/3/18.*
  *******************************/
 
-public class AppHomeActivity extends AppMenuManager implements View.OnClickListener{
+public class AppHomeActivity extends AppMenuManager implements View.OnClickListener {
     public static String ROLE = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        prefsManager    = SharedPrefsManager.getSharedInstance(AppHomeActivity.this);
+        prefsManager = SharedPrefsManager.getSharedInstance(AppHomeActivity.this);
         String role = prefsManager.getData(getString(R.string.userType));
-        if (!role.equalsIgnoreCase(Constatnts.NODATA)){
-           // role = "c";
+        if (!role.equalsIgnoreCase(Constatnts.NODATA)) {
+            // role = "c";
             ROLE = role;
             getMenus(role);
         }
@@ -53,50 +54,65 @@ public class AppHomeActivity extends AppMenuManager implements View.OnClickListe
      * Set Listeners to ui Widgets like OnClick...etc *
      **************************************************/
     protected void setListeners() {
-        rlProfile          .setOnClickListener(this); rlRateOurApp        .setOnClickListener(this);
-        rlHelpCenter       .setOnClickListener(this); rlAboutUs           .setOnClickListener(this);
-        rlLogout           .setOnClickListener(this); rlSettings          .setOnClickListener(this);
+        rlProfile.setOnClickListener(this);
+        rlRateOurApp.setOnClickListener(this);
+        rlHelpCenter.setOnClickListener(this);
+        rlAboutUs.setOnClickListener(this);
+        rlLogout.setOnClickListener(this);
+        rlSettings.setOnClickListener(this);
 
-        cardHealthCheckUp  .setOnClickListener(this); cardHealthGuide     .setOnClickListener(this);
-        cardWellness       .setOnClickListener(this); cardFitness         .setOnClickListener(this);
+        cardHealthCheckUp.setOnClickListener(this);
+        cardHealthGuide.setOnClickListener(this);
+        cardWellness.setOnClickListener(this);
+        cardFitness.setOnClickListener(this);
 
-        ivEditProfile      .setOnClickListener(this); ivViewArrow         .setOnClickListener(this);
-        ivViewArrowDown    .setOnClickListener(this); ivHealthCheckupSmall.setOnClickListener(this);
-        ivHealthGuideSmall .setOnClickListener(this); ivWelnessSmall      .setOnClickListener(this);
-        ivFitnessSmall     .setOnClickListener(this); ivMenu              .setOnClickListener(this);
-        rlStoreRecords     .setOnClickListener(this); rlReminders         .setOnClickListener(this);
-        rlIndusUpdate      .setOnClickListener(this);
+        ivEditProfile.setOnClickListener(this);
+        ivViewArrow.setOnClickListener(this);
+        ivViewArrowDown.setOnClickListener(this);
+        ivHealthCheckupSmall.setOnClickListener(this);
+        ivHealthGuideSmall.setOnClickListener(this);
+        ivWelnessSmall.setOnClickListener(this);
+        ivFitnessSmall.setOnClickListener(this);
+        ivMenu.setOnClickListener(this);
+        rlStoreRecords.setOnClickListener(this);
+        rlReminders.setOnClickListener(this);
+        rlIndusUpdate.setOnClickListener(this);
+        img_settingactivity_arrow.setOnClickListener(this);
         sliding_layout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
                 Log.i("Tab", "onPanelSlide, offset " + slideOffset);
-                if (slideOffset < 0.5){
+                if (slideOffset < 0.5) {
                     llMainMenuSmall.setVisibility(View.GONE);
-                    ivViewArrow    .setVisibility(View.VISIBLE);
+                    ivViewArrow.setVisibility(View.VISIBLE);
                     ivViewArrowDown.setVisibility(View.GONE);
-                }else if (slideOffset > 0.5){
+                } else if (slideOffset > 0.5) {
                     llMainMenuSmall.setVisibility(View.VISIBLE);
-                    ivViewArrow    .setVisibility(View.GONE);
+                    ivViewArrow.setVisibility(View.GONE);
                     ivViewArrowDown.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState
-                    previousState, SlidingUpPanelLayout.PanelState newState) {}
+                    previousState, SlidingUpPanelLayout.PanelState newState) {
+            }
         });
     }
 
     @Override
     public void onClick(View v) {
         Gson gson = new Gson();
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.ivMenu:
-                try { drawerLayout.openDrawer(GravityCompat.END);
-                }catch (Exception e){ e.printStackTrace();}
+                try {
+                    drawerLayout.openDrawer(GravityCompat.END);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.rlProfile:
-                startActivity(new Intent(AppHomeActivity.this,UserProfileActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, UserProfileActivity.class));
                 break;
             case R.id.rlRateOurApp:
 
@@ -105,42 +121,42 @@ public class AppHomeActivity extends AppMenuManager implements View.OnClickListe
                 startActivity(new Intent(AppHomeActivity.this, HomePageNewsActivity.class));
                 break;
             case R.id.rlStoreRecords:
-                        startActivity(new Intent(AppHomeActivity.this,StoreRecordsActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, StoreRecordsActivity.class));
                 break;
             case R.id.rlReminders:
-                        startActivity(new Intent(AppHomeActivity.this,ReminderActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, ReminderActivity.class));
                 break;
             case R.id.rlHelpCenter:
-                startActivity(new Intent(AppHomeActivity.this,HelpCentreActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, HelpCentreActivity.class));
                 break;
 
             case R.id.rlAboutUs:
-                startActivity(new Intent(AppHomeActivity.this,AboutUsActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, AboutUsActivity.class));
                 break;
 
             case R.id.ivHealthCheckupSmall:
             case R.id.rlHealthCheckUp:
                 String jsonStr = gson.toJson(subMenuCheckup);
-                Intent intentCheckup = new Intent(AppHomeActivity.this,MyHealthChekUpActivity.class);
-                       intentCheckup.putExtra("jsonStrSubmenu",jsonStr);
+                Intent intentCheckup = new Intent(AppHomeActivity.this, MyHealthChekUpActivity.class);
+                intentCheckup.putExtra("jsonStrSubmenu", jsonStr);
                 startActivity(intentCheckup);
                 break;
 
             case R.id.ivHealthGuideSmall:
             case R.id.rlHealthGuide:
                 String jsonStrGuide = gson.toJson(subMenuGuide);
-                Intent intentGuide = new Intent(AppHomeActivity.this,MyHealthGuideActivity.class);
-                intentGuide.putExtra("jsonStrSubmenu",jsonStrGuide);
+                Intent intentGuide = new Intent(AppHomeActivity.this, MyHealthGuideActivity.class);
+                intentGuide.putExtra("jsonStrSubmenu", jsonStrGuide);
                 startActivity(intentGuide);
                 break;
 
             case R.id.ivWelnessSmall:
             case R.id.rlWellness:
-                startActivity(new Intent(AppHomeActivity.this,MyWellnessActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, MyWellnessActivity.class));
                 break;
             case R.id.ivFitnessSamll:
             case R.id.rlFitness:
-                startActivity(new Intent(AppHomeActivity.this,FitnessMenuActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, FitnessMenuActivity.class));
                 break;
 
             case R.id.ivViewArrow:
@@ -153,14 +169,18 @@ public class AppHomeActivity extends AppMenuManager implements View.OnClickListe
 
             case R.id.rlLogout:
                 prefsManager.clearData();
-                Intent intent = new Intent(AppHomeActivity.this,LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                Intent intent = new Intent(AppHomeActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
                 break;
 
             case R.id.rlSettings:
-                startActivity(new Intent(AppHomeActivity.this,SettingsActivity.class));
+                startActivity(new Intent(AppHomeActivity.this, SettingsActivity.class));
+                break;
+
+            case R.id.img_settingactivity_arrow:
+                startActivity(new Intent(AppHomeActivity.this, SettingsActivity.class));
                 break;
         }
         if (drawerLayout.isDrawerOpen(GravityCompat.END)) {

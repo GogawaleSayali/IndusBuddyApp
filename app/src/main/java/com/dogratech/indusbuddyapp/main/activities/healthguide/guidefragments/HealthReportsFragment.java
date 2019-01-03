@@ -106,7 +106,7 @@ public class HealthReportsFragment extends Fragment implements View.OnTouchListe
         StoreRecords =  inflater.inflate(R.layout.fragment_store_records, container, false);
         initialise();
         initialiseClass();
-        setData();
+        //setData();
         setListeners();
         return StoreRecords ;
     }

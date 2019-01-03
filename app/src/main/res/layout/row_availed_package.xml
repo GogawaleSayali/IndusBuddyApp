@@ -206,7 +206,7 @@
                 android:background="@drawable/ripple_button_orange"
                 android:gravity="center"
                 android:padding="@dimen/image5x"
-                android:text="@string/feedback"
+                android:text="Feedback"
                 android:textAllCaps="false"
                 android:layout_marginRight="@dimen/image3x"
                 android:textColor="@color/colorWhite"

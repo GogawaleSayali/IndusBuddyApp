@@ -17,8 +17,7 @@ public class FileObjectModel {
     private String contentMaster;
     @SerializedName("categories")
     private String categories;
-    @SerializedName("subCategories")
-    private String subCategories;
+
     @SerializedName("publishMasters")
     private ArrayList<PublishMasterModel> publishMasters;
     @SerializedName("tagStatus")
@@ -72,13 +71,7 @@ public class FileObjectModel {
         this.categories = categories;
     }
 
-    public String getSubCategories() {
-        return subCategories;
-    }
 
-    public void setSubCategories(String subCategories) {
-        this.subCategories = subCategories;
-    }
 
     public ArrayList<PublishMasterModel> getPublishMasters() {
         return publishMasters;

@@ -17,12 +17,12 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/image6x">
+                android:padding="@dimen/image4x">
 
                 <ImageView
                     android:id="@+id/ivFileIcon"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentLeft="true"
                     android:clickable="true"
                     android:scaleType="fitXY"
@@ -58,8 +58,8 @@
                     android:layout_below="@+id/ivFileIcon">
                     <ImageView
                         android:id="@+id/ivViewIcon"
-                        android:layout_width="55dp"
-                        android:layout_height="40dp"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
                         android:padding="@dimen/image2x"
                         android:layout_toLeftOf="@+id/ivShareIcon"
                         android:alpha="0.8"
@@ -68,8 +68,8 @@
                         android:src="@drawable/view" />
                     <ImageView
                         android:id="@+id/ivShareIcon"
-                        android:layout_width="55dp"
-                        android:layout_height="40dp"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
                         android:alpha="0.8"
                         android:padding="@dimen/image2x"
                         android:background="@drawable/ripple_button_green"

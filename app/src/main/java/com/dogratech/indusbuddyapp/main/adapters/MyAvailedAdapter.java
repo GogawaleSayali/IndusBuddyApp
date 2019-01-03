@@ -109,7 +109,15 @@ public class MyAvailedAdapter extends RecyclerView.Adapter<MyAvailedAdapter.MyVi
                     Intent intent  = new Intent(mContext,FeedbackActivity.class);
                     intent.putExtra("from","history");
                     mContext.startActivity(intent);
-                }
+
+                   /* Intent intent  = new Intent(mContext,TestDetailsActivity.class);
+                    intent.putExtra("detailsType","my");
+                    intent.putExtra("pkgTests",model_test.getPackageTests());
+                    intent.putExtra("AddonTests",model_test.getAvaildedAddOnTest());
+                    intent.putExtra("AddonPackages",model_test.getAvaildedAddOnPackage());
+                    intent.putExtra("AddonDiscountPkgs",model_test.getAvaildedDiscountCouponPackage());
+                    mContext.startActivity(intent);*/
+                    }
             });
 
             holder.tv_testdetails.setOnClickListener(new View.OnClickListener() {

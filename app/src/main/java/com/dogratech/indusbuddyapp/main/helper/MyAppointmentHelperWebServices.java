@@ -2,6 +2,9 @@ package com.dogratech.indusbuddyapp.main.helper;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 import com.dogratech.indusbuddyapp.R;
 import com.dogratech.indusbuddyapp.main.adapters.MyAppointmentsAdapter;
@@ -28,7 +32,8 @@ import retrofit2.Response;
  * Created by amolr on 27/3/18.
  */
 
-public class MyAppointmentHelperWebServices extends MyAppointmentComponents{
+public class MyAppointmentHelperWebServices extends MyAppointmentComponents
+{
 
     protected void requestGetAppointmentDetails() {
         //userId = "210263";
@@ -52,10 +57,20 @@ public class MyAppointmentHelperWebServices extends MyAppointmentComponents{
                         if(response.isSuccessful()){
                             if(response.body()!=null){
                                 Model_Response_Appointment_Details details = response.body();
-                                if(details.getStatusCode().equalsIgnoreCase(getString(R.string.statuse_code_0))){
+                                if(details.getStatusCode().equalsIgnoreCase(getString(R.string.statuse_code_0)))
+                                {
                                     ArrayList<Model_Item_Appointment> appointment = details.getAppointment();
-                                    Log.v("Suze : ",""+appointment.size());
-                                    showApptList(appointment);
+                                        Log.v("Suze : ", "" + appointment.size());
+                                        if(appointment.size()>0)
+                                        {
+                                            tvDataNotFound.setVisibility(View.GONE);
+                                        }
+                                        else
+                                        {
+                                            tvDataNotFound.setVisibility(View.VISIBLE);
+                                        }
+                                        showApptList(appointment);
+
                                 }else{
                                     String error_code = details.getErrorCode();
                                     ErrorCodesAndMessagesManager errCodeMsg = ErrorCodesAndMessagesManager.getInstance();

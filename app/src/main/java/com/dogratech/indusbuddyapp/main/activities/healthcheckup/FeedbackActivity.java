@@ -3,6 +3,8 @@ package com.dogratech.indusbuddyapp.main.activities.healthcheckup;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,12 +16,18 @@ import com.dogratech.indusbuddyapp.main.uitility.DeviceUtility;
 import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
 
-public class FeedbackActivity extends BaseActivity implements View.OnClickListener{
+public class FeedbackActivity extends BaseActivity implements View.OnClickListener {
     private MaterialRatingBar ratingbar;
     private LinearLayout llRating;
     private TextView tvVideoUpload;
-    protected RelativeLayout rlGeneralInfo,rlServiceRelated,rlAdditionalInfo;
-    protected LinearLayout   llGeneralInfo,llServiceRelatedInfo,llAdditionalInfo;
+    protected RelativeLayout rlGeneralInfo, rlServiceRelated, rlAdditionalInfo;
+    protected LinearLayout llGeneralInfo, llServiceRelatedInfo, llAdditionalInfo;
+    private WebView webView;
+    private String terms = "https://www.indushealthplus.com/";
+
+   // private String terms = "https://paytm.com/fastag-dealer-tnc";
+    private RelativeLayout rlProgress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,20 +38,20 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void setListeners() {
-        rlGeneralInfo       .setOnClickListener(this);
-        rlServiceRelated    .setOnClickListener(this);
-        rlAdditionalInfo    .setOnClickListener(this);
-        llGeneralInfo       .setOnClickListener(this);
+        rlGeneralInfo.setOnClickListener(this);
+        rlServiceRelated.setOnClickListener(this);
+        rlAdditionalInfo.setOnClickListener(this);
+        llGeneralInfo.setOnClickListener(this);
         llServiceRelatedInfo.setOnClickListener(this);
-        llAdditionalInfo    .setOnClickListener(this);
+        llAdditionalInfo.setOnClickListener(this);
 
-        ratingbar . setOnRatingChangeListener(new MaterialRatingBar.OnRatingChangeListener() {
+        ratingbar.setOnRatingChangeListener(new MaterialRatingBar.OnRatingChangeListener() {
             @Override
             public void onRatingChanged(MaterialRatingBar ratingBar, float rating) {
-                if (rating < 5.0f){
+                if (rating < 5.0f) {
                     llRating.setVisibility(View.VISIBLE);
                     tvVideoUpload.setVisibility(View.GONE);
-                }else {
+                } else {
                     llRating.setVisibility(View.GONE);
                     tvVideoUpload.setVisibility(View.VISIBLE);
                 }
@@ -52,21 +60,45 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void initialize() {
-        ratingbar     = findViewById(R.id.ratingbar);
-        llRating      = findViewById(R.id.llRating);
+        ratingbar = findViewById(R.id.ratingbar);
+        llRating = findViewById(R.id.llRating);
         tvVideoUpload = findViewById(R.id.tvVideoUpload);
-        rlGeneralInfo        = findViewById(R.id.rlGeneralInfo);
-        rlServiceRelated     = findViewById(R.id.rlServiceRelated);
-        rlAdditionalInfo     = findViewById(R.id.rlAdditionalInfo);
-        llGeneralInfo        = findViewById(R.id.llGeneralInfo);
+        rlGeneralInfo = findViewById(R.id.rlGeneralInfo);
+        rlServiceRelated = findViewById(R.id.rlServiceRelated);
+        rlAdditionalInfo = findViewById(R.id.rlAdditionalInfo);
+        llGeneralInfo = findViewById(R.id.llGeneralInfo);
         llServiceRelatedInfo = findViewById(R.id.llServiceRelatedInfo);
-        llAdditionalInfo     = findViewById(R.id.llAdditionalInfo);
+        llAdditionalInfo = findViewById(R.id.llAdditionalInfo);
+        rlProgress     = findViewById(R.id.rlProgress);
         DeviceUtility.hideKeyBord(FeedbackActivity.this);
+
+        webView = findViewById(R.id.webView);
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.setWebViewClient(new WebViewClient() {
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                rlProgress.setVisibility(View.VISIBLE);
+                view.loadUrl(url);
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, final String url) {
+                if (rlProgress.getVisibility() == View.VISIBLE){ rlProgress.setVisibility(View.GONE);}
+            }
+        });
+
+
+        webView.loadUrl(terms);
     }
 
     private void initToolBar() {
         toolbar = findViewById(R.id.toolbar);
-        initializeToolBar(toolbar,"Feedback");
+        initializeToolBar(toolbar, "Feedback");
     }
 
     @Override
@@ -75,12 +107,13 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.rlGeneralInfo:
-                llGeneralInfo       .setVisibility(View.VISIBLE);
-                llAdditionalInfo    .setVisibility(View.GONE);
+                llGeneralInfo.setVisibility(View.VISIBLE);
+                llAdditionalInfo.setVisibility(View.GONE);
                 llServiceRelatedInfo.setVisibility(View.GONE);
                 rlGeneralInfo.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 rlAdditionalInfo.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -88,16 +121,16 @@ public class FeedbackActivity extends BaseActivity implements View.OnClickListen
 
                 break;
             case R.id.rlServiceRelated:
-                llGeneralInfo       .setVisibility(View.GONE);
-                llAdditionalInfo    .setVisibility(View.GONE);
+                llGeneralInfo.setVisibility(View.GONE);
+                llAdditionalInfo.setVisibility(View.GONE);
                 llServiceRelatedInfo.setVisibility(View.VISIBLE);
                 rlGeneralInfo.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 rlAdditionalInfo.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 rlServiceRelated.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 break;
             case R.id.rlAdditionalInfo:
-                llGeneralInfo       .setVisibility(View.GONE);
-                llAdditionalInfo    .setVisibility(View.VISIBLE);
+                llGeneralInfo.setVisibility(View.GONE);
+                llAdditionalInfo.setVisibility(View.VISIBLE);
                 llServiceRelatedInfo.setVisibility(View.GONE);
                 rlGeneralInfo.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 rlAdditionalInfo.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));

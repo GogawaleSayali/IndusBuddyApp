@@ -30,6 +30,16 @@ public class Model_Item_Report {
     private int  clientSelfReportId ;
     @SerializedName("addedOn")
     private String addedOn ;
+    @SerializedName("count")
+    private String count;
+
+    public String getCount() {
+        return count;
+    }
+
+    public void setCount(String count) {
+        this.count = count;
+    }
 
     public Model_Item_Report() {
     }

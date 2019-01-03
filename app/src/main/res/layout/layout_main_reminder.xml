@@ -42,28 +42,56 @@
                 android:inputType="textCapWords"
                 android:padding="@dimen/image4x"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/font3x" />
+                android:textSize="@dimen/font3x"
+                android:visibility="gone" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:layout_below="@+id/et_title"
-                android:alpha="0.2"
-                android:background="@color/colorPrimary" />
-
-            <EditText
-                android:id="@+id/etRemFor"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/rgforme_other_Reminder"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/image2x"
+                android:layout_below="@+id/et_time"
                 android:layout_marginTop="@dimen/image2x"
-                android:background="#00000000"
-                android:gravity="center"
-                android:hint="@string/Remfor"
-                android:padding="@dimen/image4x"
-                android:text=""
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/font3x" />
+                android:orientation="horizontal"
+                android:padding="@dimen/image4x">
+
+                <LinearLayout
+                    android:id="@+id/llforme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_for_me"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="true"
+
+                        android:text="For Me"
+                        android:textColor="@color/colorgrey"
+                        android:textSize="@dimen/font3x" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+
+                        android:text="Other"
+                        android:textColor="@color/colorgrey"
+                        android:textSize="@dimen/font3x" />
+                </LinearLayout>
+            </LinearLayout>
+
 
             <View
                 android:layout_width="match_parent"
@@ -81,8 +109,9 @@
                 android:gravity="center"
                 android:hint="@string/remMobile"
                 android:inputType="number"
-                android:maxLength="10"
+                android:maxLength="12"
                 android:padding="@dimen/image4x"
+
                 android:text=""
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/font3x" />
@@ -131,7 +160,7 @@
                     android:background="#00000000"
                     android:gravity="center"
                     android:hint="@string/drName"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:padding="@dimen/image4x"
                     android:text=""
                     android:textColor="@color/colorText"
@@ -197,6 +226,7 @@
                     android:background="#00000000"
                     android:gravity="center"
                     android:hint="@string/excerType"
+                    android:inputType="textCapWords"
                     android:padding="@dimen/image4x"
                     android:text=""
                     android:textColor="@color/colorText"
@@ -246,6 +276,7 @@
                     android:background="#00000000"
                     android:gravity="center"
                     android:hint="@string/testName"
+                    android:inputType="textCapWords"
                     android:padding="@dimen/image4x"
                     android:text=""
                     android:textColor="@color/colorText"
@@ -266,6 +297,7 @@
                     android:background="#00000000"
                     android:gravity="center"
                     android:hint="@string/centerName"
+                    android:inputType="textCapWords"
                     android:padding="@dimen/image4x"
                     android:text=""
                     android:textColor="@color/colorText"
@@ -456,6 +488,7 @@
                         android:src="@drawable/ic_action_calendar" />
 
                     <TextView
+                        android:id="@+id/tvStartDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -513,7 +546,7 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/radioGroup"
+                android:id="@+id/radioGroupReminder"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/et_time"
@@ -570,8 +603,8 @@
                 android:text="@string/remind_submit"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/font6x" />
-
         </LinearLayout>
     </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>

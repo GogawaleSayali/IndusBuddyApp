@@ -25,12 +25,15 @@ import com.dogratech.indusbuddyapp.main.managers.SharedPrefsManager;
 import com.dogratech.indusbuddyapp.main.models.Model_Item_Report;
 import com.dogratech.indusbuddyapp.main.models.ModelSelfUploadReports;
 import com.dogratech.indusbuddyapp.main.models.ModelResGetAllReport;
+import com.dogratech.indusbuddyapp.main.models.ViewRecordSupportModel;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiClient;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiInterfaceGet;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiUrl;
 import com.dogratech.indusbuddyapp.main.uitility.NetworkUtility;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -45,8 +48,9 @@ public class ViewRecordsActivity extends BaseActivity implements View.OnClickLis
     private String TAG = getClass().getName();
     private RecyclerView rvViewTypes;
     private FloatingActionButton fabUpload;
-    private ArrayList<Model_Item_Report> modelRecordsList = new ArrayList<>(); ;
-    private ApiInterfaceGet interface_get ;
+    private ArrayList<ViewRecordSupportModel> modelRecordsList = new ArrayList<>();
+    ;
+    private ApiInterfaceGet interface_get;
     private TextView tvNoReportsMsg;
     private RecordsAdapter recordsAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -56,7 +60,7 @@ public class ViewRecordsActivity extends BaseActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        initializeToolBar(toolbar,"View Records");
+        initializeToolBar(toolbar, "View Records");
         initialize();
     }
 
@@ -84,67 +88,108 @@ public class ViewRecordsActivity extends BaseActivity implements View.OnClickLis
      * webservice and show in a recycler view.                *
      **********************************************************/
     private void setData() {
-        if(NetworkUtility.isNetworkAvailable(ViewRecordsActivity.this)){
-            String userId      = SharedPrefsManager.getSharedInstance(ViewRecordsActivity.this)
-                                .getData(getString(R.string.shars_userid));
+        if (NetworkUtility.isNetworkAvailable(ViewRecordsActivity.this)) {
+            String userId = SharedPrefsManager.getSharedInstance(ViewRecordsActivity.this)
+                    .getData(getString(R.string.shars_userid));
 
-            String url         = ApiUrl.Base_URL_INDUS + ApiUrl.getSelfUploadReportByEHRId + userId;
+            String url = ApiUrl.Base_URL_INDUS + ApiUrl.getSelfUploadReportByEHRId + userId;
             AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ViewRecordsActivity.this);
-            LayoutInflater inflater           = this.getLayoutInflater();
-            View dialogView                   = inflater.inflate(R.layout.custom_loader, null);
-            dialogBuilder                      .setView(dialogView);
-            final AlertDialog alertDialog     = dialogBuilder.create();
+            LayoutInflater inflater = this.getLayoutInflater();
+            View dialogView = inflater.inflate(R.layout.custom_loader, null);
+            dialogBuilder.setView(dialogView);
+            final AlertDialog alertDialog = dialogBuilder.create();
             alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             alertDialog.setCancelable(false);
-            try { alertDialog.show();}catch (Exception e){ e.printStackTrace(); }
-            interface_get   = ApiClient.getClient(ApiClient.BASE_URL_TYEP_INDUS).create(ApiInterfaceGet.class);
+            try {
+                alertDialog.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            interface_get = ApiClient.getClient(ApiClient.BASE_URL_TYEP_INDUS).create(ApiInterfaceGet.class);
             interface_get.getAllReport(url).enqueue(new Callback<ModelResGetAllReport>() {
                 @Override
                 public void onResponse(Call<ModelResGetAllReport> call, Response<ModelResGetAllReport> response) {
-                    try{if (alertDialog.isShowing()){ alertDialog.hide();}
-                        if(response.isSuccessful()){
-                            if(response.body()!=null){
+                    try {
+                        if (alertDialog.isShowing()) {
+                            alertDialog.hide();
+                        }
+                        if (response.isSuccessful()) {
+                            if (response.body() != null) {
                                 ModelResGetAllReport allReport = response.body();
-                                if(allReport.getStatus_code() == Constatnts.S_CODE_0){
+                                if (allReport.getStatus_code() == Constatnts.S_CODE_0) {
                                     ModelSelfUploadReports selfUploadReports = allReport.getUploadReports();
-                                    modelRecordsList = selfUploadReports.getSelfUploadReports();
-                                    if (modelRecordsList.size()>0) {
+                                    ArrayList<Model_Item_Report> RecordsList = selfUploadReports.getSelfUploadReports();
+                                    ArrayList<String> ducplicateList = new ArrayList<>();
+
+                                  for(int k=0;k<RecordsList.size();k++){
+                                      ducplicateList.add(RecordsList.get(k).getComment());
+                                  }
+
+
+                                    HashSet<String> hashSet = new HashSet<String>();
+                                    hashSet.addAll(ducplicateList);
+                                    ducplicateList.clear();
+                                    ducplicateList.addAll(hashSet);
+                                    ArrayList<Model_Item_Report> RecordsListduplicates = selfUploadReports.getSelfUploadReports();
+                                    if (ducplicateList.size() > 0) {
+                                        for (int i = 0; i < ducplicateList.size(); i++) {
+                                            ArrayList<Model_Item_Report> List =new ArrayList<>();
+
+                                            for (int j = 0; j < RecordsListduplicates.size(); j++) {
+                                                if (ducplicateList.get(i).equals(RecordsListduplicates.get(j).getComment())) {
+                                                    List.add(RecordsListduplicates.get(j));
+                                                }
+                                                }
+                                            if(List.size()>0){
+                                                ViewRecordSupportModel item_report =new ViewRecordSupportModel();
+                                                item_report.setCount(String.valueOf(List.size()));
+                                                item_report.setName(ducplicateList.get(i));
+                                                item_report.setRecordsList(List);
+                                                modelRecordsList.add(item_report);
+
+                                            }
+
+
+                                        }
+
                                         recordsAdapter = new RecordsAdapter(ViewRecordsActivity.this, modelRecordsList);
                                         mLayoutManager = new LinearLayoutManager(ViewRecordsActivity.this);
                                         rvViewTypes.setLayoutManager(mLayoutManager);
                                         rvViewTypes.setAdapter(recordsAdapter);
-                                    }else{
+                                    } else {
                                         tvNoReportsMsg.setVisibility(View.VISIBLE);
                                     }
-                                }else{
-                                    int error_code= allReport.getError_code();
+                                } else {
+                                    int error_code = allReport.getError_code();
                                     ErrorCodesAndMessagesManager errCodeMsg = ErrorCodesAndMessagesManager.getInstance();
-                                   Log.e(TAG,errCodeMsg.getErrorMessage(error_code));
+                                    Log.e(TAG, errCodeMsg.getErrorMessage(error_code));
                                 }
                             }
                         }
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ModelResGetAllReport> call, Throwable t) {
-                    Log.d(TAG,t.toString());
-                    if (alertDialog.isShowing()){ alertDialog.hide();}
+                    Log.d(TAG, t.toString());
+                    if (alertDialog.isShowing()) {
+                        alertDialog.hide();
+                    }
                 }
             });
-        }else{
+        } else {
             snackInternet();
         }
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.fabUpload:
                 Intent intent = new Intent();
-                setResult(Activity.RESULT_OK,intent);
+                setResult(Activity.RESULT_OK, intent);
                 finish();
                 break;
         }
@@ -153,14 +198,14 @@ public class ViewRecordsActivity extends BaseActivity implements View.OnClickLis
     @Override
     public void onBackPressed() {
         Intent intent = new Intent();
-        setResult(Activity.RESULT_CANCELED,intent);
+        setResult(Activity.RESULT_CANCELED, intent);
         finish();
     }
 
     /**********************************
      * Show snake bor for no internet.*
      **********************************/
-    public void snackInternet(){
+    public void snackInternet() {
         Snackbar snackbar = Snackbar
                 .make(fabUpload, getString(R.string.no_internet), Snackbar.LENGTH_LONG)
                 .setAction("Warning", new View.OnClickListener() {

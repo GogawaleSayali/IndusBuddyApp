@@ -11,28 +11,29 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.2"
-        android:layout_marginTop="80dp"
-        android:scaleType="centerCrop"
         android:layout_above="@+id/tvSubmit"
+
+        android:alpha="0.2"
+        android:scaleType="centerCrop"
         android:src="@drawable/splach_bg" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/tvSubmit"
-        android:background="#60000000">
+        android:background="#60000000"
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/rlUpper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/square"
-                android:layout_margin="@dimen/image4x">
+                android:layout_margin="@dimen/image4x"
+                android:background="@drawable/square">
 
                 <TextView
                     android:id="@+id/tv_rating"
@@ -118,19 +119,36 @@
                         android:background="@drawable/ripple_button_green"
                         android:gravity="center"
                         android:padding="@dimen/image4x"
-                        android:visibility="gone"
                         android:text="Upload Video Testimonial"
                         android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/font5x" />
+                        android:textSize="@dimen/font5x"
+                        android:visibility="gone" />
 
                 </LinearLayout>
             </RelativeLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/rlUpper"
+
                 android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlUpper"
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <View
                     android:layout_width="match_parent"
@@ -139,66 +157,65 @@
                     android:background="@color/colorWhite" />
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <RelativeLayout
+                        android:id="@+id/rlGeneralInfo"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/image2x">
 
-                        <RelativeLayout
-                            android:id="@+id/rlGeneralInfo"
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@color/colorPrimaryDark"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/image2x">
+                            android:gravity="center"
+                            android:text="@string/general_info"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font4x" />
+                    </RelativeLayout>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="@string/general_info"
-                                android:textColor="@color/colorWhite"
-                                android:textSize="@dimen/font4x" />
-                        </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rlServiceRelated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/image2x">
 
-                        <RelativeLayout
-                            android:id="@+id/rlServiceRelated"
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@color/colorPrimary"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/image2x">
+                            android:gravity="center"
+                            android:text="@string/service_rel"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font4x" />
+                    </RelativeLayout>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="@string/service_rel"
-                                android:textColor="@color/colorWhite"
-                                android:textSize="@dimen/font4x" />
-                        </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rlAdditionalInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/image2x">
 
-                        <RelativeLayout
-                            android:id="@+id/rlAdditionalInfo"
-                            android:layout_width="0dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@color/colorPrimary"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/image2x">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="@string/additional_info"
-                                android:textColor="@color/colorWhite"
-                                android:textSize="@dimen/font4x" />
-                        </RelativeLayout>
-                    </LinearLayout>
+                            android:gravity="center"
+                            android:text="@string/additional_info"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/font4x" />
+                    </RelativeLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/llGeneralInfo"
@@ -246,8 +263,21 @@
         android:gravity="center"
         android:padding="@dimen/image4x"
         android:text="Submit"
-        android:visibility="gone"
         android:textColor="@color/colorWhite"
-        android:textSize="@dimen/font5x" />
+        android:textSize="@dimen/font5x"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50ffffff"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
 </RelativeLayout>

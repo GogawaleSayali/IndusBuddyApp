@@ -3,10 +3,12 @@ package com.dogratech.indusbuddyapp.main.fragments;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -22,6 +24,7 @@ import android.widget.Toast;
 
 import com.dogratech.indusbuddyapp.R;
 import com.dogratech.indusbuddyapp.main.activities.TipActivity;
+import com.dogratech.indusbuddyapp.main.activities.navmenuactivities.SettingsActivity;
 import com.dogratech.indusbuddyapp.main.adapters.FilterTipsAdapter;
 import com.dogratech.indusbuddyapp.main.adapters.HealthTipsAdapter;
 import com.dogratech.indusbuddyapp.main.listeners.RecyclerItemClickListener;
@@ -34,8 +37,12 @@ import com.dogratech.indusbuddyapp.main.retrofit.ApiClient;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiInterfaceGet;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiUrl;
 import com.dogratech.indusbuddyapp.main.uitility.NetworkUtility;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -66,6 +73,7 @@ public class HealthTips extends Fragment implements View.OnClickListener {
     private View HealthTips ;
     private FloatingActionButton btn_filter ;
     private OnFragmentInteractionListener mListener;
+
 
     public HealthTips() {
         // Required empty public constructor
@@ -106,9 +114,18 @@ public class HealthTips extends Fragment implements View.OnClickListener {
         initialise();
         setCommentData();
         loadComments();
+       // getchildArrayList("subcategorylist");
         setListener();
         return HealthTips ;
     }
+/*
+    public ArrayList<String> getchildArrayList(String key){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        Gson gson = new Gson();
+        String json = prefs.getString(key, null);
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        return gson.fromJson(json, type);
+    }*/
 
     private void setListener() {
         btn_filter      . setOnClickListener(this);

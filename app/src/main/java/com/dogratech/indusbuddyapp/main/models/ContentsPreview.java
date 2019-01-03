@@ -24,8 +24,19 @@ public class ContentsPreview {
     private  String modifyBy;
     @SerializedName("modifyOn")
     private long modifyOn;
+
+    public String getSubCategories() {
+        return subCategories;
+    }
+
+    public void setSubCategories(String subCategories) {
+        this.subCategories = subCategories;
+    }
+
     @SerializedName("contentFiles")
     private ArrayList<FileObjectModel> contentFiles;
+    @SerializedName("subCategories")
+    private String subCategories;
 
     public int getContentId() {
         return contentId;

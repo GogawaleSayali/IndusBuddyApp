@@ -11,4 +11,27 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/image3x"
         android:layout_marginBottom="@dimen/image3x"/>
+    <TextView
+        android:id="@+id/tvDataNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:gravity="center"
+        android:text="No Upcoming Appointment"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/font3x" />
+    <RelativeLayout
+        android:id="@+id/rlPrpgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50ffffff"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progressAvial"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
 </RelativeLayout>

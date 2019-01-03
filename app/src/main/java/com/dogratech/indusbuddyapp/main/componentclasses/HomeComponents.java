@@ -1,6 +1,7 @@
 package com.dogratech.indusbuddyapp.main.componentclasses;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
@@ -14,6 +15,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -25,7 +27,9 @@ import android.widget.TextView;
 import com.dogratech.indusbuddyapp.R;
 import com.dogratech.indusbuddyapp.main.activities.apphomeactivity.AppHomeActivity;
 import com.dogratech.indusbuddyapp.main.activities.baseactivities.BaseActivity;
+import com.dogratech.indusbuddyapp.main.activities.navmenuactivities.SettingsActivity;
 import com.dogratech.indusbuddyapp.main.adapters.HealthTipsAdapter;
+import com.dogratech.indusbuddyapp.main.helper.Constatnts;
 import com.dogratech.indusbuddyapp.main.managers.SharedPrefsManager;
 import com.dogratech.indusbuddyapp.main.models.ContentPreviewMainModel;
 import com.dogratech.indusbuddyapp.main.models.ContentsPreview;
@@ -35,42 +39,52 @@ import com.dogratech.indusbuddyapp.main.models.SubMenuList;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiClient;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiInterfaceGet;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiUrl;
+import com.dogratech.indusbuddyapp.main.uitility.Commman;
 import com.dogratech.indusbuddyapp.main.uitility.NetworkUtility;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.dogratech.indusbuddyapp.main.activities.navmenuactivities.ConstantManager.SETTINGACTIVITY_CALL;
+import static com.dogratech.indusbuddyapp.main.activities.navmenuactivities.ConstantManager.SUBCATEGORY;
+
 
 public class HomeComponents extends BaseActivity {
     private static final String AUTH_PENDING = "auth_state_pending";
-    protected DrawerLayout drawerLayout ;
-    protected ImageView ivMenu, ivHealthCheckup, ivHealthGuide, ivWelness, ivFitness, ivViewArrow,
-                        ivEditProfile, ivViewArrowDown, ivHealthCheckupSmall, ivHealthGuideSmall,
-                        ivWelnessSmall, ivFitnessSmall,ivRecords,ivReminders;
+    protected DrawerLayout drawerLayout;
+    protected ImageView ivMenu, ivHealthCheckup, ivHealthGuide, ivWelness, ivFitness, img_settingactivity_arrow, ivViewArrow,
+            ivEditProfile, ivViewArrowDown, ivHealthCheckupSmall, ivHealthGuideSmall,
+            ivWelnessSmall, ivFitnessSmall, ivRecords, ivReminders;
     protected RelativeLayout rlProfile, rlRateOurApp, rlHelpCenter, rlAboutUs, rlLogout, rlSettings,
-                             rlCheckupSmall, rlGuideSmall, rlWellnessSmall, rlFitnessSmall,
-                             rlStoreRecords,rlReminders,rlIndusUpdate,rlProgressMain;
+            rlCheckupSmall, rlGuideSmall, rlWellnessSmall, rlFitnessSmall,
+            rlStoreRecords, rlReminders, rlIndusUpdate, rlProgressMain;
     protected CardView cardHealthCheckUp, cardHealthGuide, cardWellness, cardFitness;
-    protected TextView tvHealthCheckup,tvHealthGuide,tvWellness,tvFitness, tvArticleTitle,
-                       tvCheckUpSmall, tvGuideSmall, tvWellnessSmall, tvFitnessSmall, tvUserName,tvError;
-    protected LinearLayout llMainMenuSmall,llRedeem;
+    protected TextView tvHealthCheckup, tvHealthGuide, tvWellness, tvFitness, tvArticleTitle,
+            tvCheckUpSmall, tvGuideSmall, tvWellnessSmall, tvFitnessSmall, tvUserName, tvError;
+    protected LinearLayout llMainMenuSmall, llRedeem, llMainMenuStrip;
     protected SlidingUpPanelLayout sliding_layout;
     protected SharedPrefsManager prefsManager;
-    protected LinearLayout llBottom,llTop;
+
+    protected LinearLayout llBottom, llTop;
     protected static String CHECKUP_MENU, GUIDE_MENU, WELLNESS_MENU, FITNESS_MENU;
     protected ArrayList<SubMenuList> subMenuCheckup = new ArrayList<>();
     protected ArrayList<SubMenuList> subMenuGuide = new ArrayList<>();
     protected ArrayList<SubMenuList> subMenuWellness = new ArrayList<>();
     protected ArrayList<SubMenuList> subMenuFitness = new ArrayList<>();
     private RecyclerView rvArticles;
-    private ArrayList<ContentsPreview> contentsPreview;
-    private String   selectedLanguage = "eng";
-    private boolean  authInProgress = false;
+    private String selectedLanguage = "eng";
+    private boolean authInProgress = false;
     private HealthTipsAdapter adapter;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,68 +98,71 @@ public class HomeComponents extends BaseActivity {
      ************************/
     protected void initialize() {
         CHECKUP_MENU = GUIDE_MENU = WELLNESS_MENU = FITNESS_MENU = "";
-        if (prefsManager==null) {
+        if (prefsManager == null) {
             prefsManager = SharedPrefsManager.getSharedInstance(HomeComponents.this);
         }
-        drawerLayout    = findViewById(R.id.drawer_layout);
-        sliding_layout  = findViewById(R.id.sliding_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        sliding_layout = findViewById(R.id.sliding_layout);
 
         /*RelativeLayout*/
-        rlProfile          = findViewById(R.id.rlProfile);
-        rlRateOurApp    = findViewById(R.id.rlRateOurApp);
-        rlHelpCenter    = findViewById(R.id.rlHelpCenter);
-        rlAboutUs       = findViewById(R.id.rlAboutUs);
-        rlLogout        = findViewById(R.id.rlLogout);
-        rlSettings      = findViewById(R.id.rlSettings);
-        rlStoreRecords  = findViewById(R.id.rlStoreRecords);
-        rlIndusUpdate   = findViewById(R.id.rlIndusUpdate);
-        rlReminders     = findViewById(R.id.rlReminders);
+        rlProfile = findViewById(R.id.rlProfile);
+        rlRateOurApp = findViewById(R.id.rlRateOurApp);
+        rlHelpCenter = findViewById(R.id.rlHelpCenter);
+        rlAboutUs = findViewById(R.id.rlAboutUs);
+        rlLogout = findViewById(R.id.rlLogout);
+        rlSettings = findViewById(R.id.rlSettings);
+        rlStoreRecords = findViewById(R.id.rlStoreRecords);
+        rlIndusUpdate = findViewById(R.id.rlIndusUpdate);
+        rlReminders = findViewById(R.id.rlReminders);
 
         cardHealthCheckUp = findViewById(R.id.rlHealthCheckUp);
-        cardHealthGuide   = findViewById(R.id.rlHealthGuide);
-        cardWellness      = findViewById(R.id.rlWellness);
-        cardFitness       = findViewById(R.id.rlFitness);
-        rlCheckupSmall    = findViewById(R.id.rlCheckupSmall);
-        rlGuideSmall    = findViewById(R.id.rlGuideSmall);
+        cardHealthGuide = findViewById(R.id.rlHealthGuide);
+        cardWellness = findViewById(R.id.rlWellness);
+        cardFitness = findViewById(R.id.rlFitness);
+        rlCheckupSmall = findViewById(R.id.rlCheckupSmall);
+        rlGuideSmall = findViewById(R.id.rlGuideSmall);
         rlWellnessSmall = findViewById(R.id.rlWellnessSmall);
-        rlFitnessSmall  = findViewById(R.id.rlFitnessSmall);
-        rlProgressMain  = findViewById(R.id.rlProgressMain);
+        rlFitnessSmall = findViewById(R.id.rlFitnessSmall);
+        rlProgressMain = findViewById(R.id.rlProgressMain);
 
         /*ImageView*/
-        ivMenu               = findViewById(R.id.ivMenu);
-        ivHealthCheckup      = findViewById(R.id.ivHealthCheckup);
-        ivHealthGuide        = findViewById(R.id.ivHealthGuide);
-        ivWelness            = findViewById(R.id.ivWelness);
-        ivFitness            = findViewById(R.id.ivFitness);
+        ivMenu = findViewById(R.id.ivMenu);
+        ivHealthCheckup = findViewById(R.id.ivHealthCheckup);
+        ivHealthGuide = findViewById(R.id.ivHealthGuide);
+        ivWelness = findViewById(R.id.ivWelness);
+        ivFitness = findViewById(R.id.ivFitness);
         ivHealthCheckupSmall = findViewById(R.id.ivHealthCheckupSmall);
-        ivHealthGuideSmall   = findViewById(R.id.ivHealthGuideSmall);
-        ivWelnessSmall       = findViewById(R.id.ivWelnessSmall);
-        ivFitnessSmall       = findViewById(R.id.ivFitnessSamll);
-        ivViewArrow          = findViewById(R.id.ivViewArrow);
-        ivViewArrowDown      = findViewById(R.id.ivViewArrowDown);
-        ivEditProfile        = findViewById(R.id.ivEditProfile);
-        ivRecords            = findViewById(R.id.ivRecords);
-        ivReminders          = findViewById(R.id.ivRemiders);
+        ivHealthGuideSmall = findViewById(R.id.ivHealthGuideSmall);
+        ivWelnessSmall = findViewById(R.id.ivWelnessSmall);
+        ivFitnessSmall = findViewById(R.id.ivFitnessSamll);
+
+        ivViewArrow = findViewById(R.id.ivViewArrow);
+        ivViewArrowDown = findViewById(R.id.ivViewArrowDown);
+        ivEditProfile = findViewById(R.id.ivEditProfile);
+        ivRecords = findViewById(R.id.ivRecords);
+        ivReminders = findViewById(R.id.ivRemiders);
 
         /*LinearLayout*/
-        llTop                = findViewById(R.id.llTop);
-        llBottom             = findViewById(R.id.llBottom);
-        rvArticles           = findViewById(R.id.rvArticles);
-        llMainMenuSmall      = findViewById(R.id.llMainMenuStrip);
-        llRedeem             = findViewById(R.id.llRedeem);
+        llTop = findViewById(R.id.llTop);
+        llBottom = findViewById(R.id.llBottom);
+        llMainMenuStrip = findViewById(R.id.llMainMenuStrip);
+        rvArticles = findViewById(R.id.rvArticles);
+        llMainMenuSmall = findViewById(R.id.llMainMenuStrip);
+        llRedeem = findViewById(R.id.llRedeem);
 
         /*TextView*/
-        tvError              = findViewById(R.id.tvError);
-        tvUserName           = findViewById(R.id.tvUserName);
-        tvHealthCheckup      = findViewById(R.id.tvHealthCheckup);
-        tvHealthGuide        = findViewById(R.id.tvHealthGuide);
-        tvWellness           = findViewById(R.id.tvWellness);
-        tvFitness            = findViewById(R.id.tvFitness);
-        tvArticleTitle       = findViewById(R.id.tvArticleTitle);
-        tvCheckUpSmall       = findViewById(R.id.tvCheckUpSmall);
-        tvGuideSmall         = findViewById(R.id.tvGuideSmall);
-        tvWellnessSmall      = findViewById(R.id.tvWellnessSmall);
-        tvFitnessSmall       = findViewById(R.id.tvFitnessSmall);
+        tvError = findViewById(R.id.tvError);
+        tvUserName = findViewById(R.id.tvUserName);
+        tvHealthCheckup = findViewById(R.id.tvHealthCheckup);
+        tvHealthGuide = findViewById(R.id.tvHealthGuide);
+        tvWellness = findViewById(R.id.tvWellness);
+        tvFitness = findViewById(R.id.tvFitness);
+        tvArticleTitle = findViewById(R.id.tvArticleTitle);
+        tvCheckUpSmall = findViewById(R.id.tvCheckUpSmall);
+        tvGuideSmall = findViewById(R.id.tvGuideSmall);
+        tvWellnessSmall = findViewById(R.id.tvWellnessSmall);
+        tvFitnessSmall = findViewById(R.id.tvFitnessSmall);
+        img_settingactivity_arrow = findViewById(R.id.img_settingactivity_arrow);
 
         /*Change color of image bitmap */
         changeAllImagesColor();
@@ -157,21 +174,34 @@ public class HomeComponents extends BaseActivity {
 
         if (AppHomeActivity.ROLE.equalsIgnoreCase("C")) {
             checkWellnessEvent();
-        }else{
+        } else {
             llRedeem.setVisibility(View.GONE);
         }
 
-        String welcomeNote = "Welcome , "+prefsManager.getData(getString(R.string.username));
+        String welcomeNote = "Welcome , " + prefsManager.getData(getString(R.string.username));
         //tvUserName.setText(welcomeNote);
-        RecyclerView   . LayoutManager mLayoutManager = new LinearLayoutManager(HomeComponents.this);
-        rvArticles     . setLayoutManager(mLayoutManager);
-        rvArticles     . setItemAnimator(new DefaultItemAnimator());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(HomeComponents.this);
+        rvArticles.setLayoutManager(mLayoutManager);
+        rvArticles.setItemAnimator(new DefaultItemAnimator());
 
+        loadComments();
+
+        String settingactivity = prefsManager.getData(SETTINGACTIVITY_CALL);
+        if (settingactivity.equalsIgnoreCase(Constatnts.NODATA)) {
+            startActivity(new Intent(HomeComponents.this, SettingsActivity.class));
+        }
+
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         loadComments();
     }
 
     private void loadComments() {
-        if (NetworkUtility.isNetworkAvailable(HomeComponents.this)){
+        if (NetworkUtility.isNetworkAvailable(HomeComponents.this)) {
             ApiInterfaceGet interfaceGet = ApiClient.getClient(ApiClient.BASE_URL_TYEP_INDUS)
                     .create(ApiInterfaceGet.class);
             AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(HomeComponents.this);
@@ -186,23 +216,72 @@ public class HomeComponents extends BaseActivity {
             interfaceGet.getContentPreview(url).enqueue(new Callback<ContentPreviewMainModel>() {
                 @Override
                 public void onResponse(Call<ContentPreviewMainModel> call, Response<ContentPreviewMainModel> response) {
-                    if (alertDialog.isShowing()){
+                    if (alertDialog.isShowing()) {
                         alertDialog.hide();
                     }
-                    if (response.isSuccessful()){
-                        if (response.body()!=null){
+                    if (response.isSuccessful()) {
+                        if (response.body() != null) {
                             ContentPreviewMainModel previewMainModel = response.body();
                             DataContent dataContent = previewMainModel.getData();
-                            contentsPreview = dataContent.getContents();
-                            if (contentsPreview!=null){
-                                if (contentsPreview.size()>0){
+                            ArrayList<ContentsPreview> contentsPreview = new ArrayList<>();
+                            ArrayList<ContentsPreview> dataContentList = dataContent.getContents();
+                            //Array list for checked items
+
+                            String settingactivity = prefsManager.getData(SETTINGACTIVITY_CALL);
+                            if (settingactivity.equalsIgnoreCase(Constatnts.NODATA)) {
+                                contentsPreview.addAll(dataContentList);
+                            } else {
+                                String subCate = prefsManager.getData(SUBCATEGORY);
+                                if (!subCate.equalsIgnoreCase(Constatnts.NODATA)) {
+                                    Type type = new TypeToken<ArrayList<ArrayList<HashMap<String, String>>>>() {
+                                    }.getType();
+                                    Gson gson = new Gson();
+                                    ArrayList<ArrayList<HashMap<String, String>>> arrayLists = gson.fromJson(subCate, type);
+
+                                    if (arrayLists != null) {
+                                        for (int i = 0; i < arrayLists.size(); i++) {
+                                            ArrayList<HashMap<String, String>> mapArrayList = arrayLists.get(i);
+                                            for (int j = 0; j < mapArrayList.size(); j++) {
+
+                                                HashMap<String, String> hashMap = mapArrayList.get(j);
+                                                if (hashMap.size() > 0) {
+                                                    if (hashMap.get("is_checked").equalsIgnoreCase("YES")) {
+
+                                                        for (int k = 0; k < dataContentList.size(); k++) {
+
+
+                                                            if (hashMap.get("sub_category_name").equalsIgnoreCase(dataContentList.get(k).getSubCategories())) {
+
+                                                                contentsPreview.add(dataContentList.get(k));
+
+                                                            }
+
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            Log.d("TAG", "onResponse: ");
+                                        }
+                                    }
+                                    // contentsPreview = dataContent.getContents();
+                                }
+                            }
+                                if (contentsPreview != null) {
+
                                     if (adapter == null) {
                                         adapter = new HealthTipsAdapter(HomeComponents.this, contentsPreview);
                                         rvArticles.setAdapter(adapter);
-                                    }else{
+                                    } else {
                                         adapter.updateList(contentsPreview);
                                     }
-                                }
+                                    if (contentsPreview.size() >= 1) {
+                                        llMainMenuStrip.setVisibility(View.VISIBLE);
+                                    } else {
+                                        llMainMenuStrip.setVisibility(View.INVISIBLE);
+                                    }
+
+
+
                             }
                         }
                     }
@@ -210,18 +289,18 @@ public class HomeComponents extends BaseActivity {
 
                 @Override
                 public void onFailure(Call<ContentPreviewMainModel> call, Throwable t) {
-                    if (alertDialog.isShowing()){
+                    if (alertDialog.isShowing()) {
                         alertDialog.hide();
                     }
                 }
             });
 
-        }else {
+        } else {
             snackInternet();
         }
     }
 
-    public void snackInternet(){
+    public void snackInternet() {
         Snackbar snackbar = Snackbar
                 .make(rlProgressMain, getString(R.string.no_internet), Snackbar.LENGTH_LONG)
                 .setAction("Retry", new View.OnClickListener() {
@@ -244,14 +323,15 @@ public class HomeComponents extends BaseActivity {
         interfaceGet.isEventAvail(url).enqueue(new Callback<ModelIsWellnessEvent>() {
             @Override
             public void onResponse(Call<ModelIsWellnessEvent> call, Response<ModelIsWellnessEvent> response) {
-                if (response.isSuccessful()){
-                    if (response.body()!=null){
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
                         ModelIsWellnessEvent isWellnessEvent = response.body();
-                        if (isWellnessEvent.getStatusCode() == 1){
-                            if (isWellnessEvent.getIsEvent().equalsIgnoreCase("Yes")){
+                        if (isWellnessEvent.getStatusCode() == 1) {
+                            if (isWellnessEvent.getIsEvent().equalsIgnoreCase("Yes")) {
                                 llRedeem.setVisibility(View.VISIBLE);
-                            }else {
-                                llRedeem.setVisibility(View.GONE);                            }
+                            } else {
+                                llRedeem.setVisibility(View.GONE);
+                            }
                         }
                     }
                 }
@@ -269,19 +349,19 @@ public class HomeComponents extends BaseActivity {
      * Set image and color.*
      ***********************/
     private void changeAllImagesColor() {
-        changeImageColor("primary",ivHealthCheckup);
-        changeImageColor("primary",ivHealthGuide);
-        changeImageColor("primary",ivWelness);
-        changeImageColor("primary",ivFitness);
-        changeImageColor("primary",ivRecords);
-        changeImageColor("primary",ivReminders);
+        changeImageColor("primary", ivHealthCheckup);
+        changeImageColor("primary", ivHealthGuide);
+        changeImageColor("primary", ivWelness);
+        changeImageColor("primary", ivFitness);
+        changeImageColor("primary", ivRecords);
+        changeImageColor("primary", ivReminders);
 
-        changeImageColor("white",ivHealthCheckupSmall);
-        changeImageColor("white",ivHealthGuideSmall);
-        changeImageColor("white",ivWelnessSmall);
-        changeImageColor("white",ivFitnessSmall);
-        changeImageColor("white",ivViewArrow);
-        changeImageColor("white",ivViewArrowDown);
+        changeImageColor("white", ivHealthCheckupSmall);
+        changeImageColor("white", ivHealthGuideSmall);
+        changeImageColor("white", ivWelnessSmall);
+        changeImageColor("white", ivFitnessSmall);
+        changeImageColor("white", ivViewArrow);
+        changeImageColor("white", ivViewArrowDown);
     }
 
 
@@ -290,10 +370,10 @@ public class HomeComponents extends BaseActivity {
      * @param color : color tb be filled*
      * @param imageView : ImageView     *
      ************************************/
-    private void changeImageColor(String color,ImageView imageView){
+    private void changeImageColor(String color, ImageView imageView) {
         if (color.equalsIgnoreCase("primary")) {
             imageView.setColorFilter(getResources().getColor(R.color.colorPrimaryDark), PorterDuff.Mode.SRC_IN);
-        }else if (color.equalsIgnoreCase("white")) {
+        } else if (color.equalsIgnoreCase("white")) {
             imageView.setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_IN);
         }
 
@@ -316,9 +396,9 @@ public class HomeComponents extends BaseActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
             drawerLayout.closeDrawer(GravityCompat.END);
-        } else if (sliding_layout.getPanelState()== SlidingUpPanelLayout.PanelState.EXPANDED){
+        } else if (sliding_layout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED) {
             sliding_layout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-        }else{
+        } else {
             super.onBackPressed();
         }
     }

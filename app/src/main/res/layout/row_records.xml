@@ -15,46 +15,38 @@
         android:padding="@dimen/image4x"
         card_view:cardCornerRadius="5dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:gravity="bottom"
-                android:padding="@dimen/image6x">
 
-                <ImageView
-                    android:id="@+id/ivIcon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:clickable="true"
-                    android:layout_centerVertical="true"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_action_file_icon" />
-                <TextView
-                    android:id="@+id/tvDocumentType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/ivIcon"
-                    android:text="document type"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/colorText"
-                    android:textSize="@dimen/font3x"
-                    android:padding="@dimen/image3x"/>
-                <TextView
-                    android:id="@+id/tvRecordCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="count"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/font3x"
-                    android:background="@drawable/ripple_button_green"
-                    android:paddingTop="@dimen/image3x"
-                    android:paddingBottom="@dimen/image3x"
-                    android:paddingLeft="@dimen/image6x"
-                    android:paddingRight="@dimen/image6x" />
-            </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvDocumentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/image3x"
+                android:text="document type"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/font3x" />
+
+            <TextView
+                android:id="@+id/tvRecordCount"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle"
+                android:text="94"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font4x" />
+
+        </RelativeLayout>
+
+
     </android.support.v7.widget.CardView>
 </LinearLayout>

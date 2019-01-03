@@ -34,7 +34,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ReminderActivity extends BaseActivity {
+public class    ReminderActivity extends BaseActivity {
     private String TAG = ReminderActivity.class.getName();
     private RecyclerView rv_reminder ;
     private ReminderAdapter adapter;
@@ -44,6 +44,12 @@ public class ReminderActivity extends BaseActivity {
     private String userId ;
     private TextView tvNoData;
     private ApiInterfaceGet interface_get ;
+
+    /*@Override
+    protected void onResume() {
+        super.onResume();
+        requestGetReminderData();
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

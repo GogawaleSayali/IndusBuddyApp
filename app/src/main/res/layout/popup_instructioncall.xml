@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="10px"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/radiogroup_instructioncall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButton_English"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:text="English"/>
+
+
+        <RadioButton
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:id="@+id/radioButton_Marathi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Marathi"/>
+
+
+        <RadioButton
+            android:textSize="15dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/radioButton_Hindi"
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:text="Hindi"/>
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/colorGreenemi"
+            android:clickable="true"
+            android:text="Ok"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/colorGreenemi"
+            android:clickable="true"
+            android:text="cancle"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

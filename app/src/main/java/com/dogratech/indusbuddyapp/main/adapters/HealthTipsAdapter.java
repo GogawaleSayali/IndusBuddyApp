@@ -28,20 +28,29 @@ public class HealthTipsAdapter extends RecyclerView.Adapter<HealthTipsAdapter.My
     private List<ContentsPreview> tipsList;
 
     public void updateList(ArrayList<ContentsPreview> contentsPreview) {
-        tipsList = contentsPreview;
+
+        if (tipsList != null) {
+            tipsList.clear();
+            tipsList.addAll(contentsPreview);
+        } else {
+            tipsList = contentsPreview;
+        }
+        notifyDataSetChanged();
+
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView  tvArticleTitle,tvAddedBy,tvAddedOn,tvPublishDate,tvDescription;
+        public TextView tvArticleTitle, tvAddedBy, tvAddedOn, tvPublishDate, tvDescription;
         public ImageView ivArticleImage;
+
         public MyViewHolder(View view) {
             super(view);
             tvArticleTitle = view.findViewById(R.id.tvArticleTitle);
-            tvDescription  = view.findViewById(R.id.tvDescription);
-            tvAddedBy      = view.findViewById(R.id.tvAddedBy);
-            tvAddedOn      = view.findViewById(R.id.tvAddedOn);
+            tvDescription = view.findViewById(R.id.tvDescription);
+            tvAddedBy = view.findViewById(R.id.tvAddedBy);
+            tvAddedOn = view.findViewById(R.id.tvAddedOn);
             ivArticleImage = view.findViewById(R.id.ivArticleImage);
-            tvPublishDate  = view.findViewById(R.id.tvPublishDate);
+            tvPublishDate = view.findViewById(R.id.tvPublishDate);
         }
     }
 
@@ -61,22 +70,21 @@ public class HealthTipsAdapter extends RecyclerView.Adapter<HealthTipsAdapter.My
         ContentsPreview health_tips = tipsList.get(position);
         holder.tvArticleTitle.setText(health_tips.getContentTitle());
         String descr = health_tips.getContentDescription().equalsIgnoreCase("")
-                ? "-":health_tips.getContentDescription();
-        String addedBy = health_tips.getAddedBy()==null? "-":health_tips.getAddedBy();
+                ? "-" : health_tips.getContentDescription();
+        String addedBy = health_tips.getAddedBy() == null ? "-" : health_tips.getAddedBy();
         holder.tvDescription.setText(descr.trim());//mContext.getString(R.string.about_us_text)
-        holder.tvAddedBy.setText("Added By - "+addedBy);
+        holder.tvAddedBy.setText("Added By - " + addedBy);
         long addedOn = health_tips.getAddedOn();
         String dateFormat = "dd-MM-yyyy hh:mm";
-        holder.tvPublishDate.setText("Published on : "+getDate(addedOn,dateFormat));
+        holder.tvPublishDate.setText("Published on : " + getDate(addedOn, dateFormat));
         if (health_tips.getContentFiles().get(0).getFileType().equalsIgnoreCase("image")) {
-            final String image = ApiUrl.Base_URL_INDUS+"viewReport/content/"
-                    +health_tips.getContentFiles().get(0).getFileName();
+            final String image = ApiUrl.Base_URL_INDUS + "viewReport/content/"
+                    + health_tips.getContentFiles().get(0).getFileName();
             Glide.with(mContext).load(image).into(holder.ivArticleImage);
         }
     }
 
-    public static String getDate(long milliSeconds, String dateFormat)
-    {
+    public static String getDate(long milliSeconds, String dateFormat) {
         // Create a DateFormatter object for displaying date in specified format.
         SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
 

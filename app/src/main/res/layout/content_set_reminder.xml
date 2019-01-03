@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -26,16 +27,28 @@
 
                 <include layout="@layout/layout_main_reminder" />
                 <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Summary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorText"/>
+                <TextView
                     android:id="@+id/tvRepeatSumm"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/font3x"
                     android:padding="@dimen/image3x"
                     android:textStyle="bold"
                     android:textColor="@color/colorText"/>
+               <include layout="@layout/one_time_summary_onsubmit"/>
+
             </LinearLayout>
 
-        </ScrollView>
+        </android.support.v4.widget.NestedScrollView>
     </FrameLayout>
 
     <RelativeLayout
@@ -116,6 +129,65 @@
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCalendarViewEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:padding="@dimen/image4x"
+        android:tag=""
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <com.applandeo.materialcalendarview.CalendarView
+                android:id="@+id/calendarViewEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:headerColor="@color/colorGreen"
+                app:type="one_day_picker" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/image3x">
+
+                <TextView
+                    android:id="@+id/tvCancelEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tvOkEndDate"
+                    android:background="@drawable/ripple_button_maroon"
+                    android:paddingBottom="@dimen/image4x"
+                    android:paddingLeft="@dimen/image10x"
+                    android:paddingRight="@dimen/image10x"
+                    android:paddingTop="@dimen/image4x"
+                    android:text="@string/Camera_Cancel"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvOkEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/image10x"
+                    android:background="@drawable/ripple_button_blue"
+                    android:paddingBottom="@dimen/image4x"
+                    android:paddingLeft="@dimen/image10x"
+                    android:paddingRight="@dimen/image10x"
+                    android:paddingTop="@dimen/image4x"
+                    android:text="@string/amdp_ok"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
 
 
 </RelativeLayout>

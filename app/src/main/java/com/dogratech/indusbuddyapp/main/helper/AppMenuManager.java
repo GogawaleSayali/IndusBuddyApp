@@ -1,10 +1,13 @@
 package com.dogratech.indusbuddyapp.main.helper;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.dogratech.indusbuddyapp.main.activities.apphomeactivity.AppHomeActivity;
+import com.dogratech.indusbuddyapp.main.activities.navmenuactivities.SettingsActivity;
 import com.dogratech.indusbuddyapp.main.models.MainMenuModel;
 import com.dogratech.indusbuddyapp.main.models.MainMenuResponceModel;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiClient;
@@ -17,6 +20,8 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.dogratech.indusbuddyapp.main.activities.navmenuactivities.ConstantManager.SETTINGACTIVITY_CALL;
 
 /*******************************
  * Created by amolr on 20/4/18.*
@@ -139,6 +144,8 @@ public class AppMenuManager extends GoogleClientHelper{
             cardWellness.setLayoutParams(paramsWellness);
             resizeImages(ivWelness,false,true,false ,false);
         }
+
+
     }
 
     /**********************************************************************************************

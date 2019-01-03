@@ -2,10 +2,14 @@ package com.dogratech.indusbuddyapp.main.activities.healthguide.guidefragments;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -48,17 +52,17 @@ public class DoctorCommentFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private  final String TAG = this.getClass().getName();
+    private final String TAG = this.getClass().getName();
     private RecyclerView rv_doctorView;
     private DoctorCommentAdapter adapter;
     private TextView tvNoCommentMsg;
-    private ApiInterfaceGet interface_get ;
+    private ApiInterfaceGet interface_get;
     private ArrayList<Model_Item_doctor_comment> doctorCommentList;
-    private View DoctorComment ;
+    private View DoctorComment;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private SharedPrefsManager prefsManager ;
+    private SharedPrefsManager prefsManager;
     private String userId;
     private FrameLayout frame;
 
@@ -95,35 +99,90 @@ public class DoctorCommentFragment extends Fragment {
         }
     }
 
+
+
+
+    private Boolean isStarted = false;
+    private Boolean isVisible = false;
+
+
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        isVisible = isVisibleToUser;
+        if (isStarted && isVisible) {
+            loadComments();
+        }
+    }
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        DoctorComment =  inflater.inflate(R.layout.fragment_doctor_comment, container, false);
-        initialise();
+        DoctorComment = inflater.inflate(R.layout.fragment_doctor_comment, container, false);
+        return DoctorComment;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         initiliseClass();
-        return DoctorComment ;
+        initialise();
+        // loadComments();
+    }
+
+    private void initialise() {
+        rv_doctorView = DoctorComment.findViewById(R.id.rv_doctorView);
+        tvNoCommentMsg = DoctorComment.findViewById(R.id.tvNoCommentMsg);
+        frame = DoctorComment.findViewById(R.id.frame);
+        isStarted = true;
+        if (isVisible && isStarted){
+
+            loadComments();
+        }
+
+
     }
 
     private void initiliseClass() {
-        interface_get     = ApiClient.getClient(ApiClient.BASE_URL_TYEP_INDUS).create(ApiInterfaceGet.class);
-        prefsManager      = SharedPrefsManager.getSharedInstance(getActivity());;
-        userId            = prefsManager.getData(getString(R.string.shars_userid));
+        interface_get = ApiClient.getClient(ApiClient.BASE_URL_TYEP_INDUS).create(ApiInterfaceGet.class);
+        prefsManager = SharedPrefsManager.getSharedInstance(getActivity());
+        userId = prefsManager.getData(getString(R.string.shars_userid));
         doctorCommentList = new ArrayList<>();
-        loadComments();
+        // loadComments();
     }
 
+
     private void loadComments() {
-        String url = ApiUrl.Base_URL_INDUS + ApiUrl.getAnalysisCommentByEHRId + userId ;
-        if(NetworkUtility.isNetworkAvailable(getActivity())){
+        String url = ApiUrl.Base_URL_INDUS + ApiUrl.getAnalysisCommentByEHRId + userId;
+        if (NetworkUtility.isNetworkAvailable(getActivity())) {
+
+            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
+            LayoutInflater inflater = this.getLayoutInflater();
+            View dialogView = inflater.inflate(R.layout.custom_loader, null);
+            dialogBuilder.setView(dialogView);
+            final AlertDialog alertDialog = dialogBuilder.create();
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            alertDialog.setCancelable(false);
+            try {
+                alertDialog.show();
+            } catch (Exception e) {
+            }
+
             interface_get.getDoctorComments(url).enqueue(new Callback<Model_Response_DoctorComment>() {
                 @Override
                 public void onResponse(Call<Model_Response_DoctorComment> call, Response<Model_Response_DoctorComment> response) {
-                    try{
-                        if(response.isSuccessful()){
-                            if(response.body()!=null){
+                    try {
+                        if (alertDialog.isShowing()) {
+                            alertDialog.hide();
+                        }
+                        if (response.isSuccessful()) {
+                            if (response.body() != null) {
                                 Model_Response_DoctorComment doctorComment = response.body();
-                                if(doctorComment.getStatus_code()== Constatnts.S_CODE_0){
+                                if (doctorComment.getStatus_code() == Constatnts.S_CODE_0) {
                                     Model_Item_AnalysisObject analysisObject = doctorComment.getAnalysisObject();
                                     ArrayList<Model_Item_doctor_comment> comments = analysisObject.getAnalysisComments();
                                    /* String dataDummy = "{     \"msg\": \"success\",     \"status_code\": 0,     \"data\": {         \"analysisComments\": [             {                 \"visitId\": \"1951216\",                 \"commentTypeId\": \"1\",                 \"analysisCommentId\": \"27775\",                 \"addedBy\": \"amol\",                 \"analysisComment\": \"neee\",                 \"comment\": \"Previous\",                 \"classification\": \"Urgent\",                 \"addedOn\": \"04-Apr-2018 10:57:36\"             },             {                 \"visitId\": \"1951216\",                 \"commentTypeId\": \"2\",                 \"analysisCommentId\": \"27776\",                 \"addedBy\": \"amol\",                 \"analysisComment\": \"grrdrfvgf\",                 \"comment\": \"New Com1\",                 \"classification\": \"Urgent\",                 \"addedOn\": \"04-Apr-2018 10:57:36\"             }         ]     },     \"error_code\": 0 }";
@@ -145,44 +204,52 @@ public class DoctorCommentFragment extends Fragment {
                                         comments2.add(comment);
                                     }
                                     comments =comments2;*/
-                                    if (comments!=null) {
-
-
-                                        tvNoCommentMsg.setVisibility(View.GONE);
-                                        doctorCommentList = comments;
-                                        if (adapter != null) {
-                                            adapter.update(doctorCommentList);
+                                    if (comments != null) {
+                                        if (comments.size() > 0) {
+                                            tvNoCommentMsg.setVisibility(View.INVISIBLE);
+                                            doctorCommentList = comments;
+                                          /*  if (adapter != null) {
+                                                adapter.update(doctorCommentList);
+                                            } else {*/
+                                                setCommentData(doctorCommentList);
+                                            //}
                                         } else {
-                                            setCommentData(doctorCommentList);
+                                            tvNoCommentMsg.setVisibility(View.VISIBLE);
                                         }
-                                    }else {
-                                        tvNoCommentMsg.setVisibility(View.VISIBLE);
                                     }
-                                }else{
+
+                                  /* else
+                                        {
+                                        tvNoCommentMsg.setVisibility(View.VISIBLE);
+                                        }*/
+                                }/*else{
                                     tvNoCommentMsg.setVisibility(View.VISIBLE);
-                                }
+                                }*/
                             }
                         }
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<Model_Response_DoctorComment> call, Throwable t) {
-                    Log.d(TAG,t.toString());
+                    Log.d(TAG, t.toString());
+                    if (alertDialog.isShowing()) {
+                        alertDialog.hide();
+                    }
                     tvNoCommentMsg.setVisibility(View.VISIBLE);
                 }
             });
-        }else{
+        } else {
             snackInternet();
         }
     }
 
     /*
-   * Internet checking code
-   * */
-    public void snackInternet(){
+     * Internet checking code
+     * */
+    public void snackInternet() {
         Snackbar snackbar = Snackbar
                 .make(frame, getString(R.string.no_internet), Snackbar.LENGTH_LONG)
                 .setAction("RETRY", new View.OnClickListener() {
@@ -199,24 +266,21 @@ public class DoctorCommentFragment extends Fragment {
     }
 
     private void setCommentData(List<Model_Item_doctor_comment> doctorCommentList) {
-        adapter           = new DoctorCommentAdapter(getActivity(), doctorCommentList);
-        RecyclerView      . LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        rv_doctorView     . setLayoutManager(mLayoutManager);
-        rv_doctorView     . setItemAnimator(new DefaultItemAnimator());
-        rv_doctorView     . setAdapter(adapter);
+        adapter = new DoctorCommentAdapter(getActivity(), doctorCommentList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+        rv_doctorView.setLayoutManager(mLayoutManager);
+        rv_doctorView.setItemAnimator(new DefaultItemAnimator());
+        rv_doctorView.setAdapter(adapter);
     }
 
-    private void initialise() {
-        rv_doctorView  = DoctorComment.findViewById(R.id.rv_doctorView);
-        tvNoCommentMsg = DoctorComment.findViewById(R.id.tvNoCommentMsg);
-        frame          = DoctorComment.findViewById(R.id.frame);
-    }
 
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
+
         }
     }
+
 
     @Override
     public void onAttach(Context context) {

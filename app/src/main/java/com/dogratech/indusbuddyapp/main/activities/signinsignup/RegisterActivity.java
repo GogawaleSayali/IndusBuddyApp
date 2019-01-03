@@ -260,6 +260,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             et_email.setError(null);
             et_mobile.setError(null);
         }
+
+       /* TextView errorText = (TextView)spinnerGender.getSelectedView();
+        if(spinnerGender.getSelectedItem().equals("Select Gender"))
+        {
+            errorText.setError("anything here, just to add the icon");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Pick one of them");//changes the selected item text to this
+            errorText.setError(null);
+        }*/
+
         String gender;
         if(spinnerGender.getSelectedItem().toString().equalsIgnoreCase("Male")){
             bGender = true;
@@ -276,9 +286,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if(bfName && blName && bDob && bGender){
-            if(bMobile){
+            if(bMobile)
+            {
                 registerUser(fName, lName,dob,mobile,gender,true);
-            }else if(bEmail){
+            }else if(bEmail)
+            {
                 registerUser(fName, lName,dob,email,gender,false);
             }
         }
@@ -303,19 +315,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     /*
     * request for server to register user
     * */
+
     private void registerUser(String fName, String lName, String dob, String eMobile, String gender,
                               boolean isMobile){
         if(NetworkUtility.isNetworkAvailable(getApplicationContext())){
             char s = gender.toString().trim().charAt(0);
             ModelUserDetails details = new ModelUserDetails();
+           /* if(et_firstname.equals(fName))
+            {
+                details.setFirstName(fName);
+            }*/
             details.setFirstName(fName);
             details.setLastName(lName);
+           /*if(et_lastname.equals(lName)) {
+                details.setLastName(lName);
+            }*/
             details.setGender(""+s);
             details.setDob(dob);
             if(isMobile){
                 details.setMobileNumber("91"+eMobile);
                 details.setEmailId("");
-            }else{
+            }else {
                 details.setEmailId(eMobile);
                 details.setMobileNumber("");
             }

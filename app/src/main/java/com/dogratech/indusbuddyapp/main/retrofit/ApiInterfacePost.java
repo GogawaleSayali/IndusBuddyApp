@@ -7,6 +7,8 @@ import com.dogratech.indusbuddyapp.main.models.Model_Response;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_AppReschedule;
 import com.dogratech.indusbuddyapp.main.models.Model_Response_Report;
 import com.dogratech.indusbuddyapp.main.models.ModelUserDetails;
+import com.dogratech.indusbuddyapp.main.models.Model_Response_setReminderDetails;
+import com.dogratech.indusbuddyapp.main.models.Model_item_setReminderDetails;
 
 import java.util.ArrayList;
 
@@ -28,6 +30,9 @@ public interface ApiInterfacePost {
     @POST(ApiUrl.verifyDetails)
     Call<Model_Response> verifyDetails(@Body ModelUserDetails body);
 
+   @POST(ApiUrl.saveReminder)
+    Call<Model_Response_setReminderDetails> saveReminder(@Body Model_item_setReminderDetails body);
+
     @POST(ApiUrl.postAppointment)
     Call<Model_Response_AppReschedule> RESCHEDULE_CALL  (@Field("AppNo") String AppNo,
                                                          @Field("AppYear") String AppYear ,
@@ -40,17 +45,17 @@ public interface ApiInterfacePost {
                                                          @Field("Appointment") String appoinmrnt);
     @Multipart
     @POST(ApiUrl.uploadSelfReport)
-    Call<Model_Response_Report> uploadSelfReport         (@Part("ehrId") RequestBody ehrId,
+    Call<Model_Response_Report> uploadSelfReport (@Part("ehrId") RequestBody ehrId,
                                                           @Part("comment") RequestBody  comment,
                                                           @Part MultipartBody.Part file);
     @Multipart
     @POST(ApiUrl.uploadProfilePicture)
-    Call<Model_Response_Report> uploadProfilePic         (@Part("ehrId") RequestBody ehrId,@Part MultipartBody.Part file);
+    Call<Model_Response_Report> uploadProfilePic (@Part("ehrId") RequestBody ehrId,@Part MultipartBody.Part file);
 
     @POST(ApiUrl.saveHRADetails)
     @Headers({"Accept: application/json",
             "Content-Type: application/json"})
-    Call<Model_Response_Report> saveHRAAnswers         (@Body ArrayList<HRAAnswerMainModel> data);
+    Call<Model_Response_Report> saveHRAAnswers (@Body ArrayList<HRAAnswerMainModel> data);
 
     @POST(ApiUrl.event)
     @Headers({"Accept: application/json",

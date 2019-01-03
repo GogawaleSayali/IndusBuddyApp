@@ -9,7 +9,7 @@
     tools:context="com.dogratech.indusbuddyapp.main.activities.navmenuactivities.SettingsActivity"
     tools:showIn="@layout/activity_settings">
 
-    <ScrollView
+    <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/image4x">
@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorWhite"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -72,7 +73,7 @@
                 android:alpha="0.7"
                 android:background="@color/colorgrey" />
         </LinearLayout>
-    </ScrollView>
+    </ScrollView>-->
 
     <FrameLayout
         android:id="@+id/frameArticlePrefs"
@@ -80,7 +81,7 @@
         android:layout_height="match_parent"
         android:background="#99000000"
         android:clickable="true"
-        android:visibility="gone">
+        >
 
         <!--<android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -93,21 +94,30 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:layout_margin="@dimen/image3x">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="bottom"
+                android:layout_alignParentTop="true"
                 android:layout_above="@+id/tvSave"
-                android:background="@drawable/square_round_tab">
-                <android.support.v7.widget.RecyclerView
+               android:background="@color/colorWhite">
+                <ExpandableListView
+                    android:id="@+id/lvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:divider="@color/colorPrimary"
+                    android:dividerHeight="0.5dp" />
+              <!--  <android.support.v7.widget.RecyclerView
                     android:id="@+id/rvArticleSettings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/tvSave"
                     android:background="@drawable/square_round_tab"
-                    android:padding="@dimen/image2x" />
+                    android:padding="@dimen/image2x" />-->
             </LinearLayout>
             <TextView
                 android:id="@+id/tvSave"
@@ -124,7 +134,11 @@
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/font5x" />
+
         </RelativeLayout>
         <!--</android.support.v7.widget.CardView>-->
+
     </FrameLayout>
+
+
 </RelativeLayout>

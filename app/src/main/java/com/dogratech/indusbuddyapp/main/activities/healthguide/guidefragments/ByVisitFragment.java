@@ -71,7 +71,7 @@ public class ByVisitFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     Map<String, ArrayList<ModelItemByVisit>> map = new HashMap<>();
     private ArrayList<ParamGraphModel> paramWiseList = new ArrayList<>();
-    private TextView tvDataNotFound;
+    private TextView tvDataNotFound,tvDataNotFound_visit;
 
     public ByVisitFragment() {
         // Required empty public constructor
@@ -126,23 +126,29 @@ public class ByVisitFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String visit = (String) parent.getAdapter().getItem(position);
-                if (!visit.equalsIgnoreCase("Select Visit")) {
+              //  if (!visit.equalsIgnoreCase("Select Visit")) {
                     lvParameters.setVisibility(View.VISIBLE);
                     tvDataNotFound.setVisibility(View.GONE);
+                    tvDataNotFound_visit.setVisibility(View.GONE);
                     String[] visitParams = visit.split("-");
-                    if (visitParams.length == 5) {
+                    if (visitParams.length == 5)
+                    {
                         String visitId = visitParams[1];
-                        if (map.get(visitId.trim()).size()>0) {
+                        ArrayList<ModelItemByVisit> list = map.get(visitId.trim());
+                        if (map.get(visitId.trim()).size()>0)
+                        {
                             setDataToVisitList(map.get(visitId.trim()));
-                        }else {
+                        }else
+                            {
                             lvParameters.setVisibility(View.GONE);
                             tvDataNotFound.setVisibility(View.VISIBLE);
                         }
                     }
-                }else{
+
+               /* }else{
                     lvParameters.setVisibility(View.GONE);
                     tvDataNotFound.setVisibility(View.VISIBLE);
-                }
+                }*/
             }
 
             @Override
@@ -247,14 +253,18 @@ public class ByVisitFragment extends Fragment {
                                 ArrayList<String> visitDates = new ArrayList<>();
                                 ArrayList<ModelItemByVisit> byVisits = new ArrayList<>();
                                 ArrayList<ModelItemByVisit> byVisitsSorted = new ArrayList<>();
-                                visitDates.add("Select Visit");
-                                ArrayList<ModelItemByVisit> itemByVisitNoData = new ArrayList<>();
-                                ArrayList<ModelItemByVisit> itemByVisitGreen = new ArrayList<>();
-                                ArrayList<ModelItemByVisit> itemByVisitRed = new ArrayList<>();
-                                ArrayList<ModelItemByVisit> itemByVisitOrange = new ArrayList<>();
+                               // visitDates.add("Select Visit");
+
 
                                 for (int i = 0; i<itemByVisit.size(); i++) {
+                                    byVisitsSorted.clear();
                                     byVisits = itemByVisit.get(i).getParameterList();
+                                    ArrayList<ModelItemByVisit> itemByVisitNoData = new ArrayList<>();
+                                    ArrayList<ModelItemByVisit> itemByVisitGreen = new ArrayList<>();
+                                    ArrayList<ModelItemByVisit> itemByVisitRed = new ArrayList<>();
+                                    ArrayList<ModelItemByVisit> itemByVisitOrange = new ArrayList<>();
+
+
                                     for (ModelItemByVisit visit :byVisits) {
                                         if (visit.getNormalValue().equalsIgnoreCase("1")){
                                             if (visit.getTestResultStatus().equalsIgnoreCase("normal")){
@@ -268,14 +278,11 @@ public class ByVisitFragment extends Fragment {
                                             itemByVisitNoData.add(visit);
                                         }
                                     }
-                                }
-                                byVisitsSorted.addAll(itemByVisitGreen);
-                                byVisitsSorted.addAll(itemByVisitOrange);
-                                byVisitsSorted.addAll(itemByVisitRed);
-                                byVisitsSorted.addAll(itemByVisitNoData);
+                                    byVisitsSorted.addAll(itemByVisitGreen);
+                                    byVisitsSorted.addAll(itemByVisitOrange);
+                                    byVisitsSorted.addAll(itemByVisitRed);
+                                    byVisitsSorted.addAll(itemByVisitNoData);
 
-                                for (int i = 0; i<itemByVisit.size(); i++) {
-                                   // byVisitsSorted = itemByVisit.get(i).getParameterList();
                                     String visitId = itemByVisit.get(i).getVisitId();
                                     String visitDate = itemByVisit.get(i).getVisitDate();
                                     visitDates.add("Visit Id - "+visitId+" - ( "+visitDate+" )");
@@ -283,7 +290,11 @@ public class ByVisitFragment extends Fragment {
                                         byVisitsSorted.get(j).setVisitDate(itemByVisit.get(i).getVisitDate());
                                     }
                                     map.put(visitId.trim(), byVisitsSorted);
+
                                 }
+
+
+
                                 setVisitDateToSpinner(visitDates);
                                 TrackParameter.global_paramlist = byVisitsSorted;
                                 TrackParameter.global_visitlist = listParameter.getItemVisitList().getParameterLists();
@@ -339,6 +350,7 @@ public class ByVisitFragment extends Fragment {
     private void initialize() {
         lvParameters = rootView.findViewById(R.id.lvParameters);
         tvDataNotFound = rootView.findViewById(R.id.tvDataNotFound);
+        tvDataNotFound_visit=rootView.findViewById(R.id.tvDataNotFound_visit);
         spinnerVisit = rootView.findViewById(R.id.spinnerVisit);
 
     }

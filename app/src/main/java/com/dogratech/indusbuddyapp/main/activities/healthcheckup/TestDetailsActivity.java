@@ -28,7 +28,7 @@ public class TestDetailsActivity extends BaseActivity implements
     private TabLayout tabLayout;
     private ViewPagerAdapter adapter ;
     private Intent intent;
-    private String tabTitles[] = new String[] { "PACKAGE", "ADD ON TESTS","ADD ON PACKAGES",
+    private String tabTitles[] = new String[] { "PACKAGE TEST", "ADD ON TESTS","ADD ON PACKAGES",
                                                 "DISCOUNT COUPON PACKAGE"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {

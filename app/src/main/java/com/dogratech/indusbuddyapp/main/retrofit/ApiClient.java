@@ -32,6 +32,7 @@ public class ApiClient {
     public static Gson gson = new GsonBuilder()
                                   .setLenient()
                                   .create();
+
     public static Retrofit getClient(String urlType) {
         try {
             if (urlType.equalsIgnoreCase(BASE_URL_TYEP_MOBILE)){

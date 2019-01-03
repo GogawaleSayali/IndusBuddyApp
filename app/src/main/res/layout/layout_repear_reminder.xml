@@ -93,10 +93,10 @@
                         <Spinner
                             android:id="@+id/spinnerRepeatEvery"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="13dp"
+                            android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:background="@drawable/square_white"
-                            android:layout_gravity="center_vertical"
                             android:inputType="number"
                             android:textSize="@dimen/font3x" />
 
@@ -358,6 +358,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:inputType="number"
                                     android:layout_gravity="bottom"
                                     android:background="@drawable/square_white"
                                     android:padding="@dimen/image3x"

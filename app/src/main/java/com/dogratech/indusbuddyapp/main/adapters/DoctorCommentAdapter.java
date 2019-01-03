@@ -26,19 +26,21 @@ public class DoctorCommentAdapter extends RecyclerView.Adapter<DoctorCommentAdap
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView  tv_comment,tvClassification,tvAddedOn,tvAddedBy;
+        public TextView tv_comment, tvClassification, tvAddedOn, tvAddedBy, commentTitle;
+
         public MyViewHolder(View view) {
             super(view);
             tv_comment = view.findViewById(R.id.tv_comment);
             tvClassification = view.findViewById(R.id.tvClassification);
             tvAddedOn = view.findViewById(R.id.tvAddedOn);
             tvAddedBy = view.findViewById(R.id.tvAddedBy);
+            commentTitle = view.findViewById(R.id.CommentTitle);
         }
     }
 
     public DoctorCommentAdapter(Context mContext, List<Model_Item_doctor_comment> dr_comment_list) {
-        this.mContext  = mContext;
-        this.dr_comment_list  = dr_comment_list;
+        this.mContext = mContext;
+        this.dr_comment_list = dr_comment_list;
     }
 
     @Override
@@ -52,6 +54,7 @@ public class DoctorCommentAdapter extends RecyclerView.Adapter<DoctorCommentAdap
         try {
             Model_Item_doctor_comment doctor_comment = dr_comment_list.get(position);
             String comment = doctor_comment.getAnalysisComment();
+            String comments = doctor_comment.getComment();
             if (comment != null) {
                 comment = comment.replace("\n", "\n\n");
                 holder.tv_comment.setText(comment);
@@ -59,7 +62,8 @@ public class DoctorCommentAdapter extends RecyclerView.Adapter<DoctorCommentAdap
             holder.tvClassification.setText(doctor_comment.getClassification());
             holder.tvAddedBy.setText(doctor_comment.getAddedBy());
             holder.tvAddedOn.setText(doctor_comment.getAddedOn());
-        }catch (Exception e){
+            holder.commentTitle.setText(comments);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

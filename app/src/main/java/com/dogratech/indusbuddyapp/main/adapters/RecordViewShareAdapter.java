@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.dogratech.indusbuddyapp.R;
 import com.dogratech.indusbuddyapp.main.models.ModelRedordDetails;
+import com.dogratech.indusbuddyapp.main.models.Model_Item_Report;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiUrl;
 
 import java.io.File;
@@ -44,9 +45,9 @@ import java.util.List;
 
 public class RecordViewShareAdapter extends RecyclerView.Adapter<RecordViewShareAdapter.MyViewHolder>{
     private Context mContext;
-    private List<ModelRedordDetails> packagesListFiltered;
+    private List<Model_Item_Report> packagesListFiltered;
 
-    public void updateList(ArrayList<ModelRedordDetails> modelCentre) {
+    public void updateList(ArrayList<Model_Item_Report> modelCentre) {
         packagesListFiltered = modelCentre;
         notifyDataSetChanged();
     }
@@ -70,7 +71,7 @@ public class RecordViewShareAdapter extends RecyclerView.Adapter<RecordViewShare
     }
 
 
-    public RecordViewShareAdapter(Context mContext, List<ModelRedordDetails> packages) {
+    public RecordViewShareAdapter(Context mContext, List<Model_Item_Report> packages) {
         this.mContext  = mContext;
         this.packagesListFiltered = packages;
     }
@@ -85,19 +86,19 @@ public class RecordViewShareAdapter extends RecyclerView.Adapter<RecordViewShare
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final ModelRedordDetails records = packagesListFiltered.get(position);
-        holder.tvFileName.setText(records.getFileName());
-        holder.tvRecordDate.setText(records.getDate());
-        final String image = ApiUrl.Base_URL_INDUS+"viewReport/report/"+records.getFileName();
+        final Model_Item_Report records = packagesListFiltered.get(position);
+        holder.tvFileName.setText(records.getFilePath());
+        holder.tvRecordDate.setText(records.getAddedOn());
+        final String image = ApiUrl.Base_URL_INDUS+"viewReport/report/"+records.getFilePath();
         holder.ivShareIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    String fileName = records.getFileName();
+                    String fileName = records.getFilePath();
                     if (fileName.contains("pdf")){
-                        new DownloadFile().execute(image,records.getFileType());
+                        new DownloadFile().execute(image,records.getComment());
                     }else if (fileName.contains("jpg") ||fileName.contains("jpeg") ||fileName.contains("png")){
-                        new BitmapLoader().execute(image,records.getFileName(),records.getFileType());
+                        new BitmapLoader().execute(image,records.getFilePath(),records.getComment());
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
