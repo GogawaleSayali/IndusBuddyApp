@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.helper.MyAppointmentMain">
+    tools:context=".helper.MyAppointmentMain">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvMyAppt"
         android:layout_width="match_parent"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context=".main.activities.signinsignup.VerifyOtpActivity">
+    tools:context=".activities.signinsignup.VerifyOtpActivity">
 
     <LinearLayout
         android:id="@+id/Lout_Main"

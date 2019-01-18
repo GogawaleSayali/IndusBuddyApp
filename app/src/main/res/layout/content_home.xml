@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorWhitegrey"
         sothree:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.dogratech.indusbuddyapp.main.componentclasses.HomeComponents"
+        tools:context=".componentclasses.HomeComponents"
         tools:showIn="@layout/app_bar_home">
       <include layout="@layout/home_main_layout"/>
     </RelativeLayout>

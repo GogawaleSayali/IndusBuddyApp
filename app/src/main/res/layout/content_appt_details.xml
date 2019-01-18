@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".main.activities.healthcheckup.ApptDetailsActivity"
+    tools:context=".activities.healthcheckup.ApptDetailsActivity"
     tools:showIn="@layout/activity_appt_details">
     <RelativeLayout
         android:layout_width="match_parent"

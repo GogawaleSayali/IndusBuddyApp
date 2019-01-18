@@ -6,7 +6,7 @@
     android:background="@color/colorWhitegrey"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".main.activities.wellness.WellnessHistoryActivity"
+    tools:context=".activities.wellness.WellnessHistoryActivity"
     tools:showIn="@layout/activity_willness_history">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvHistory"

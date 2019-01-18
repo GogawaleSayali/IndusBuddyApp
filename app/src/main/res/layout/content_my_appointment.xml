@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.componentclasses.MyAppointmentComponents"
+    tools:context=".componentclasses.MyAppointmentComponents"
     tools:showIn="@layout/activity_my_appointment">
 
     <RelativeLayout

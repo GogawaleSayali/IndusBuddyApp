@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.navmenuactivities.HelpCentreActivity"
+    tools:context=".activities.navmenuactivities.HelpCentreActivity"
     tools:showIn="@layout/activity_help_centre">
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.CentreLocatorFragment">
+    tools:context=".activities.healthcheckup.checkupfragments.CentreLocatorFragment">
     <android.support.v7.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"

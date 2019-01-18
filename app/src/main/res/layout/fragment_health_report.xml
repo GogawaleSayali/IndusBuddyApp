@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.fragments.HealthReport">
+    tools:context=".fragments.HealthReport">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

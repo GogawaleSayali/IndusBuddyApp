@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.signinsignup.LoginActivity">
+    tools:context=".activities.signinsignup.LoginActivity">
 
     <ImageView
         android:layout_width="match_parent"

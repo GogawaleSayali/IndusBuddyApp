@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.DashboardFragment">
+    tools:context=".activities.healthcheckup.checkupfragments.DashboardFragment">
 
     <ScrollView
         android:layout_width="match_parent"

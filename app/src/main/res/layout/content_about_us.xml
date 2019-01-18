@@ -7,7 +7,7 @@
     android:background="@color/colorWhitegrey"
     android:padding="@dimen/image4x"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.navmenuactivities.AboutUsActivity"
+    tools:context=".activities.navmenuactivities.AboutUsActivity"
     tools:showIn="@layout/activity_about_us">
 
     <RelativeLayout

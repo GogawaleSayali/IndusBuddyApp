@@ -7,7 +7,7 @@
     android:background="@color/colorWhitegrey"
     android:padding="@dimen/image3x"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".main.activities.fitness.FitnessMenuActivity"
+    tools:context=".activities.fitness.FitnessMenuActivity"
     tools:showIn="@layout/activity_fitness_menu">
   <LinearLayout
       android:layout_width="match_parent"

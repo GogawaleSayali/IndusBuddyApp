@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.healthguide.guidefragments.HRAFragment">
+    tools:context=".activities.healthguide.guidefragments.HRAFragment">
 <!--    <LinearLayout
         android:layout_width="@dimen/image9x"
         android:layout_height="match_parent"

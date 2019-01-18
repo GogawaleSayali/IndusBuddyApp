@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.AddOnTests">
+    tools:context=".activities.healthcheckup.checkupfragments.AddOnTests">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

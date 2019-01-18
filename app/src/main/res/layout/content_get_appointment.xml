@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.componentclasses.GetAppointmentComponents"
+    tools:context=".componentclasses.GetAppointmentComponents"
     tools:showIn="@layout/activity_get_appointment">
 
     <LinearLayout

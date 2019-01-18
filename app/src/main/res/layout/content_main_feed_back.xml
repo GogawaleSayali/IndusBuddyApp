@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.healthcheckup.MainFeedBackActivity"
+    tools:context=".activities.healthcheckup.MainFeedBackActivity"
     tools:showIn="@layout/activity_main_feed_back">
     <ImageView
         android:layout_width="match_parent"

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.wellness.wellnessfragments.MyEventFragment">
+    tools:context=".activities.wellness.wellnessfragments.MyEventFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

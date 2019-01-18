@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.fitness.SetGoalActivity"
+    tools:context=".activities.fitness.SetGoalActivity"
     tools:showIn="@layout/activity_set_goal">
     <FrameLayout
         android:id="@+id/fragmentContainer"

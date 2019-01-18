@@ -1,4 +1,4 @@
-package com.dogratech.indusbuddyapp;
+package com.indushealthplus.android.indusbuddy;
 
 import org.junit.Test;
 

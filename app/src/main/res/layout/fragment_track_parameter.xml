@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.healthguide.guidefragments.TrackParameter">
+    tools:context=".activities.healthguide.guidefragments.TrackParameter">
     <LinearLayout
         android:id="@+id/llTabs"
         android:layout_width="match_parent"

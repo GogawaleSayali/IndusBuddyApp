@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".main.activities.reminder.ReminderDetailsActivity"
+    tools:context=".activities.reminder.ReminderDetailsActivity"
     tools:showIn="@layout/activity_reminder_details">
     <ScrollView
         android:layout_width="match_parent"

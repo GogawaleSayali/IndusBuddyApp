@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dogratech.indusbuddyapp.main.activities.fitness.MyFitnessHomeActivity"
+    tools:context=".activities.fitness.MyFitnessHomeActivity"
     tools:showIn="@layout/activity_my_fitness_home">
     <FrameLayout
         android:id="@+id/fragmentContainer"

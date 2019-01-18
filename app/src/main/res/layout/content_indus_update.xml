@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhitegrey"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".main.activities.navmenuactivities.ArchivesActivity"
+    tools:context=".activities.navmenuactivities.ArchivesActivity"
     tools:showIn="@layout/activity_indus_update">
 <android.support.v7.widget.RecyclerView
     android:id="@+id/rvArchives"

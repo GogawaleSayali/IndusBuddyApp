@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhitegrey"
-    tools:context="com.dogratech.indusbuddyapp.main.fragments.HealthTips">
+    tools:context=".fragments.HealthTips">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_healthTips"
