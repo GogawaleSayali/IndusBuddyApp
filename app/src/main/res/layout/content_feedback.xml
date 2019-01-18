@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/tvSubmit"
         android:background="#60000000"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/image3x"
-                    android:text=" * Rating :"
+                    android:text="@string/feedback_rating_title"
                     android:textColor="@color/textbox_pinview"
                     android:textSize="@dimen/font5x" />
 
@@ -79,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/image4x"
                         android:paddingTop="@dimen/image4x"
-                        android:text=" * Comment :"
+                        android:text="@string/feedback_comment_title"
                         android:textColor="@color/textbox_pinview"
                         android:textSize="@dimen/font5x" />
 
@@ -111,6 +111,31 @@
                     android:orientation="vertical"
                     android:padding="@dimen/image3x">
 
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/image30x"
+                        android:background="@drawable/square_white"
+                        android:visibility="gone"
+                        android:src="@drawable/pdf"/>
+
+                    <TextView
+                        android:id="@+id/fbClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X"
+                        android:textSize="@dimen/font5x"
+                        android:textColor="@color/colorText"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/image30x"
+                        android:layout_marginTop="@dimen/image30x"
+                        android:background="@drawable/square_semi_brown"
+                        android:padding="@dimen/image8x"/>
+
+
                     <TextView
                         android:id="@+id/tvVideoUpload"
                         android:layout_width="match_parent"
@@ -119,20 +144,32 @@
                         android:background="@drawable/ripple_button_green"
                         android:gravity="center"
                         android:padding="@dimen/image4x"
-                        android:text="Upload Video Testimonial"
+                        android:text="@string/feedback_video_testimonial_text"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/font5x"
                         android:visibility="gone" />
 
                 </LinearLayout>
-            </RelativeLayout>
 
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/btn_SubmitFeedback"
+                android:background="@drawable/ripple_button_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlUpper"
+                android:layout_marginRight="@dimen/image2x"
+                android:gravity="center"
+                android:padding="@dimen/image5x"
+                android:text="@string/feedback_submit_button"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/rlUpper"
-
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <WebView

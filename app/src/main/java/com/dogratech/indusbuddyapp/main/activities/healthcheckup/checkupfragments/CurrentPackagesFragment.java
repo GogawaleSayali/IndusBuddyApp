@@ -13,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,6 @@ import com.dogratech.indusbuddyapp.main.activities.apphomeactivity.AppHomeActivi
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.CenterLocatorActivity;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.InstructionCallActivity;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.TestAVActivity;
-import com.dogratech.indusbuddyapp.main.adapters.MyAvailedAdapter;
 import com.dogratech.indusbuddyapp.main.adapters.MyPackages_Adapter;
 import com.dogratech.indusbuddyapp.main.helper.Constatnts;
 import com.dogratech.indusbuddyapp.main.managers.SharedPrefsManager;
@@ -33,6 +33,7 @@ import com.dogratech.indusbuddyapp.main.models.PackageDetailsModel;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiClient;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiInterfaceGet;
 import com.dogratech.indusbuddyapp.main.retrofit.ApiUrl;
+import com.dogratech.indusbuddyapp.main.models.InstructionCallRequestModel;
 import com.dogratech.indusbuddyapp.main.uitility.NetworkUtility;
 
 import java.util.ArrayList;
@@ -66,6 +67,8 @@ public class CurrentPackagesFragment extends Fragment implements View.OnClickLis
     private boolean isPkg = false;
     private TextView tvGetPkg,tvCenterLocator;
     private OnFragmentInteractionListener mListener;
+
+    private ArrayList<InstructionCallRequestModel> addPackage ;
 
     public CurrentPackagesFragment() {
         // Required empty public constructor
@@ -130,6 +133,7 @@ public class CurrentPackagesFragment extends Fragment implements View.OnClickLis
        // recyclerView  . addItemDecoration(new GridSpacingItemDecoration(2,
         // DeviceUtility.convertDpToPx(getActivity(),2), true));
         recyclerView    . setItemAnimator(new DefaultItemAnimator());
+        addPackage=  new ArrayList<InstructionCallRequestModel>();
 
 
     }
@@ -147,6 +151,7 @@ public class CurrentPackagesFragment extends Fragment implements View.OnClickLis
         if (NetworkUtility.isNetworkAvailable(getActivity())) {
             rlProgress.setVisibility(View.VISIBLE);
             String userId = prefsManager.getData(getString(R.string.shars_userid));
+            String gender = prefsManager.getData(getString(R.string.userGender));
             //userId = "210263"; // <--- Dummy user
             String url = ApiUrl.Base_URL_MOBILE + ApiUrl.GetPendingPackageDetails + userId;
             ApiInterfaceGet interfaceGet = ApiClient.getClient(ApiUrl.Base_URL_MOBILE).create(ApiInterfaceGet.class);
@@ -160,6 +165,14 @@ public class CurrentPackagesFragment extends Fragment implements View.OnClickLis
                             packages = packagesModel.getPackageDetailsModels();
                             if(packages!=null) {
                                 if (packages.size() > 0) {
+                                 //*****************
+                                    for(int i=0; i<packages.size(); i++){
+                                        InstructionCallRequestModel objt = new InstructionCallRequestModel(gender,packages.get(i).getName()); // Creating a new object
+                                        addPackage.add(objt); // Adding it to the list
+                                    }
+                                    prefsManager.setData(getString(R.string.shares_pckList),addPackage.toString());
+                                    Log.d("TAG : ","New Package List :: " + addPackage.toString());
+                                 //*****************
                                     rlWithPkg.setVisibility(View.VISIBLE);
                                     rlWthoutPkg.setVisibility(View.GONE);
                                     tvDataNotFound.setVisibility(View.GONE);

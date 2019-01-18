@@ -31,7 +31,7 @@ public class HRAActivity extends AppCompatActivity {
     private ImageView   ivPrevious,ivNext;
     private RelativeLayout                 rlPrevious,rlNext;
     private ArrayList<Model_Item_Question> question;
-    private LoopingViewPager               viewpager;
+    private LoopingViewPager viewpager;
     private SharedPrefsManager prefsManager;
     private int userId ;
 
@@ -144,8 +144,7 @@ public class HRAActivity extends AppCompatActivity {
             model.setAnswer("");
             HRAFragment.myAnswerArray.add(model);
         }
-        HRAQuesnAdapter quesnAdapter = new
-        HRAQuesnAdapter(HRAActivity.this,question,false);
+        HRAQuesnAdapter quesnAdapter = new HRAQuesnAdapter(HRAActivity.this,question,false);
         viewpager.setAdapter(quesnAdapter);
         if (question.size() == 1){
             rlPrevious.setVisibility(View.GONE);

@@ -2,6 +2,7 @@ package com.dogratech.indusbuddyapp.main.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,10 +78,13 @@ public class HealthTipsAdapter extends RecyclerView.Adapter<HealthTipsAdapter.My
         long addedOn = health_tips.getAddedOn();
         String dateFormat = "dd-MM-yyyy hh:mm";
         holder.tvPublishDate.setText("Published on : " + getDate(addedOn, dateFormat));
-        if (health_tips.getContentFiles().get(0).getFileType().equalsIgnoreCase("image")) {
-            final String image = ApiUrl.Base_URL_INDUS + "viewReport/content/"
-                    + health_tips.getContentFiles().get(0).getFileName();
-            Glide.with(mContext).load(image).into(holder.ivArticleImage);
+        Log.d("Health Tips Crash :: ",  " champ : : " + health_tips.getContentFiles().isEmpty());
+        if(!health_tips.getContentFiles().isEmpty()){
+            if (health_tips.getContentFiles().get(0).getFileType().equalsIgnoreCase("image")) {
+                final String image = ApiUrl.Base_URL_INDUS + "viewReport/content/"
+                        + health_tips.getContentFiles().get(0).getFileName();
+                Glide.with(mContext).load(image).into(holder.ivArticleImage);
+            }
         }
     }
 

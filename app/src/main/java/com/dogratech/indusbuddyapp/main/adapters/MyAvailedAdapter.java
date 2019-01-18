@@ -36,9 +36,12 @@ public class MyAvailedAdapter extends RecyclerView.Adapter<MyAvailedAdapter.MyVi
 
     public MyAvailedAdapter(Context mContext, ArrayList<PackageDetailsModel> model_availed_packages) {
         this.model_availed_packages = model_availed_packages;
-        this.mContext    = mContext;
-        layoutInflater   =  (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        imageLoader.init(ImageLoaderConfiguration.createDefault(mContext));
+        if(mContext != null){
+            this.mContext    = mContext;
+            layoutInflater   =  (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            imageLoader.init(ImageLoaderConfiguration.createDefault(mContext));
+        }
+        // Addeed null pointer condition to above 3 lines
         // mFilter = new CustomFilter(TestAdapter.this);
         options = new DisplayImageOptions.Builder()
                 .showImageOnLoading(R.mipmap.logo_indus)

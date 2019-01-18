@@ -14,6 +14,7 @@ import com.dogratech.indusbuddyapp.main.activities.baseactivities.BaseActivity;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.AvailedPackagesFragment;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.CurrentPackagesFragment;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.DashboardFragment;
+import com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.InstructionCallFragment;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.MlmWithoutPkgFragment;
 import com.dogratech.indusbuddyapp.main.activities.healthcheckup.checkupfragments.MyAppointmentFragment;
 import com.dogratech.indusbuddyapp.main.models.SubMenuList;
@@ -38,6 +39,7 @@ public class CheckUpSubMenuManager extends BaseActivity implements
         CurrentPackagesFragment.OnFragmentInteractionListener,
         AvailedPackagesFragment.OnFragmentInteractionListener,
         MyAppointmentHelperWebServices.OnFragmentInteractionListener,
+        InstructionCallFragment.OnFragmentInteractionListener,
         MlmWithoutPkgFragment.OnFragmentInteractionListener{
     private TextView tvCentreLocator;
     protected EasyTabs tabs;
@@ -46,6 +48,7 @@ public class CheckUpSubMenuManager extends BaseActivity implements
     protected static final String SUBMENU_AVAILED_PKGS = "Availed Packages";
     protected static final String SUBMENU_MY_APPTMNT = "My Appointments";
     protected static final String SUBMENU_STATUS = "Status";
+    protected static final String SUBMENU_INSTRUCTION = "Instruction call";
     /**Toolbar and Action bar common for all activities which extends this class**/
     protected Toolbar toolbar;
     protected ActionBar actionBar;
@@ -74,6 +77,10 @@ public class CheckUpSubMenuManager extends BaseActivity implements
                         break;
                     case SUBMENU_STATUS:
                         tabsParams[i] = new TabItem(new DashboardFragment(), SUBMENU_STATUS);
+                        break;
+
+                    case SUBMENU_INSTRUCTION:
+                        tabsParams[i] = new TabItem(new InstructionCallFragment(), SUBMENU_INSTRUCTION);
                         break;
 
                         default:

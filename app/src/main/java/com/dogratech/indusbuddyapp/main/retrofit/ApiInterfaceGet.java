@@ -5,6 +5,8 @@ import com.dogratech.indusbuddyapp.main.models.AvailedPackagesModel;
 import com.dogratech.indusbuddyapp.main.models.ContentPreviewMainModel;
 import com.dogratech.indusbuddyapp.main.models.EventsMainModel;
 import com.dogratech.indusbuddyapp.main.models.HistoryEventResponse;
+import com.dogratech.indusbuddyapp.main.models.InstructionCallModel;
+import com.dogratech.indusbuddyapp.main.models.InstructionCallRequestModel;
 import com.dogratech.indusbuddyapp.main.models.MainMenuResponceModel;
 import com.dogratech.indusbuddyapp.main.models.MemberDetrailsModel;
 import com.dogratech.indusbuddyapp.main.models.ModelCentre;
@@ -86,7 +88,6 @@ public interface ApiInterfaceGet {
     @GET
     public Call<AvailedPackagesModel>  getAvailedPackes (@Url String url);
 
-
     @GET
     public Call<MemberDetrailsModel>  getMemberDetails (@Url String url);
 
@@ -115,8 +116,13 @@ public interface ApiInterfaceGet {
     @GET(ApiUrl.GET_POSTPONE_REASON)
     Call<ModelPostPoneReasonRes> getPostPoneReason ();
 
+      @GET
+      public Call<InstructionCallModel>  getPckwiseInstructionCallList (@Url String url);
 
+//    @GET(ApiUrl.AvailedPackagesModel)
+//    public Call<InstructionCallModel>  getPckwiseInstructionCallList (@Query("s")  String s);
 
-
+//    @GET(ApiUrl.GET_POSTPONE_REASON)
+//    public Call<InstructionCallModel>  getPckwiseInstructionCallList (@Query("s")  InstructionCallRequestModel s);
 
 }

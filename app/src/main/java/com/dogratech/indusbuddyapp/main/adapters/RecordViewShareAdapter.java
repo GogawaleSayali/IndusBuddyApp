@@ -145,7 +145,8 @@ public class RecordViewShareAdapter extends RecyclerView.Adapter<RecordViewShare
             comment =  urls[2];
             try {
                 url = new URL(urls[0]);
-                 bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                // tO SHARE TEXT AND IMAGE BY INTENT :
+                bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -165,9 +166,8 @@ public class RecordViewShareAdapter extends RecyclerView.Adapter<RecordViewShare
             }
             if (bitmap!=null){
                 Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT, comment);
-                    String path = MediaStore.Images.Media.insertImage
-                            (mContext.getContentResolver(), bitmap, "", null);
+                    intent.putExtra(Intent.EXTRA_TEXT, comment);
+                    String path = MediaStore.Images.Media.insertImage(mContext.getContentResolver(), bitmap, "", null);
                     Uri screenshotUri = Uri.parse(path);
                     intent.putExtra(Intent.EXTRA_STREAM, screenshotUri);
                     intent.setType("image/*");
@@ -272,6 +272,8 @@ public class RecordViewShareAdapter extends RecyclerView.Adapter<RecordViewShare
     private void openFile(String url) {
 
         try {
+
+            //oPEN IMAGE OR DOCUMENT THROUGH INTENT :
             Uri uri = Uri.parse(url);
             Intent intent = new Intent(Intent.ACTION_VIEW);
             if (url.toString().contains(".doc") || url.toString().contains(".docx")) {

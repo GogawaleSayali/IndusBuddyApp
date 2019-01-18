@@ -369,4 +369,13 @@ Headquartered in Pune,twe are present in major metros, tier I, II and III cities
     <string name="otherLocation">Location</string>
     <string name="othersDuration">Duration</string>
     <string name="title_activity_fitness_menu">FitnessMenuActivity</string>
+    <string name="feedback_submit_button">Submit Feedback</string>
+    <string name="feedback_video_testimonial_text">Upload Video Testimonial</string>
+    <string name="feedback_enter_comments">Enter your Comment</string>
+    <string name="feedback_comment_title"> * Comment :</string>
+    <string name="feedback_rating_title"> * Rating :</string>
+    <string name="feedback_button_uploaded">Uploaded Video</string>
+    <string name="instruction_call_pck_name">Package Name</string>
+    <string name="instruction_call_audio">Audio</string>
+    <string name="shares_pckList">packageList</string>
 </resources>

@@ -21,7 +21,10 @@ public class Model_Item_Question {
 
     @SerializedName("options")
     private ArrayList<Model_Item_options> options ;
-    private String answString = "";
+
+//    private String answString = "";
+    @SerializedName("answString")
+    private String answString;
     public Model_Item_Question() {
     }
 

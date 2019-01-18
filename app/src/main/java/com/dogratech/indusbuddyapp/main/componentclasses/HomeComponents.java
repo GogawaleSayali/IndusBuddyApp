@@ -246,16 +246,10 @@ public class HomeComponents extends BaseActivity {
                                                 HashMap<String, String> hashMap = mapArrayList.get(j);
                                                 if (hashMap.size() > 0) {
                                                     if (hashMap.get("is_checked").equalsIgnoreCase("YES")) {
-
                                                         for (int k = 0; k < dataContentList.size(); k++) {
-
-
                                                             if (hashMap.get("sub_category_name").equalsIgnoreCase(dataContentList.get(k).getSubCategories())) {
-
                                                                 contentsPreview.add(dataContentList.get(k));
-
                                                             }
-
                                                         }
                                                     }
                                                 }
@@ -274,14 +268,11 @@ public class HomeComponents extends BaseActivity {
                                     } else {
                                         adapter.updateList(contentsPreview);
                                     }
-                                    if (contentsPreview.size() >= 1) {
+                                   if (contentsPreview.size() >= 1) {
                                         llMainMenuStrip.setVisibility(View.VISIBLE);
                                     } else {
                                         llMainMenuStrip.setVisibility(View.INVISIBLE);
                                     }
-
-
-
                             }
                         }
                     }

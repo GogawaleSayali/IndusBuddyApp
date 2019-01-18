@@ -20,9 +20,11 @@ import java.util.List;
 public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyViewHolder> {
     private ReminderActivity mContext;
     private List<ModelItemReminder> reminderList;
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView  tv_reminder,tvDate,tvRemForMe,tvCategory;
         public LinearLayout llRow;
+
         public MyViewHolder(View view) {
             super(view);
             tv_reminder = view.findViewById(R.id.tv_reminder);
@@ -57,7 +59,6 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
                 mContext.showReminder(position);
             }
         });
-
     }
 
     @Override

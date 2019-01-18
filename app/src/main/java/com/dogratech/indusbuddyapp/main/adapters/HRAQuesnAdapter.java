@@ -62,11 +62,13 @@ public class HRAQuesnAdapter extends LoopingPagerAdapter<Model_Item_Question> {
             final String question = itemList.get(position).getQuestion();
             final int questionId = itemList.get(position).getQuestionId();
             ArrayList<Model_Item_options> options = itemList.get(position).getOptions();
+
         CheckBox checkboxOptionOne,checkboxOptionTwo,checkboxOptionThree,checkboxOptionFour,
                 checkboxOptionFive,checkboxOptionSix,checkboxOptionSeven,checkboxOptionEight,
                 checkboxOptionNine,checkboxOptionTen;
         RadioButton radioOptionOne,radioOptionTwo,radioOptionThree,radioOptionFour,
                 radioOptionFive,radioOptionSix,radioOptionSeven,radioOptionEight,radioOptionNine,radioOptionTen;
+
         ArrayList<RadioButton> radio = new ArrayList<>();
         final ArrayList<CheckBox> checkBoxes = new ArrayList<>();
         final ArrayList<CheckBox> visibleCheck = new ArrayList<>();

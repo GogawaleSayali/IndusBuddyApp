@@ -62,4 +62,5 @@ public interface ApiInterfacePost {
             "Content-Type: application/json"})
     Call<EventDetailsActivity.ConfirmResponse> confirmEvent(@Body EventDetailsActivity.ConfirmEvenModel data);
 
+
 }
